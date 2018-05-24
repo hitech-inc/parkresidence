@@ -22,3 +22,4 @@ Route::get('/features', 'SiteController@features');
 Route::get('/cottages', 'SiteController@cottages');
 Route::get('/3D-tour', 'SiteController@tour');
 Route::get('/contacts', 'SiteController@contacts');
+Route::get('/house-details', 'SiteController@houseDetails');

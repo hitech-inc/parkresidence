@@ -36,4 +36,9 @@ class SiteController extends Controller
     {
     	return view('frontend.contacts');
     }
+
+    public function houseDetails()
+    {
+    	return view('frontend.house-details');
+    }
 }
