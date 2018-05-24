@@ -2,7 +2,8 @@
 
 @section('content')
 <!--Start of Banner Area-->
-<div class="banner-area bg-2 bg-overlay-2 ptb-165">
+<!-- Класс bg-overlay-2 придает темный фон -->
+<div class="banner-area bg-2 ptb-165">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
