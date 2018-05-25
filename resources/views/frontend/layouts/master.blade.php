@@ -43,7 +43,9 @@
     	<link href="index.html#" data-style="styles" rel="stylesheet">  
         
         <!-- Modernizr JS -->
-        <script src="/js/vendor/modernizr-2.8.3.min.js"></script>    
+        <script src="/js/vendor/modernizr-2.8.3.min.js"></script> 
+
+        <link rel="shortcut icon" href="{{ asset('images/icons/favicon.png') }}" type="image/png">   
     </head>  
     <body>
         <!--[if lt IE 8]>
