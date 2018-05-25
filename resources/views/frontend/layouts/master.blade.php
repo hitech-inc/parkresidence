@@ -9,7 +9,7 @@
         
         <!-- favicon
         ============================================ -->		
-        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+        <!-- <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"> -->
         
         <!-- Google Fonts
         ============================================ -->		
@@ -45,7 +45,7 @@
         <!-- Modernizr JS -->
         <script src="/js/vendor/modernizr-2.8.3.min.js"></script> 
 
-        <link rel="shortcut icon" href="{{ asset('images/icons/favicon.png') }}" type="image/png">   
+        <!-- <link rel="shortcut icon" href="{{ asset('images/icons/favicon.png') }}" type="image/png"> -->   
     </head>  
     <body>
         <!--[if lt IE 8]>
