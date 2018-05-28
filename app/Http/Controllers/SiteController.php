@@ -4,12 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Backend\Houses;
+
 class SiteController extends Controller
 {
     //
-    public function index()
+    public function index(Request $request, $slug = "" )
     {
-    	return view('frontend.index');
+		// // index page
+    	if (!$slug)
+    	{
+    		$houses = Houses::getHouses();
+    		return view('frontend.index', compact('houses'));
+    	}
+    	//house-details-page
+    	else 
+    	{
+    		$house = Houses::whereSlug( $slug )->first();
+    		//dd($house);
+    		return view('frontend.house-details', compact('house'));
+    	}
     }
 
     public function about()
@@ -37,8 +51,9 @@ class SiteController extends Controller
     	return view('frontend.contacts');
     }
 
-    public function houseDetails()
+    public function houseDetails($slug = "")
     {
-    	return view('frontend.house-details');
+    	$house = Houses::whereSlug( $slug )->first();
+    	return view('frontend.house-details', compact('house'));
     }
 }

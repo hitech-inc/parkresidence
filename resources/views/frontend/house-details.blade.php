@@ -20,14 +20,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
+				
 				<div class="property-image mb-57">
-					<img src="images/properties/house-details.jpg" alt="">
+					<img src="{{ '/images/houses/house-details/' . $house->img }}" alt="">
 				</div>
 				<div class="property-desc mb-56">
 					<h4 class="details-title mb-22">Описание</h4>
-					<p class="mb-24"><span>Dom-Inno is</span> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etlor magna iqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut quipx ea codo loremed consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolo</p>
-					<p class="mb-28">Dom-Inno is the Best  should be the consectetur adipiscing elit, sed do eiusmod tempor incidint ut labore lore gna iqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacm emod tempor nt ut labore lore magna iqua. Ut enim ad minim veniamco laboris nisi ut aliqu</p>
-					<p>Dom-Inno is the Best  should be the consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore lore gna iqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacm</p>
+					<p class="mb-24">{!! $house->description !!}</p>
 				</div>
 				<div class="property-details">
 					<div class="row">
@@ -113,7 +112,7 @@
 						<div class="col-4 pl-15">
 							<h4 class="details-title mb-37">Поэтажный план</h4>
 							<div class="desc-images">
-								<img src="images/banner/plan.jpg" alt="">
+								<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">
 							</div>
 						</div>
 						<div class="col-6 pr-15">
@@ -123,6 +122,7 @@
 							</div>
 						</div>
 					</div>
+				
 					<div class="comments fix pt-50">
 						<h4 class="details-title pb-8 mb-27">3 Отзыва</h4>
 						<div class="single-comment fix mb-18">

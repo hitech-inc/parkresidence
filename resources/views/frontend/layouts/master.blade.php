@@ -32,6 +32,7 @@
         <!--  Theme main style
         ============================================ -->  
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/mystyle.css">
         
         <!-- Responsive CSS
         ============================================ -->
@@ -123,6 +124,13 @@
         <!-- Main js file contents all jQuery plugins activation
 		========================================================= -->		
         <script src="js/main.js"></script>
-        
+        <!-- Начало Plugin для респонсивной адаптации карты изображения на разных дисплеях -->
+        <script src="/js/imageMapResizer.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('map').imageMapResize();
+            });
+        </script>
+        <!-- Конец Plugin для респонсивной адаптации карты изображения на разных дисплеях -->
     </body>
 </html>
