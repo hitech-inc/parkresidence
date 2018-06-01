@@ -52,12 +52,13 @@
                                 <div class="single-footer-widget">
                                     <h3 class="text-white text-uppercase mb-17">Быстрые ссылки</h3>
                                     <ul class="footer-list">
-                                        <li><a href="index.html#">Услуги</a></li>
-                                        <li><a href="index.html#">Агенты</a></li>
-                                        <li><a href="index.html#">Выбрать дом</a></li>
-                                        <li><a href="index.html#">Особенности</a></li>
-                                        <li><a href="index.html#">Отзывы</a></li>
-                                        <li><a href="index.html#">Контакты</a></li>
+                                        <li><a href="/">Главная</a></li>
+                                        <li><a href="/about">О Park residence</a></li>
+                                        <li><a href="/location">Расположение</a></li>
+                                        <li><a href="/infrastructure">Инфраструктура</a></li>
+                                        <li><a href="/town-houses">Таунхаусы</a></li>
+                                        <li><a href="/town-houses">Виллы</a></li>
+                                        <li><a href="/contacts">Контакты</a></li>
                                     </ul>
                                 </div>
                             </div>
