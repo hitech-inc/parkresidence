@@ -78,59 +78,88 @@
         
         <!-- jquery latest version
 		========================================================= -->	
-        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="/js/vendor/jquery-1.12.4.min.js"></script>
         
         <!-- Bootstrap framework js
 		========================================================= -->			
-        <script src="js/bootstrap.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
         
         <!-- Owl Carousel js
 		========================================================= -->		
-        <script src="js/owl.carousel.min.js"></script>
+        <script src="/js/owl.carousel.min.js"></script>
         
         <!-- nivo slider js
 		========================================================= -->	    
-		<script src="lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
-		<script src="lib/nivo-slider/home.js" type="text/javascript"></script>
+		<script src="/lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
+		<script src="/lib/nivo-slider/home.js" type="text/javascript"></script>
         
         <!-- Waypoint Js
 		========================================================= -->	
-        <script src="js/waypoints.min.js"></script>
+        <script src="/js/waypoints.min.js"></script>
         
 		<!-- Video Player JS
 		========================================================= -->			
-        <script src="js/jquery.mb.YTPlayer.js"></script>
+        <script src="/js/jquery.mb.YTPlayer.js"></script>
         
 		<!-- AJax Mail JS
 		========================================================= -->			
-        <script src="js/ajax-mail.js"></script>
+        <script src="/js/ajax-mail.js"></script>
         
 		<!-- Mail Chimp JS
 		========================================================= -->			
-        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="/js/jquery.ajaxchimp.min.js"></script>
         
 		<!-- Slick Carousel JS
 		========================================================= -->			
-        <script src="js/slick.min.js"></script>
+        <script src="/js/slick.min.js"></script>
         
 		<!-- Style Customizer JS
 		========================================================= -->		
-        <script src="js/style-customizer.js"></script>
+        <script src="/js/style-customizer.js"></script>
         
         <!-- Plugin Js
 		========================================================= -->	
-        <script src="js/plugins.js"></script>
+        <script src="/js/plugins.js"></script>
         
         <!-- Main js file contents all jQuery plugins activation
 		========================================================= -->		
-        <script src="js/main.js"></script>
+        <script src="/js/main.js"></script>
         <!-- Начало Plugin для респонсивной адаптации карты изображения на разных дисплеях -->
         <script src="/js/imageMapResizer.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.maphilight.min.js"></script>
+        <!-- <script src="https://unpkg.com/tippy.js@2.5.2/dist/tippy.all.min.js"></script> -->
         <script>
             $(document).ready(function() {
                 $('map').imageMapResize();
-            });
+
+                //initialize highlight это подсветска при наведении мыши на объект на карте
+                var data = {};
+                $('.map').maphilight();
+                data.alwaysOn = true;
+                data.fillColor = 'ffff00';
+                data.fillOpacity = '0.6';
+                data.fill = true;
+                data.stroke = true;
+                data.strokeColor = 'ff0000';
+                data.strokeOpacity = 1;
+                data.strokeWidth = 1;
+                data.fade = true;
+                data.neverOn = false;
+                data.groupBy = false;
+                data.wrapClass = true;
+                // plenty of shadow:
+                data.shadow = false;
+                data.shadowX = 0;
+                data.shadowY = 0;
+                data.shadowRadius = 6;
+                data.shadowColor = '000000';
+                data.shadowOpacity = 0.8;
+                data.shadowPosition = 'outside';
+                data.shadowFrom = false;
+
+            });//End ready
         </script>
         <!-- Конец Plugin для респонсивной адаптации карты изображения на разных дисплеях -->
+        
     </body>
 </html>

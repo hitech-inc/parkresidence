@@ -2,8 +2,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h1 class="text-white mb-22">Забронируйте катедж или дом и получите скидку!</h1>
-				<h2 class="text-white">Подробнее по телефону : +7  777  7777</h2>
+				<h1 class="text-white mb-22">Спешите забронировать виллу своей мечты!</h1>
+				<h2 class="text-white">Подробнее по телефону : +7 701 9117744 </h2>
 			</div>
 		</div>
 	</div>

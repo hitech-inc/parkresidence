@@ -34,30 +34,30 @@
 							<h4 class="details-title mb-38">Состояние</h4>
 							<div class="bg-gray fix pl-35 pt-42 pr-35 pb-39 left-column mb-56">
 								<div class="desc-info mb-37">
-									<img src="images/icons/g-floor.png" alt="" class="pr-8">
+									<img src="/images/icons/g-floor.png" alt="" class="pr-8">
 									<span>Площадь 450 квм</span>
 								</div>
 								<div class="desc-info mb-37">
-									<img src="images/icons/g-bed.png" alt="" class="pr-8">
+									<img src="/images/icons/g-bed.png" alt="" class="pr-8">
 									<span>Кровать 5</span>
 								</div>
 								<div class="desc-info mb-37">
-									<img src="images/icons/g-shower.png" alt="" class="pr-8">
+									<img src="/images/icons/g-shower.png" alt="" class="pr-8">
 									<span>Ванна 3</span>
 								</div>
 								<div class="desc-info mb-37">
-									<img src="images/icons/g-garage.png" alt="" class="pr-8">
+									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
 									<span>Гараж 2</span>
 								</div>
 								<div class="desc-info mb-35">
-									<img src="images/icons/kitchen.png" alt="" class="pr-8">
+									<img src="/images/icons/kitchen.png" alt="" class="pr-8">
 									<span>Кухня 2</span>
 								</div>
 								<div class="desc-info mb-35">
 									<span class="price">$52,350</span>
 								</div>
 								<div class="desc-info">
-									<img src="images/icons/g-map.png" alt="" class="pr-8">
+									<img src="/images/icons/g-map.png" alt="" class="pr-8">
 									<span class="location">ул. Мадели Кожа, 48Б</span>
 								</div>
 							</div>
@@ -127,7 +127,7 @@
 						<h4 class="details-title pb-8 mb-27">3 Отзыва</h4>
 						<div class="single-comment fix mb-18">
 							<div class="author-image pull_left mr-23">
-								<img alt="" src="images/comment/1.jpg">
+								<img alt="" src="/images/comment/1.jpg">
 							</div>
 							<div class="comment-text fix">
 								<div class="author-info">
@@ -139,7 +139,7 @@
 						</div>
 						<div class="single-comment fix mb-18">
 							<div class="author-image pull_left mr-23">
-								<img alt="" src="images/comment/2.jpg">
+								<img alt="" src="/images/comment/2.jpg">
 							</div>
 							<div class="comment-text fix">
 								<div class="author-info">
@@ -151,7 +151,7 @@
 						</div>
 						<div class="single-comment fix">
 							<div class="author-image pull_left mr-23">
-								<img alt="" src="images/comment/3.jpg">
+								<img alt="" src="/images/comment/3.jpg">
 							</div>
 							<div class="comment-text fix">
 								<div class="author-info">
@@ -284,7 +284,7 @@
 									</div>
 								</div>
 								<div class="property-image">
-									<a href="properties-details.html" class="block dark-hover"><img src="images/properties/s-1.jpg" alt="">
+									<a href="properties-details.html" class="block dark-hover"><img src="/images/properties/s-1.jpg" alt="">
 										<span class="img-button text-uppercase">Подробнее</span>
 									</a>
 								</div>
@@ -301,7 +301,7 @@
 									</div>
 								</div>
 								<div class="property-image">
-									<a href="properties-details.html" class="block dark-hover"><img src="images/properties/s-2.jpg" alt="">
+									<a href="properties-details.html" class="block dark-hover"><img src="/images/properties/s-2.jpg" alt="">
 										<span class="img-button text-uppercase">Подробнее</span>
 									</a>
 								</div>
@@ -318,7 +318,7 @@
 									</div>
 								</div>
 								<div class="property-image">
-									<a href="properties-details.html" class="block dark-hover"><img src="images/properties/s-3.jpg" alt="">
+									<a href="properties-details.html" class="block dark-hover"><img src="/images/properties/s-3.jpg" alt="">
 										<span class="img-button text-uppercase">Подробнее</span>
 									</a>
 								</div>
@@ -335,7 +335,7 @@
 									</div>
 								</div>
 								<div class="property-image">
-									<a href="properties-details.html" class="block dark-hover"><img src="images/properties/s-4.jpg" alt="">
+									<a href="properties-details.html" class="block dark-hover"><img src="/images/properties/s-4.jpg" alt="">
 										<span class="img-button text-uppercase">Подробнее</span>
 									</a>
 								</div>
@@ -355,7 +355,7 @@
 							<div class="col-md-4 mb-22 col-sm-2 col-xs-4">
 								<div class="agent-hover">
 									<a href="agent-details.html" class="block border mb-11">
-										<img src="images/team/s-1.jpg" alt="">
+										<img src="/images/team/s-1.jpg" alt="">
 									</a>
 									<h5><a href="agent-details.html" class="block">Джеки Чан</a></h5>
 								</div>
@@ -363,7 +363,7 @@
 							<div class="col-md-4 mb-22 col-sm-2 col-xs-4">
 								<div class="agent-hover">
 									<a href="agent-details.html" class="block border mb-11">
-										<img src="images/team/s-2.jpg" alt="">
+										<img src="/images/team/s-2.jpg" alt="">
 									</a>
 									<h5><a href="agent-details.html" class="block">Том Круз</a></h5>
 								</div>
@@ -371,7 +371,7 @@
 							<div class="col-md-4 mb-22 col-sm-2 col-xs-4">
 								<div class="agent-hover">
 									<a href="agent-details.html" class="block border mb-11">
-										<img src="images/team/s-3.jpg" alt="">
+										<img src="/images/team/s-3.jpg" alt="">
 									</a>
 									<h5><a href="agent-details.html" class="block">Кулпаш</a></h5>
 								</div>
@@ -379,7 +379,7 @@
 							<div class="col-md-4 col-sm-2 col-xs-4">
 								<div class="agent-hover">
 									<a href="agent-details.html" class="block border mb-11">
-										<img src="images/team/s-4.jpg" alt="">
+										<img src="/images/team/s-4.jpg" alt="">
 									</a>
 									<h5><a href="agent-details.html" class="block">Пистегул</a></h5>
 								</div>
@@ -387,7 +387,7 @@
 							<div class="col-md-4 col-sm-2 col-xs-4">
 								<div class="agent-hover">
 									<a href="agent-details.html" class="block border mb-11">
-										<img src="images/team/s-5.jpg" alt="">
+										<img src="/images/team/s-5.jpg" alt="">
 									</a>
 									<h5><a href="agent-details.html" class="block">Еркин</a></h5>
 								</div>
@@ -395,7 +395,7 @@
 							<div class="col-md-4 col-sm-2 col-xs-4">
 								<div class="agent-hover">
 									<a href="agent-details.html" class="block border mb-11">
-										<img src="images/team/s-6.jpg" alt="">
+										<img src="/images/team/s-6.jpg" alt="">
 									</a>
 									<h5><a href="agent-details.html" class="block">Нурлан</a></h5>
 								</div>

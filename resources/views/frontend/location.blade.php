@@ -32,7 +32,7 @@
 				<div class="padding">
 					<ol class="breadcrumb"> 
 						<li><a href="/">Главная</a></li> 
-						<li class="active">Особенности</li> 
+						<li class="active">Расположение</li> 
 					</ol> 
 				</div>    
 			</div>
@@ -40,6 +40,14 @@
 	</div>
 </div>
 <!-- End breadcrumbs -->
+
+<!-- Location image Start -->
+<div class="text-area pt-100 pb-100" style="padding-top: 0; padding-bottom: 0;">
+	<div class="container">
+		<img src="/images/location/location.jpg" alt="" style="max-width: 100%">
+	</div>
+</div>
+<!-- Location image End -->
 
 <!--Text Area Start-->
 <div class="text-area pt-100 pb-100" style="padding-top: 50px;">

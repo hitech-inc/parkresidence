@@ -1,3 +1,25 @@
 .myhouse{
 	cursor: pointer !important;
+	opacity:0;
+}
+
+area.myhouse:hover{
+	opacity:0.2;
+}
+
+.tooltip {
+  position: fixed;
+  display:none;
+  width: 400px;
+ 
+  color: #F4F8F7;
+  padding: 10px;
+  background-color: #E7552C;
+  font-size:0.6em;
+  left: 0;
+  box-sizing:border-box;
+  /*shadow*/
+  -webkit-box-shadow: 10px 7px 30px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 7px 30px -7px rgba(0,0,0,0.75);
+  box-shadow: 10px 7px 30px -7px rgba(0,0,0,0.75);
 }

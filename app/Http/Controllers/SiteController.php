@@ -9,21 +9,10 @@ use App\Models\Backend\Houses;
 class SiteController extends Controller
 {
     //
-    public function index(Request $request, $slug = "" )
+    public function index()
     {
-		// // index page
-    	if (!$slug)
-    	{
-    		$houses = Houses::getHouses();
-    		return view('frontend.index', compact('houses'));
-    	}
-    	//house-details-page
-    	else 
-    	{
-    		$house = Houses::whereSlug( $slug )->first();
-    		//dd($house);
-    		return view('frontend.house-details', compact('house'));
-    	}
+    	// $houses = Houses::getHouses();
+    	return view('frontend.index');    	
     }
 
     public function about()
@@ -31,29 +20,23 @@ class SiteController extends Controller
     	return view('frontend.about');
     }
 
-    public function features()
+    public function location()
     {
-    	return view('frontend.features');
+    	return view('frontend.location');
     }
 
-    public function cottages()
+    public function infrastructure()
     {
-    	return view('frontend.cottages');
+    	return view('frontend.infrastructure');
     }
 
-    public function tour()
+    public function townHouses()
     {
-    	return view('frontend.3d-tour');
+    	return view('frontend.town-houses');
     }
 
     public function contacts()
     {
     	return view('frontend.contacts');
-    }
-
-    public function houseDetails($slug = "")
-    {
-    	$house = Houses::whereSlug( $slug )->first();
-    	return view('frontend.house-details', compact('house'));
     }
 }

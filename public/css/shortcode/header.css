@@ -143,7 +143,7 @@ nav#primary-menu {display: inline-block; float: right; margin-top: 53px;}
 	text-transform: uppercase;
 }
 .main-menu.text-white > li > a {color: #ffffff;}
-.main-menu > li {display: inline-block; padding-left: 35px; position: relative;}
+.main-menu > li {display: inline-block; /*padding-left: 35px;*/padding-left: 30px; position: relative;}
 .main-menu > li:first-child {padding: 0}
 
 /*--------Dropdown Style---------*/
