@@ -47,7 +47,7 @@
          <div class="col-md-12">
             <div class="section-title mb-38 mt-31">
                 <span class="opacity-text text-uppercase">ИНФРАСТРУКТУРА</span>
-                <h2 class="uppercase">Park Residence&nbsp;-&nbsp;<span class="text-color" style="text-transform: normal">это больше чем коттеджный городок, это клуб единомышленников, предпочитающих активное времяпровождение и здоровый образ жизни на лоне природы.</span></h2>
+                <h2 class="uppercase">Park Residence&nbsp;-&nbsp;<span class="text-color" style="text-transform: initial; line-height: 30px;">это больше чем коттеджный городок, это клуб единомышленников, предпочитающих активное времяпровождение и здоровый образ жизни на лоне природы.</span></h2>
             </div>
           </div>
           <div class="col-md-4">
