@@ -287,7 +287,7 @@
                 				<div class="section-title mb-38 mt-31 text-center">
                 					<span class="opacity-text text-uppercase center">Каталог</span>
                 					<h2 class="uppercase mb-25">Виллы и Таунхаусы</h2>
-                					<p class="pb-15">Park residence is the best theme for  elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed<br> do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud exercitation oris</p>
+                					<!-- <p class="pb-15">Park residence is the best theme for  elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed<br> do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud exercitation oris</p> -->
                 				</div>
                 			</div>
                 		</div>

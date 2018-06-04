@@ -1,7 +1,13 @@
 <!-- Shape Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-3">
     {!! Form::label('shape', 'Shape:') !!}
     {!! Form::text('shape', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Alias Field -->
+<div class="form-group col-sm-3">
+    {!! Form::label('alias', 'Alias:') !!}
+    {!! Form::text('alias', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Coords Field -->

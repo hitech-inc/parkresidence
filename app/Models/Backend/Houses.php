@@ -37,7 +37,8 @@ class Houses extends Model
         'img',
         'description',
         'plane',
-        'video'
+        'video',
+        'alias'
     ];
 
     /**

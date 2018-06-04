@@ -19,13 +19,13 @@
                             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                                 <div class="single-footer-widget">
                                     <h3 class="text-white text-uppercase mb-21">О park residence</h3>
-                                    <p class="pb-19">Lorem must explain to you how all this mistaolt cing pleasure and praising ain wasnad I will give you a complete pain was prexplain to you lorem</p>
-									<form action="index.html#" id="mc-form" class="mc-form fix">
+                                    <p class="pb-19">Park Residence - для тех, кто ценит личный комфорт и личное пространство, сегодня существует способ окружить себя и свою семью спокойствием и достойным обществом. Жизнь за городом, это тот случай, когда место обитания человека, в буквальном смысле слова, отражает высоту его положения. Нужно лишь выбрать, где жить!</p>
+									<!-- <form action="index.html#" id="mc-form" class="mc-form fix">
 										<div class="subscribe-form">
 											<input id="mc-email" type="email" name="email" placeholder="Ваш email">
 											<button id="mc-submit" type="submit"><i class="fa fa-send"></i></button>
 										</div>    
-									</form>
+									</form> -->
 									<!-- mailchimp-alerts Start -->
 									<div class="mailchimp-alerts text-centre fix text-small">
 										<div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
@@ -73,11 +73,13 @@
                                     <div class="footer-contact-info mb-24">
                                     	<img src="images/icons/f-phone.png" alt="">
                                     	<span class="pl-40 block">Телефон : +7 7252 953595 <br>
-                                    	Сотовый телефон : +7 701 505 0807  </span>
+                                    	Сотовый телефон : +7 701 505 0807  <br>
+                                        +7 701 9114404
+                                        </span>
                                     </div>
                                     <div class="footer-contact-info">
                                     	<img src="images/icons/f-globe.png" alt="">
-                                    	<span class="pl-40 block">Email : info@example.com<br>
+                                    	<span class="pl-40 block">Email : sales@otaugroup.kz<br>
                                     	Web : www.parkresidence.kz</span>
                                     </div>
                                 </div>

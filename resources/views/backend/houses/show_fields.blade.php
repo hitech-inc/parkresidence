@@ -46,10 +46,10 @@
     <p>{!! $houses->plane !!}</p>
 </div>
 
-<!-- Video Field -->
+<!-- Alias Field -->
 <div class="form-group">
-    {!! Form::label('video', 'Video:') !!}
-    <p>{!! $houses->video !!}</p>
+    {!! Form::label('alias', 'Alias:') !!}
+    <p>{!! $houses->alias !!}</p>
 </div>
 
 <!-- Created At Field -->

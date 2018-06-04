@@ -8,7 +8,7 @@
         <th>Img</th>
         <th>Description</th>
         <th>Plane</th>
-        <th>Video</th>
+        <th>Alias</th>
             <th colspan="3">Action</th>
         </tr>
     </thead>
@@ -22,7 +22,7 @@
             <td>{!! $houses->img !!}</td>
             <td>{!! $houses->description !!}</td>
             <td>{!! $houses->plane !!}</td>
-            <td>{!! $houses->video !!}</td>
+            <td>{!! $houses->alias !!}</td>
             <td>
                 {!! Form::open(['route' => ['backend.houses.destroy', $houses->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
