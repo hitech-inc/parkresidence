@@ -28,3 +28,13 @@ area.myhouse:hover{
   list-style: initial;
   margin-bottom: 10px;
 }
+
+div.featuresBlocks{
+  height: 80px;
+}
+
+.featuresBlocks img{
+  width: 23px;
+  height: 23px;
+  max-width: 100%;
+}

@@ -292,11 +292,12 @@
                 			</div>
                 		</div>
                 		<div class="row">
+                            @forelse($houses as $house)
                 			<div class="col-lg-4 col-md-6 col-sm-6 mb-40">
                 				<div class="single-property hover-effect-two">
                 					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
                 						<div class="title-left pull_left">
-                							<h4 class="text-white mb-12"><a href="#">Таун хаус</a></h4>
+                							<h4 class="text-white mb-12"><a href="{{ url('/house-details/' . $house->slug) }}">{{ $house->title }}</a></h4>
                 							<span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span>
                 						</div>
                 						<div class="fix pull_right">
@@ -304,7 +305,7 @@
                 						</div>
                 					</div>
                 					<div class="property-image">
-                						<a href="#" class="block dark-hover"><img src="images/properties/taunhaus1.jpg" alt="">
+                						<a href="{{ url('/house-details/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
                 							<span class="img-button text-uppercase">Узнать больше</span>
                 							<span class="p-tag bg-lemon">Продается</span>
                 						</a>
@@ -329,189 +330,8 @@
                 					</div>
                 				</div>
                 			</div>
-                			<div class="col-lg-4 col-md-6 col-sm-6 mb-40">
-                				<div class="single-property hover-effect-two">
-                					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
-                						<div class="title-left pull_left">
-                							<h4 class="text-white mb-12"><a href="#">Вилла</a></h4>
-                							<span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span>
-                						</div>
-                						<div class="fix pull_right">
-                							<h3>$62,354</h3>
-                						</div>
-                					</div>
-                					<div class="property-image">
-                						<a href="#" class="block dark-hover"><img src="images/properties/vila.jpg" alt="">
-                							<span class="img-button text-uppercase">Узнать больше</span>
-                						</a>
-                						<div class="hover-container pl-15 pr-15 pt-16 pb-15">
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/floor.png" alt="">
-                								<span>550 sqft</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/bed.png" alt="">
-                								<span>6</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/shower.png" alt="">
-                								<span>4</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/garage.png" alt="">
-                								<span>3</span>
-                							</div>
-                						</div>
-                					</div>
-                				</div>
-                			</div>
-                			<div class="col-lg-4 col-md-6 col-sm-6 mb-40">
-                				<div class="single-property hover-effect-two">
-                					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
-                						<div class="title-left pull_left">
-                							<h4 class="text-white mb-12"><a href="#">Таун хаус</a></h4>
-                							<span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span>
-                						</div>
-                						<div class="fix pull_right">
-                							<h3>$45,354</h3>
-                						</div>
-                					</div>
-                					<div class="property-image">
-                						<a href="#" class="block dark-hover"><img src="images/properties/taunhaus2.jpg" alt="">
-                							<span class="img-button text-uppercase">Узнать больше</span>
-                							<span class="p-tag bg-light-violet">Сдается</span>
-                						</a>
-                						<div class="hover-container pl-15 pr-15 pt-16 pb-15">
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/floor.png" alt="">
-                								<span>350 sqft</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/bed.png" alt="">
-                								<span>4</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/shower.png" alt="">
-                								<span>3</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/garage.png" alt="">
-                								<span>1</span>
-                							</div>
-                						</div>
-                					</div>
-                				</div>
-                			</div>
-                			<div class="col-lg-4 col-md-6 col-sm-6">
-                				<div class="single-property hover-effect-two">
-                					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
-                						<div class="title-left pull_left">
-                							<h4 class="text-white mb-12"><a href="#">Таун хаус</a></h4>
-                							<span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span>
-                						</div>
-                						<div class="fix pull_right">
-                							<h3>$78,322</h3>
-                						</div>
-                					</div>
-                					<div class="property-image">
-                						<a href="#" class="block dark-hover"><img src="images/properties/taunhaus2.jpg" alt="">
-                							<span class="img-button text-uppercase">Узнать больше</span>
-                						</a>
-                						<div class="hover-container pl-15 pr-15 pt-16 pb-15">
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/floor.png" alt="">
-                								<span>450 sqft</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/bed.png" alt="">
-                								<span>5</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/shower.png" alt="">
-                								<span>3</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/garage.png" alt="">
-                								<span>2</span>
-                							</div>
-                						</div>
-                					</div>
-                				</div>
-                			</div>
-                			<div class="col-lg-4 col-md-6 col-sm-6">
-                				<div class="single-property hover-effect-two">
-                					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
-                						<div class="title-left pull_left">
-                							<h4 class="text-white mb-12"><a href="#">Таун хаус</a></h4>
-                							<span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span>
-                						</div>
-                						<div class="fix pull_right">
-                							<h3>$22,876</h3>
-                						</div>
-                					</div>
-                					<div class="property-image">
-                						<a href="#" class="block dark-hover"><img src="images/properties/taunhaus1.jpg" alt="">
-                							<span class="img-button text-uppercase">Узнать больше</span>
-                							<span class="p-tag bg-light-violet">Сдается</span>
-                						</a>
-                						<div class="hover-container pl-15 pr-15 pt-16 pb-15">
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/floor.png" alt="">
-                								<span>550 sqft</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/bed.png" alt="">
-                								<span>6</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/shower.png" alt="">
-                								<span>4</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/garage.png" alt="">
-                								<span>3</span>
-                							</div>
-                						</div>
-                					</div>
-                				</div>
-                			</div>
-                			<div class="col-lg-4 col-md-6 col-sm-6">
-                				<div class="single-property hover-effect-two">
-                					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
-                						<div class="title-left pull_left">
-                							<h4 class="text-white mb-12"><a href="#">Таун хаус</a></h4>
-                							<span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span>
-                						</div>
-                						<div class="fix pull_right">
-                							<h3>$90,654</h3>
-                						</div>
-                					</div>
-                					<div class="property-image">
-                						<a href="#" class="block dark-hover"><img src="images/properties/taunhaus2.jpg" alt="">
-                							<span class="img-button text-uppercase">Узнать больше</span>
-                							<span class="p-tag bg-lemon">Продается</span>
-                						</a>
-                						<div class="hover-container pl-15 pr-15 pt-16 pb-15">
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/floor.png" alt="">
-                								<span>350 sqft</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/bed.png" alt="">
-                								<span>4</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/shower.png" alt="">
-                								<span>3</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/garage.png" alt="">
-                								<span>1</span>
-                							</div>
-                						</div>
-                					</div>
-                				</div>
-                			</div>
+                            @empty <h3>Нет данных</h3>
+                            @endforelse
                 		</div>
                 	</div>
                 </div>

@@ -21,7 +21,6 @@ Route::get('/', 'SiteController@index');
 Route::get('/about', 'SiteController@about');
 Route::get('/location', 'SiteController@location');
 Route::get('/infrastructure', 'SiteController@infrastructure');
-Route::get('/town-houses', 'SiteController@townHouses');
 Route::get('/contacts', 'SiteController@contacts');
 
 
@@ -44,3 +43,5 @@ Route::get('backend/houses/{houses}/edit', ['as'=> 'backend.houses.edit', 'uses'
 
 // Houses-details page
 Route::get('house-details/{slug?}', 'HousesController@houses');
+Route::get('town-houses/{slug?}', 'SiteController@townHouses');
+Route::get('/villas/{slug?}', 'SiteController@villas');

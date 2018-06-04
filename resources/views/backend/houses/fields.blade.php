@@ -29,10 +29,28 @@
 </div>
 
 <!-- Img Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-3">
     {!! Form::label('img', 'Img:') !!}
     {!! Form::file('img') !!}
 </div>
+<!-- Small_Img Field -->
+<div class="form-group col-sm-3">
+    {!! Form::label('small_img', 'Small_img:') !!}
+    {!! Form::file('small_img') !!}
+</div>
+
+<!-- Plane Field -->
+<div class="form-group col-sm-3">
+    {!! Form::label('plane', 'Plane:') !!}
+    {!! Form::file('plane') !!}
+</div>
+
+<!-- Video Field -->
+<div class="form-group col-sm-3">
+    {!! Form::label('video', 'Video:') !!}
+    {!! Form::file('video') !!}
+</div>
+
 <div class="clearfix"></div>
 
 <!-- Description Field -->
@@ -41,17 +59,6 @@
     {!! Form::textarea('description', null, ['class' => 'form-control ckeditor']) !!}
 </div>
 
-<!-- Plane Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('plane', 'Plane:') !!}
-    {!! Form::file('plane') !!}
-</div>
-
-<!-- Video Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('video', 'Video:') !!}
-    {!! Form::file('video') !!}
-</div>
 <div class="clearfix"></div>
 
 <!-- Submit Field -->

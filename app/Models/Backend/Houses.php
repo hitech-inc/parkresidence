@@ -35,6 +35,7 @@ class Houses extends Model
         'title',
         'slug',
         'img',
+        'small_img',
         'description',
         'plane',
         'video',
@@ -52,6 +53,7 @@ class Houses extends Model
         'title' => 'string',
         'slug' => 'string',
         'img' => 'string',
+        'small_img' => 'string',
         'description' => 'string',
         'plane' => 'string',
         'video' => 'string'

@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2 col-xs-12">
-				<div class="logo"><a href="index.html"><img src="/images/logo/logo3.1.png" alt="DomInno"></a></div>
+				<div class="logo"><a href="/"><img src="/images/logo/logo3.1.png" alt="DomInno"></a></div>
 			</div>
 			<div class="col-md-10 hidden-sm hidden-xs">
 				<div class="pull_right">
@@ -17,13 +17,10 @@
 							<li><a href="/location">Расположение</a>
 
 							</li>
-							<li><a href="/infrastructure">Инфраструктура</a>
-
-							</li>
 							<li class="mega-parent"><a href="/town-houses">Таунхаусы</a>
 
 							</li>
-							<li class="mega-parent"><a href="/town-houses">Виллы</a>
+							<li class="mega-parent"><a href="/villas">Виллы</a>
 
 							</li>
 

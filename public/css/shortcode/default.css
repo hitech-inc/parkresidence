@@ -1195,7 +1195,7 @@ textarea:focus {
 }
 .banner-2 {
 	/*background: rgba(0, 0, 0, 0) url("../../images/banner/2.jpg") no-repeat scroll 106% 48%;*/
-  background: rgba(0, 0, 0, 0) url("../../images/banner/banner2.jpg") no-repeat scroll 108% 48%;
+  /*background: rgba(0, 0, 0, 0) url("../../images/banner/banner2.jpg") no-repeat scroll 108% 48%;*/
 }
 .banner-3 {
 	background: rgba(0, 0, 0, 0) url("../../images/banner/3.png") no-repeat scroll 0% 48%;

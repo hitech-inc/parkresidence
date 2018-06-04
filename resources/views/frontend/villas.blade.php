@@ -28,12 +28,12 @@
 <div class="property-area ptb-120 property-page" style="padding-top: 50px;">
 	<div class="container">
 		<div class="row">
-			@forelse($townhouses as $townhouse)
+			@forelse($villas as $villa)
 			<div class="col-lg-4 col-md-6 col-sm-6 mb-40">
 				<div class="single-property hover-effect-two">
 					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
 						<div class="title-left pull_left">
-							<h4 class="text-white mb-12"><a href="#">{{ $townhouse->title }}</a></h4>
+							<h4 class="text-white mb-12"><a href="#">{{$villa->title}}</a></h4>
 							<span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span>
 						</div>
 						<div class="fix pull_right">
@@ -41,7 +41,7 @@
 						</div>
 					</div>
 					<div class="property-image">
-						<a href="{{url('town-houses/' . $townhouse->slug)}}" class="block dark-hover"><img src="/images/houses/small_img/{{$townhouse->small_img}}" alt="">
+						<a href="{{ url('villas/' . $villa->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{$villa->small_img}}" alt="">
 							<span class="img-button text-uppercase">Узнать больше</span>
 							<span class="p-tag bg-lemon">Продается</span>
 						</a>
