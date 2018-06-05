@@ -6,7 +6,7 @@
         <title>Главная || Park residence</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+        <link rel="stylesheet" href="/css/font.css">
         <!-- favicon
         ============================================ -->		
         <!-- <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"> -->
@@ -121,9 +121,7 @@
 		========================================================= -->	
         <script src="/js/plugins.js"></script>
         
-        <!-- Main js file contents all jQuery plugins activation
-		========================================================= -->		
-        <script src="/js/main.js"></script>
+
         <!-- Начало Plugin для респонсивной адаптации карты изображения на разных дисплеях -->
         <script src="/js/imageMapResizer.min.js"></script>
         <script type="text/javascript" src="/js/jquery.maphilight.min.js"></script>
@@ -160,6 +158,8 @@
             });//End ready
         </script>
         <!-- Конец Plugin для респонсивной адаптации карты изображения на разных дисплеях -->
-        
+                <!-- Main js file contents all jQuery plugins activation
+        ========================================================= -->       
+        <script src="/js/main.js"></script>
     </body>
 </html>

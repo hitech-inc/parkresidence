@@ -1,0 +1,19 @@
+@font-face{
+  font-family: Light;
+  src: url(../fonts/DinProCondLight.otf);
+}
+
+@font-face{
+  font-family: Bold;
+  src: url(../fonts/DinProCondBold.otf);
+}
+
+@font-face{
+  font-family: Medium;
+  src: url(../fonts/DinProCondMedium.otf);
+}
+
+@font-face{
+  font-family: Cond;
+  src: url(../fonts/DinProCond.otf);
+}
