@@ -20,6 +20,7 @@ Design and Developed by: Dominno
 	09. Video Player
 	10. Mail Chimp
 	11. Testimonial Slick Carousel
+    12. Custom animations on indexpage
  
 ======================================
 [ End table content ]
@@ -317,3 +318,20 @@ $('.properties-tab-slider').owlCarousel({
 	
     
 })(jQuery);
+
+/*------------------------------------
+    12. Custom animations on indexpage 
+--------------------------------------*/
+
+$(document).ready(function() {
+    $('.special').show();
+    setTimeout(function () {
+        $('.specialbutton').css('display','block');
+    }, 300);
+    $('div.map').css('background-size','100%');
+    $('div.map').mouseover(function() {
+        $('div.map').css('background-size','105% !important');
+    });
+
+});
+

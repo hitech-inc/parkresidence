@@ -1,5 +1,4 @@
 
-
 .myhouse{
 	cursor: pointer !important;
 	opacity:0;
@@ -40,3 +39,27 @@ div.featuresBlocks{
   height: 23px;
   max-width: 100%;
 }
+
+
+/*-----------------------
+    Styles of Image Map 
+----------------------*/
+
+div.map {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  margin: 0 auto;
+  background-position: center center;
+}
+
+div.map:hover {
+  background-size: 105% !important;
+  z-index: 5555555555555555;
+}
+
+
+
+

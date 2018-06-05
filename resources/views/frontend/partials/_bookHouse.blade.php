@@ -1,4 +1,4 @@
-<div class="advertise-area bg-1 bg-overlay-1 pt-76 pb-76">
+<div class="advertise-area bg-1 bg-overlay-1 pt-76 pb-76 wow fadeInUp">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">

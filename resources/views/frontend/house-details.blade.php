@@ -36,79 +36,28 @@
 						<h5>Все дома</h5>
 					</div>  
 					<div class="row">
-						@if( 'house-details' )
-							@forelse(App\Models\Backend\Houses::getHouses() as $house)
-							<div class="col-md-6 pr-9 mb-18 col-sm-3">
-								<div class="single-property hover-effect-two">
-									<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
-										<div class="title-left">
-											<h4 class="text-white mb-12"><a href="properties-details.html">{{ $house->title }}</a></h4>
-										</div>
+						@forelse(App\Models\Backend\Houses::getHouses() as $house)
+						<div class="col-md-6 pr-9 mb-18 col-sm-3">
+							<div class="single-property hover-effect-two">
+								<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
+									<div class="title-left">
+										<h4 class="text-white mb-12"><a href="properties-details.html">{{ $house->title }}</a></h4>
 									</div>
-									<div class="property-image">
-										<a href="{{ url('/town-houses/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
-											<span class="img-button text-uppercase">Подробнее</span>
-										</a>
-									</div>
-									<div class="property-title fix pl-18 pr-18 pt-9 pb-9 bg-violet">
-										<!-- <h3>$52,354</h3> -->
-									</div>
+								</div>
+								<div class="property-image">
+									<a href="{{ url('/town-houses/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
+										<span class="img-button text-uppercase">Подробнее</span>
+									</a>
+								</div>
+								<div class="property-title fix pl-18 pr-18 pt-9 pb-9 bg-violet">
+									<!-- <h3>$52,354</h3> -->
 								</div>
 							</div>
+						</div>
 
-							@empty <h4>Нет данных</h4>
+						@empty <h4>Нет данных</h4>
 
-							@endforelse
-			
-						@elseif( $currentURL == 'villas' )
-							@forelse($villas as $house)
-							<div class="col-md-6 pr-9 mb-18 col-sm-3">
-								<div class="single-property hover-effect-two">
-									<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
-										<div class="title-left">
-											<h4 class="text-white mb-12"><a href="properties-details.html">{{ $house->title }}</a></h4>
-										</div>
-									</div>
-									<div class="property-image">
-										<a href="{{ url('/town-houses/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
-											<span class="img-button text-uppercase">Подробнее</span>
-										</a>
-									</div>
-									<div class="property-title fix pl-18 pr-18 pt-9 pb-9 bg-violet">
-										<!-- <h3>$52,354</h3> -->
-									</div>
-								</div>
-							</div>
-
-							@empty <h4>Нет данных</h4>
-
-							@endforelse
-
-							@elseif($currentURL == 'town-house')
-								@forelse($houses as $house)
-								<div class="col-md-6 pr-9 mb-18 col-sm-3">
-									<div class="single-property hover-effect-two">
-										<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
-											<div class="title-left">
-												<h4 class="text-white mb-12"><a href="properties-details.html">{{ $house->title }}</a></h4>
-											</div>
-										</div>
-										<div class="property-image">
-											<a href="{{ url('/town-houses/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
-												<span class="img-button text-uppercase">Подробнее</span>
-											</a>
-										</div>
-										<div class="property-title fix pl-18 pr-18 pt-9 pb-9 bg-violet">
-											<!-- <h3>$52,354</h3> -->
-										</div>
-									</div>
-								</div>
-
-							@empty <h4>Нет данных</h4>
-
-							@endforelse
-
-						@endif
+						@endforelse
 					</div>
 				</div>
 				<!-- <div class="single-sidebar-widget fix">
