@@ -55,11 +55,6 @@ div.map {
   background-position: center center;
 }
 
-div.map:hover {
-  background-size: 105% !important;
-  z-index: 5555555555555555;
-}
-
 
 
 
