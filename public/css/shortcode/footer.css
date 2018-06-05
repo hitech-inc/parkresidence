@@ -6,7 +6,8 @@ NOTE: This is Footer style file. All footer related style included in this file.
 --------------------------------------*/
 .single-footer-widget {color: #c7c7c7}
 .single-footer-widget > h3 {
-	  font-family: "montserratsemi_bold";
+	  /*font-family: "montserratsemi_bold";*/
+      font-family: "Bold";
 	  font-size: 16px;
 	  font-weight: 500;
 }

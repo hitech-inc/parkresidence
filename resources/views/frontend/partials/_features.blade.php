@@ -5,7 +5,7 @@
         <div class="section-title mb-38 mt-31">
           <span class="opacity-text text-uppercase ml-9">Особенности</span>
           <h2 class="uppercase mb-24">Удивительные особенности</h2>
-          <p class="pb-20">Park residence это больше чем коттеджный городок, это клуб единомышленников, предпочитающих активное времяпровождение и здоровый образ жизни на лоне природы.</p>
+          <p class="pb-20"><strong style="font-family: Bold">Park residence</strong> это больше чем коттеджный городок, это клуб единомышленников, предпочитающих активное времяпровождение и здоровый образ жизни на лоне природы.</p>
         </div>
       </div>
     </div>

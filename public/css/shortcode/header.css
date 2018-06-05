@@ -136,8 +136,9 @@ nav#primary-menu {display: inline-block; float: right; margin-top: 53px;}
 .main-menu > li > a {
 	color: #1f223e;
 	display: block;
-	font-family: "montserratregular";
-	font-size: 16px;
+	/*font-family: "montserratregular";*/
+	font-family: "Medium";
+	font-size: 20px;
 	line-height: 16px;
 	padding: 12px 0;
 	text-transform: uppercase;

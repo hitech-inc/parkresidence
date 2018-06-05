@@ -105,8 +105,9 @@ Please do not change anything here! write in a custom.css file if required!
 }
 body {
     color: #606060;
-    font-family: 'montserratlight';
-    font-size: 14px;
+    /*font-family: 'montserratlight';*/
+    font-family: 'Light';
+    font-size: 18px;
     text-align: left;
 	line-height: 24px
 }
@@ -150,7 +151,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Raleway';
+    /*font-family: 'Raleway';*/
+    font-family: 'Bold';
     margin: 0px;
     color: #1f223e;
 	font-weight: 700
@@ -922,10 +924,11 @@ img {
 	position: relative;
 	z-index: 2;
 }
-.section-title p {margin-bottom: 0px; font-size: 14px;}
+.section-title p {margin-bottom: 0px; font-size: 20px;}
 .opacity-text {
 	color: #f4f4f4;
-	font-family: "montserratregular";
+	/*font-family: "montserratregular";*/
+  font-family: "Medium";
 	font-size: 60px;
 	left: 0;
 	letter-spacing: 4px;
