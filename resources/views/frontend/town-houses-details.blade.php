@@ -23,7 +23,7 @@
 				<div class="padding">
 					<ol class="breadcrumb"> 
 						<li><a href="/">Главная</a></li> 
-						<li>Детали дома</li> 
+						<li><a href="/town-houses">Таунхаусы</a></li> 
 						<li class="active">{{ $house->title }}</li>
 					</ol> 
 				</div>    
@@ -34,7 +34,7 @@
 <!-- End breadcrumbs -->
 
 <!--Start of Featured Property Area-->
-<div class="property-area ptb-120">
+<div class="property-area ptb-120" style="padding-top: 50px;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
@@ -51,10 +51,10 @@
 			<div class="col-md-4 pl-35">
 				<div class="single-sidebar-widget fix mb-60 hidden-sm hidden-xs">
 					<div class="sidebar-widget-title mb-32">
-						<h5>Все дома</h5>
+						<h5>Все таунхаусы</h5>
 					</div>  
 					<div class="row">
-						@forelse(App\Models\Backend\Houses::getHouses() as $house)
+						@forelse($houses as $house)
 						<div class="col-md-6 pr-9 mb-18 col-sm-3">
 							<div class="single-property hover-effect-two">
 								<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
@@ -63,7 +63,7 @@
 									</div>
 								</div>
 								<div class="property-image">
-									<a href="{{ url('/house-details/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
+									<a href="{{ url('/town-houses/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
 										<span class="img-button text-uppercase">Подробнее</span>
 									</a>
 								</div>

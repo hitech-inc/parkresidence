@@ -39,11 +39,11 @@ class SiteController extends Controller
 
         else
         {
-            $currentURL = \Request::segment(1);
+            // $currentURL = \Request::segment(1);
             $house = Houses::whereSlug($slug)->first();
-            $townHouses = Houses::where('alias', 'town-houses')->get();
+            $houses = Houses::where('alias', 'town-houses')->get();
             //dd($currentURL);
-            return view('frontend.house-details', compact('house', 'townHouses', 'currentURL'));
+            return view('frontend.town-houses-details', compact('house', 'houses'));
         }
     }
 
@@ -57,11 +57,11 @@ class SiteController extends Controller
         }
         else 
         {
-            $currentURL = \Request::segment(1);
+            // $currentURL = \Request::segment(1);
             $house = Houses::whereSlug($slug)->first();
-            $villas = Houses::where('alias', 'villas')->get();
+            $houses = Houses::where('alias', 'villas')->get();
 
-            return view('frontend.house-details', compact('house', 'villas', 'currentURL'));
+            return view('frontend.villas-details', compact('house', 'houses'));
         }
     }
 

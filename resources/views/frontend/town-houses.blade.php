@@ -24,6 +24,23 @@
 </div>
 <!--End of Background Area-->
 
+<!-- Start breadcrumps -->
+<div class="shortcode-area pt-100 pb-120" style="padding: 20px 0">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">   
+				<div class="padding">
+					<ol class="breadcrumb"> 
+						<li><a href="/">Главная</a></li> 
+						<li class="active">Таунхаусы</li>
+					</ol> 
+				</div>    
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End breadcrumbs -->
+
 <!--Start of Cottages Area-->
 <div class="property-area ptb-120 property-page" style="padding-top: 50px;">
 	<div class="container">
