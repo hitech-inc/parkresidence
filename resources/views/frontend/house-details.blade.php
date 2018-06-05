@@ -20,7 +20,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-				
+				<h3 style="padding-bottom: 35px;">{{ $house->title }}</h3>
 				<div class="property-image mb-57">
 					<img src="{{ '/images/houses/house-details/' . $house->img }}" alt="">
 				</div>
