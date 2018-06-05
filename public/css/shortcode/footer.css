@@ -8,15 +8,15 @@ NOTE: This is Footer style file. All footer related style included in this file.
 .single-footer-widget > h3 {
 	  /*font-family: "montserratsemi_bold";*/
       font-family: "Bold";
-	  font-size: 16px;
+	  font-size: 2rem;
 	  font-weight: 500;
 }
-.single-footer-widget p {font-size: 14px;}
+.single-footer-widget p {font-size: 2rem;}
 .single-footer-widget > span i {font-size: 18px; width: 30px;}
 .footer-list a:hover {color: #95c41f}
 .footer-list a {
 	color: #c7c7c7;
-	font-size: 16px;
+	font-size: 2rem;
 	line-height: 33px;
 }
 .footer-logo {/*margin-top: -116px;*/ text-align: center;}
@@ -67,7 +67,7 @@ NOTE: This is Footer style file. All footer related style included in this file.
 .footer-contact-info {position: relative; font-size: 16px;}
 .footer-text {
 	font-family: "montserratlight";
-	line-height: 14px;
+	line-height: 2rem;
 	color: #b9b9b9;
 	font-size: 13px;
 }

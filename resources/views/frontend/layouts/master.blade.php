@@ -14,6 +14,7 @@
         <!-- Google Fonts
         ============================================ -->		
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800" rel="stylesheet"> 
+        <link rel="stylesheet" href="/css/fonts.css">
         
         <!-- All css files are included here
         ============================================ -->    

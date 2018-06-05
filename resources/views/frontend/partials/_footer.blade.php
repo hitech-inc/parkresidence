@@ -3,7 +3,7 @@
                         <div class="row">
                         <div class="col-md-12">
                         	<div class="footer-logo">
-                        		<a href="index.html"><img src="images/logo/logo3F1.png" alt=""></a>
+                        		<a href="/"><img src="images/logo/logo3F1.png" alt=""></a>
                         	</div>
                         </div>
                         	<div class="col-md-12">
@@ -16,7 +16,7 @@
                         	</div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                 <div class="single-footer-widget">
                                     <h3 class="text-white text-uppercase mb-21">О park residence</h3>
                                     <p class="pb-19">Park Residence - для тех, кто ценит личный комфорт и личное пространство, сегодня существует способ окружить себя и свою семью спокойствием и достойным обществом. Жизнь за городом, это тот случай, когда место обитания человека, в буквальном смысле слова, отражает высоту его положения. Нужно лишь выбрать, где жить!</p>
@@ -35,20 +35,7 @@
 									<!-- mailchimp-alerts end -->
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-sm-4 pl-80 col-xs-12">
-                                <div class="single-footer-widget">
-                                    <h3 class="text-white text-uppercase mb-28">Последние новости</h3>
-                                    <div class="footer-widget-content">
-										<h5 class="mb-8">Таун хаус</h5>
-										<span class="mb-27 block">Lorem ipsum dolor sit amet, tur<br>acinglit sed do eius </span>
-                                	</div>
-                                    <div class="footer-widget-content">
-										<h5 class="mb-8">Таун хаус</h5>
-										<span>Lorem ipsum dolor sit amet, tur<br>acinglit sed do eius </span>
-                                	</div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 hidden-md hidden-sm pl-80 col-xs-12">
+                            <div class="col-lg-2 hidden-md hidden-sm pl-80 col-xs-12 col-md-offset-2 col-lg-offset-2" style="padding-left: 0">
                                 <div class="single-footer-widget">
                                     <h3 class="text-white text-uppercase mb-17">Быстрые ссылки</h3>
                                     <ul class="footer-list">
@@ -62,7 +49,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                 <div class="single-footer-widget pull_right">
                                     <h3 class="text-white text-uppercase mb-21">Контакты</h3>
                                     <div class="footer-contact-info mb-24">
