@@ -328,10 +328,6 @@ $(document).ready(function() {
     setTimeout(function () {
         $('.specialbutton').css('display','block');
     }, 300);
-    $('div.map').css('background-size','100%');
-    $('div.map').mouseover(function() {
-        $('div.map').css('background-size','105% !important');
-    });
 
 });
 
