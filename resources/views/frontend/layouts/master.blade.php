@@ -156,6 +156,8 @@
                 data.shadowPosition = 'outside';
                 data.shadowFrom = false;
 
+                new WOW().init();
+
             });//End ready
         </script>
         <!-- Конец Plugin для респонсивной адаптации карты изображения на разных дисплеях -->
