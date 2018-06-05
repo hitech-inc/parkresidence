@@ -42,8 +42,9 @@ class SiteController extends Controller
         else
         {
             $house = Houses::whereSlug($slug)->first();
+            $houses = Houses::where('alias', 'town-houses')->get();
         
-            return view('frontend.house-details', compact('house'));
+            return view('frontend.house-details', compact('house', 'houses'));
         }
     }
 
@@ -58,7 +59,9 @@ class SiteController extends Controller
         else 
         {
             $house = Houses::whereSlug($slug)->first();
-            return view('frontend.house-details', compact('house'));
+            $houses = Houses::where('alias', 'villas')->get();
+
+            return view('frontend.house-details', compact('house', 'houses'));
         }
     }
 
