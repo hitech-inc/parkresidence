@@ -45,7 +45,7 @@
 									</div>
 								</div>
 								<div class="property-image">
-									<a href="{{ url('/town-houses/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
+									<a href="{{ url('/house-details/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
 										<span class="img-button text-uppercase">Подробнее</span>
 									</a>
 								</div>

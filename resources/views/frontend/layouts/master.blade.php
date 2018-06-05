@@ -45,7 +45,7 @@
     	<link href="index.html#" data-style="styles" rel="stylesheet">  
         
         <!-- Modernizr JS -->
-        <script src="/js/vendor/modernizr-2.8.3.min.js"></script> 
+        <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
 
         <!-- <link rel="shortcut icon" href="{{ asset('images/icons/favicon.png') }}" type="image/png"> -->   
     </head>  
@@ -160,7 +160,28 @@
         </script>
         <!-- Конец Plugin для респонсивной адаптации карты изображения на разных дисплеях -->
                 <!-- Main js file contents all jQuery plugins activation
+
         ========================================================= -->       
         <script src="/js/main.js"></script>
+        <!-- google map api -->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC2oz2oxzEiJyNIgde7-Ef30-EthG6Oac&callback=initMap"
+  type="text/javascript"></script> 
+       <!-- google map init -->
+        <script>
+            function initMap() {
+                var coordinates = {lat: 42.38294, lng: 69.590929};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 14,
+                      center: coordinates,
+                      mapTypeId: 'satellite'
+                    });
+                var marker = new google.maps.Marker({
+                    position: coordinates,
+                    map: map,
+                    animation: google.maps.Animation.BOUNCE
+                    });
+                }
+
+        </script>
     </body>
 </html>

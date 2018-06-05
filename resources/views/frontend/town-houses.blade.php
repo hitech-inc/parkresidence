@@ -36,9 +36,9 @@
 							<h4 class="text-white mb-12"><a href="#">{{ $townhouse->title }}</a></h4>
 							<span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span>
 						</div>
-						<div class="fix pull_right">
+						<!-- <div class="fix pull_right">
 							<h3>$52,354</h3>
-						</div>
+						</div> -->
 					</div>
 					<div class="property-image">
 						<a href="{{url('town-houses/' . $townhouse->slug)}}" class="block dark-hover"><img src="/images/houses/small_img/{{$townhouse->small_img}}" alt="">

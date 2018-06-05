@@ -41,7 +41,8 @@
 				<!--Start of Map Section-->
 				<div id="contacts" class="map-area">
 					<!-- <div id="googleMap" style="width:100%;height:485px;filter: grayscale(100%);-webkit-filter: grayscale(100%);"></div> -->
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.5628750930864!2d69.59883461488101!3d42.330521344960104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a91c3cce2e87ff%3A0xd494d40baeff77ce!2z0YPQu9C40YbQsCDQnNCw0LTQtdC70Lgg0JrQvtC20LAgNDgsINCo0YvQvNC60LXQvdGC!5e0!3m2!1sru!2skz!4v1527160230145" width="100%" height="485" frameborder="0" style="border:0; filter: grayscale(100%);-webkit-filter: grayscale(100%);" allowfullscreen></iframe>
+					<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4895.27257631729!2d69.58868927840562!3d42.38246798611687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDIyJzU4LjYiTiA2OcKwMzUnMjYuOSJF!5e1!3m2!1sru!2skz!4v1528192267461" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+					<div id="map" style="width: 100%; height: 475px;"></div>
 					<!--End of Map Section-->
 				</div>
 				<div class="contact-information">
