@@ -34,7 +34,7 @@
 <!-- End breadcrumbs -->
 
 <!--Start of Featured Property Area-->
-<div class="property-area ptb-120">
+<div class="property-area ptb-120" style="padding-top: 50px;s">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
