@@ -11,8 +11,11 @@ class SiteController extends Controller
     //
     public function index()
     {
-    	$houses = Houses::getHouses();
-    	return view('frontend.index', compact('houses'));    	
+
+        $houses = Houses::getHouses();
+        //$houses = Houses::where('alias', 'town-houses')->get();
+
+        return view('frontend.index', compact('houses'));   	
     }
 
     public function about()
@@ -23,11 +26,6 @@ class SiteController extends Controller
     public function location()
     {
     	return view('frontend.location');
-    }
-
-    public function infrastructure()
-    {
-    	return view('frontend.infrastructure');
     }
 
     public function townHouses($slug = "")
@@ -41,10 +39,11 @@ class SiteController extends Controller
 
         else
         {
+            $currentURL = \Request::segment(1);
             $house = Houses::whereSlug($slug)->first();
-            $houses = Houses::where('alias', 'town-houses')->get();
-        
-            return view('frontend.house-details', compact('house', 'houses'));
+            $townHouses = Houses::where('alias', 'town-houses')->get();
+            //dd($currentURL);
+            return view('frontend.house-details', compact('house', 'townHouses', 'currentURL'));
         }
     }
 
@@ -58,10 +57,11 @@ class SiteController extends Controller
         }
         else 
         {
+            $currentURL = \Request::segment(1);
             $house = Houses::whereSlug($slug)->first();
-            $houses = Houses::where('alias', 'villas')->get();
+            $villas = Houses::where('alias', 'villas')->get();
 
-            return view('frontend.house-details', compact('house', 'houses'));
+            return view('frontend.house-details', compact('house', 'villas', 'currentURL'));
         }
     }
 

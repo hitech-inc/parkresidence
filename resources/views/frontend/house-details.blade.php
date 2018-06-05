@@ -31,123 +31,84 @@
 				
 			</div>
 			<div class="col-md-4 pl-35">
-				<!-- <div class="single-sidebar-widget fix mb-40">
-					<div class="sidebar-widget-title mb-30">
-						<h5>Search for Property</h5>
-					</div> 
-					<form action="properties-details.html#" class="">
-						<div class="form-box mb-18 pr-10">
-							<div class="select">
-								<select name="location">
-									<option>Location</option>
-									<option>Dhaka</option>
-									<option>Shylet</option>
-									<option>Khulna</option>
-									<option>Barishal</option>
-									<option>Chittagong</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-box mb-18 pl-10">
-							<div class="select">
-								<select name="sub-location">
-									<option>Sub - Location</option>
-									<option>Dhaka</option>
-									<option>Shylet</option>
-									<option>Khulna</option>
-									<option>Barishal</option>
-									<option>Chittagong</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-box mb-18 pr-10">
-							<div class="select">
-								<select name="min-sqft">
-									<option>Min area (sqft)</option>
-									<option>Dhaka</option>
-									<option>Shylet</option>
-									<option>Khulna</option>
-									<option>Barishal</option>
-									<option>Chittagong</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-box mb-400 pl-10">
-							<div class="select">
-								<select name="max-sqft">
-									<option>Max area (sqft)</option>
-									<option>Dhaka</option>
-									<option>Shylet</option>
-									<option>Khulna</option>
-									<option>Barishal</option>
-									<option>Chittagong</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-box pr-10">
-							<div class="select">
-								<select name="bedrooms">
-									<option>No of Bedroom</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-box pl-10">
-							<div class="select">
-								<select name="bedrooms">
-									<option>No of Bathroom</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-box large mt-8">
-							<div class="price_filter">
-								<div class="price_slider_amount mb-20">
-									<div class="slider-values">
-										<span>Price Range</span>
-										<input type="text" class="amount" name="price"  placeholder="Add Your Price" /> 
-									</div>
-								</div>
-								<div class="slider-range"></div>
-							</div>
-							<button name="search_price" type="button" class="button search_price lemon mt-36"><span><span>SEARCH PROPERTY</span></span></button>
-						</div>
-					</form>
-				</div> -->
 				<div class="single-sidebar-widget fix mb-60 hidden-sm hidden-xs">
 					<div class="sidebar-widget-title mb-32">
 						<h5>Все дома</h5>
 					</div>  
 					<div class="row">
-						@forelse($houses as $house)
-						<div class="col-md-6 pr-9 mb-18 col-sm-3">
-							<div class="single-property hover-effect-two">
-								<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
-									<div class="title-left">
-										<h4 class="text-white mb-12"><a href="properties-details.html">{{ $house->title }}</a></h4>
+						@if( 'house-details' )
+							@forelse(App\Models\Backend\Houses::getHouses() as $house)
+							<div class="col-md-6 pr-9 mb-18 col-sm-3">
+								<div class="single-property hover-effect-two">
+									<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
+										<div class="title-left">
+											<h4 class="text-white mb-12"><a href="properties-details.html">{{ $house->title }}</a></h4>
+										</div>
+									</div>
+									<div class="property-image">
+										<a href="{{ url('/town-houses/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
+											<span class="img-button text-uppercase">Подробнее</span>
+										</a>
+									</div>
+									<div class="property-title fix pl-18 pr-18 pt-9 pb-9 bg-violet">
+										<!-- <h3>$52,354</h3> -->
 									</div>
 								</div>
-								<div class="property-image">
-									<a href="{{ url('/town-houses/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
-										<span class="img-button text-uppercase">Подробнее</span>
-									</a>
-								</div>
-								<div class="property-title fix pl-18 pr-18 pt-9 pb-9 bg-violet">
-									<!-- <h3>$52,354</h3> -->
+							</div>
+
+							@empty <h4>Нет данных</h4>
+
+							@endforelse
+			
+						@elseif( $currentURL == 'villas' )
+							@forelse($villas as $house)
+							<div class="col-md-6 pr-9 mb-18 col-sm-3">
+								<div class="single-property hover-effect-two">
+									<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
+										<div class="title-left">
+											<h4 class="text-white mb-12"><a href="properties-details.html">{{ $house->title }}</a></h4>
+										</div>
+									</div>
+									<div class="property-image">
+										<a href="{{ url('/town-houses/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
+											<span class="img-button text-uppercase">Подробнее</span>
+										</a>
+									</div>
+									<div class="property-title fix pl-18 pr-18 pt-9 pb-9 bg-violet">
+										<!-- <h3>$52,354</h3> -->
+									</div>
 								</div>
 							</div>
-						</div>
 
-						@empty <h4>Нет данных</h4>
+							@empty <h4>Нет данных</h4>
 
-						@endforelse
+							@endforelse
+
+							@elseif($currentURL == 'town-house')
+								@forelse($houses as $house)
+								<div class="col-md-6 pr-9 mb-18 col-sm-3">
+									<div class="single-property hover-effect-two">
+										<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
+											<div class="title-left">
+												<h4 class="text-white mb-12"><a href="properties-details.html">{{ $house->title }}</a></h4>
+											</div>
+										</div>
+										<div class="property-image">
+											<a href="{{ url('/town-houses/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
+												<span class="img-button text-uppercase">Подробнее</span>
+											</a>
+										</div>
+										<div class="property-title fix pl-18 pr-18 pt-9 pb-9 bg-violet">
+											<!-- <h3>$52,354</h3> -->
+										</div>
+									</div>
+								</div>
+
+							@empty <h4>Нет данных</h4>
+
+							@endforelse
+
+						@endif
 					</div>
 				</div>
 				<!-- <div class="single-sidebar-widget fix">
