@@ -54,20 +54,20 @@
                                     <h3 class="text-white text-uppercase mb-21">Контакты</h3>
                                     <div class="footer-contact-info mb-24">
                                     	<img src="images/icons/f-map.png" alt="">
-                                    	<span class="pl-40 block">ул. Мадели Кожа, 48Б<br>
+                                    	<span class="pl-40 block">ул. Мадели Кожа, 48Б
                                     	, Шымкент</span>
                                     </div>
                                     <div class="footer-contact-info mb-24">
                                     	<img src="images/icons/f-phone.png" alt="">
-                                    	<span class="pl-40 block">Телефон : +7 7252 953595 <br>
-                                    	Сотовый телефон : +7 701 505 0807  <br>
+                                    	<span class="pl-40 block">+7 7252 953595 <br>
+                                    	+7 701 505 0807  <br>
                                         +7 701 9114404
                                         </span>
                                     </div>
                                     <div class="footer-contact-info">
                                     	<img src="images/icons/f-globe.png" alt="">
-                                    	<span class="pl-40 block">Email : sales@otaugroup.kz<br>
-                                    	Web : www.parkresidence.kz</span>
+                                    	<span class="pl-40 block">sales@otaugroup.kz<br>
+                                    	www.parkresidence.kz</span>
                                     </div>
                                 </div>
                             </div>
