@@ -52,7 +52,7 @@
 							<img src="images/icons/c-map.png" alt="">
 							<div class="info-text pl-40">
 								<span class="block mb-7">Казахстан, ЮКО</span>
-								<span class="block mb-7">г.Шымкент, ул. Мадели Кожа 48Б</span>
+								<span class="block mb-7">ул. К. Тулеметова — угол ул. Утегенова</span>
 							</div>
 						</div>
 					</div>
@@ -60,8 +60,9 @@
 						<div class="contents"> 
 							<img src="images/icons/c-phone.png" alt="">
 							<div class="info-text pl-40">
-								<span class="block mb-7">Телефон : +7 7252 953595</span>
-								<span class="block mb-7">Телефон : +7 701 505 0807</span>
+								<span class="block mb-7">Телефон : +7 (7252) 95-35-95</span>
+								<span class="block mb-7">Телефон : +7 (701) 911-77-44</span>
+								<span class="block mb-7">Телефон : +7 (701) 505-08-07</span>
 							</div>
 						</div>
 					</div>
@@ -137,80 +138,45 @@
         </div>
 	@endif
 
+
 @endsection
 
-@section('script')
-<!-- google map api -->
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC2oz2oxzEiJyNIgde7-Ef30-EthG6Oac&callback=initMap"
-  type="text/javascript"></script> 
-<script>
-            var markersData = [
-                {
-                    lat: 42.38294,     // Широта
-                    lng: 69.590929,    // Долгота
-                    name: "Park residence", // Произвольное название, которое будем выводить в информационном окне
-                    address:"Адрес 1",   // Адрес, который также будем выводить в информационном окне
-                    icon: "images/icons/new/mapMarker.png"
-                },
-                {
-                    lat: 42.381042,     // Широта
-                    lng: 69.594169,    // Долгота
-                    name: "Школа Назарбаева", // Произвольное название, которое будем выводить в информационном окне
-                    address:"Адрес 1",   // Адрес, который также будем выводить в информационном окне
-                    icon: "images/icons/new/ns-map-icon.png"
-                }
-            ];
-            // initMap
-            var map;
-            function initMap() {
-                var centerLatLng = new google.maps.LatLng(42.38294, 69.590929);
-                var mapOptions = {
-                    center: centerLatLng,
-                    zoom: 15,
-                    mapTypeId: 'satellite'
-                 };
-                map = new google.maps.Map(document.getElementById("map"), mapOptions);
-                
-                // Перебираем в цикле все координата хранящиеся в markersData
-                for (var i = 0; i < markersData.length; i++){
-                    var latLng = new google.maps.LatLng(markersData[i].lat, markersData[i].lng);
-                    var name = markersData[i].name;
-                    // var address = markersData[i].address;
-                    var icon = markersData[i].icon;
-                    // Добавляем маркер
-                    addMarker(latLng, name, icon);
-                }
-            }
+@section('scripts')
 
-            //google.maps.event.addDomListener(window, "load", initMap);
-            // Функция добавления маркера
-            function addMarker(latLng, name, icon) {
-                var marker = new google.maps.Marker({
-                    position: latLng,
-                    map: map,
-                    title: name,
-                    icon: icon,
-                    animation: google.maps.Animation.BOUNCE
-                });
-            }
+<script type="text/javascript">
+  ymaps.ready(init);
+    var myMap,
+        myPlacemark;
 
-            // function initMap() {
-            //     var coordinates = {lat: 42.38294, lng: 69.590929};
-            //     var map = new google.maps.Map(document.getElementById('map'), {
-            //           zoom: 15,
-            //           center: coordinates,
-            //           mapTypeId: 'satellite'
-            //         });
+    function init(){     
+        myMap = new ymaps.Map("map", {
+            center: [42.38217392, 69.59299179],
+            zoom: 16
+        });
 
-            //     var image = 'images/icons/new/mapMarker.png';
-            //     var marker = new google.maps.Marker({
-            //         position: coordinates,
-            //         map: map,
-            //         animation: google.maps.Animation.BOUNCE,
-            //         icon: image
-            //         });
-            //     
-            // }
+        myPlacemark = new ymaps.Placemark([42.38294, 69.590929], { 
+            hintContent: 'Park Residence'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '/images/icons/new/mapMarker.svg',
+            iconImageSize: [60, 115],
+            iconImageOffset: [-30, -115]
+        });
 
-        </script>
+        myPlacemark2 = new ymaps.Placemark([42.381042, 69.594169], {
+  			hintContent: 'Назарбаев Интеллектуальная школа'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '/images/icons/new/nMarker.svg',
+            iconImageSize: [80, 80],
+            iconImageOffset: [-40, -80]
+        });
+        myMap.geoObjects.add(myPlacemark);
+        myMap.geoObjects.add(myPlacemark2);
+    }
+</script>
+
+
+
+
 @endsection

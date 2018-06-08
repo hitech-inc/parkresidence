@@ -46,7 +46,7 @@
         
         <!-- Modernizr JS -->
         <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
-
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <!-- <link rel="shortcut icon" href="{{ asset('images/icons/favicon.png') }}" type="image/png"> -->   
     </head>  
     <body>
@@ -165,6 +165,9 @@
 
         ========================================================= -->       
         <script src="/js/main.js"></script>
+       
+        @yield('scripts')
+
         <!--Start Tippy js tooltips -->
         <script src="https://unpkg.com/tippy.js@2.5.2/dist/tippy.all.min.js"></script>
         <script>
@@ -178,30 +181,8 @@
                 theme: 'parkresidence',
             });
         </script>
-        <!--End Tippy js tooltips -->
-        <!-- Image map area tooltip -->
-        <!-- <script type="text/javascript">
-            $(function() {
-                $('.map').maphilight();
-
-                $(document).on('mouseover', '.map-tile', function(e) {
-                    console.log(e);
-
-                    let coords = $(this).attr('coords');
-                    // $('#content').html(coords);
-
-                    $('#tooltip')
-                        .css('top', e.clientY)
-                        .css('left', e.clientX)
-                        .show();
-                });
-
-                $(document).on('mouseleave', '.map-tile', function() {
-                    $('#tooltip').hide();
-                });
-            });
-        </script> -->
 
         @yield('scripts')
+
     </body>
 </html>

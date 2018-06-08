@@ -31,7 +31,10 @@ NOTE: This is Slider style file. All Slider related style included in this file.
 .banner-content .text-content-wrapper.text-left {float: left}
 .banner-content .text-content, .banner-content .display-table-cell {display: table-cell; vertical-align: middle;}
 h3.title-small{font-size: 23px; font-weight: 600}
-h1.title1 {font-size: 50px; font-weight: 700;}
+h1.title1 {font-size: 30px; font-weight: 700;}
+h1.title1 span {
+	font-size: 50px;
+}
 p.sub-title {
 	font-size: 2rem;
 	line-height: 28px;
