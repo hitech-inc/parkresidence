@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Backend\Houses;
+use App\Mail\Feedback;
+use Mail;
 
 class SiteController extends Controller
 {
@@ -14,6 +16,7 @@ class SiteController extends Controller
 
         $houses = Houses::getHouses();
         //$houses = Houses::where('alias', 'town-houses')->get();
+        
 
         return view('frontend.index', compact('houses'));   	
     }
@@ -68,5 +71,25 @@ class SiteController extends Controller
     public function contacts()
     {
     	return view('frontend.contacts');
+    }
+
+    public function feedback(Request $request)
+    {
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'text' => $request->text
+        ];
+
+        $success = '
+        <div style="margin: 0 auto;">
+                      <h2 style="text-align: center; color: #000; padding: 25px;">Спасибо, Ваша заявка принята!</h2>
+                    </div>  
+        ';
+        //dd($data);
+        Mail::to(env('MAIL_TO'))->send(new Feedback($data));
+        
+        // return view('frontend.contacts');
+        return redirect('/contacts')->with('status', $success);
     }
 }

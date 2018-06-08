@@ -19,13 +19,20 @@
 <!-- Title Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('title', 'Title:') !!}
-    {!! Form::text('title', null, ['class' => 'form-control']) !!}
+    {!! Form::textarea('title', null, ['class' => 'form-control ckeditor']) !!}
+    <!-- {!! Form::text('title', null, ['class' => 'form-control']) !!} -->
 </div>
 
 <!-- Slug Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-3">
     {!! Form::label('slug', 'Slug:') !!}
     {!! Form::text('slug', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Name Field -->
+<div class="form-group col-sm-3">
+    {!! Form::label('name', 'Name:') !!}
+    {!! Form::text('name', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Img Field -->
@@ -49,6 +56,54 @@
 <div class="form-group col-sm-3">
     {!! Form::label('video', 'Video:') !!}
     {!! Form::file('video') !!}
+</div>
+
+<!-- Квадтратура Field -->
+<div class="form-group col-sm-3">
+    {!! Form::label('kvadratura', 'Квадратура:') !!}
+    {!! Form::text('kvadratura', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Участок Field -->
+<div class="form-group col-sm-3">
+    {!! Form::label('uchastok', 'Участок:') !!}
+    {!! Form::text('uchastok', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Высота потолка Field -->
+<div class="form-group col-sm-3">
+    {!! Form::label('visota_potolka', 'Высота потолка:') !!}
+    {!! Form::text('visota_potolka', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Высота потолка в гостинной Field -->
+<div class="form-group col-sm-3">
+    {!! Form::label('visota_potolka_gostinaya', 'Высота потолка в гостинной') !!}
+    {!! Form::text('visota_potolka_gostinaya', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Спальные комнаты Field -->
+<div class="form-group col-sm-3">
+    {!! Form::label('spalnie_comnati', 'Спальные комнаты') !!}
+    {!! Form::text('spalnie_comnati', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Ванные комнаты Field -->
+<div class="form-group col-sm-3">
+    {!! Form::label('vannie_comnati', 'Ванные комнаты') !!}
+    {!! Form::text('vannie_comnati', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Терраса Field -->
+<div class="form-group col-sm-3">
+    {!! Form::label('terrasa', 'Терраса') !!}
+    {!! Form::text('terrasa', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Паркинг Field -->
+<div class="form-group col-sm-3">
+    {!! Form::label('parking', 'Паркинг') !!}
+    {!! Form::text('parking', null, ['class' => 'form-control']) !!}
 </div>
 
 <div class="clearfix"></div>

@@ -42,7 +42,7 @@
 		<!-- Style Customizer CSS
 		============================================ -->
         <link rel="stylesheet" href="/css/style-customizer.css">
-    	<link href="index.html#" data-style="styles" rel="stylesheet">  
+    	<!-- <link href="index.html#" data-style="styles" rel="stylesheet">  --> 
         
         <!-- Modernizr JS -->
         <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
@@ -76,7 +76,8 @@
         </div>    
         <!--End of Main Wrapper Area--> 
        
-        
+        <!-- myscript -->
+        <script src="/js/myscript.js"></script>
         <!-- jquery latest version
 		========================================================= -->	
         <script src="/js/vendor/jquery-1.12.4.min.js"></script>
@@ -126,7 +127,6 @@
         <!-- Начало Plugin для респонсивной адаптации карты изображения на разных дисплеях -->
         <script src="/js/imageMapResizer.min.js"></script>
         <script type="text/javascript" src="/js/jquery.maphilight.min.js"></script>
-        <!-- <script src="https://unpkg.com/tippy.js@2.5.2/dist/tippy.all.min.js"></script> -->
         <script>
             $(document).ready(function() {
                 $('map').imageMapResize();
@@ -165,7 +165,48 @@
 
         ========================================================= -->       
         <script src="/js/main.js"></script>
+<<<<<<< HEAD
        
         @yield('scripts')
+=======
+        <!--Start Tippy js tooltips -->
+        <script src="https://unpkg.com/tippy.js@2.5.2/dist/tippy.all.min.js"></script>
+        <script>
+            tippy('.myHouse', {
+                delay: 100,
+                arrow: true,
+                arrowType: 'round',
+                size: 'large',
+                duration: 500,
+                animation: 'scale',
+                theme: 'parkresidence',
+            });
+        </script>
+        <!--End Tippy js tooltips -->
+        <!-- Image map area tooltip -->
+        <!-- <script type="text/javascript">
+            $(function() {
+                $('.map').maphilight();
+
+                $(document).on('mouseover', '.map-tile', function(e) {
+                    console.log(e);
+
+                    let coords = $(this).attr('coords');
+                    // $('#content').html(coords);
+
+                    $('#tooltip')
+                        .css('top', e.clientY)
+                        .css('left', e.clientX)
+                        .show();
+                });
+
+                $(document).on('mouseleave', '.map-tile', function() {
+                    $('#tooltip').hide();
+                });
+            });
+        </script> -->
+
+        @yield('script')
+>>>>>>> 48edcc76684993845925032f1c7f420cde94be6d
     </body>
 </html>

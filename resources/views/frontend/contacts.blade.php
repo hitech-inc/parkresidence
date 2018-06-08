@@ -1,6 +1,7 @@
 @extends('frontend.layouts.master')
 
 @section('content')
+
 <!--Start of Banner Area-->
 <!-- Класс bg-overlay-2 придает темный фон -->
 <div class="banner-area bg-2 ptb-165">
@@ -86,10 +87,11 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<h4 class="details-title text-center mb-43">Отправьте нам сообщение</h4>
-				<form id="contact-form" action="http://themeshub.io/preview/dominno-preview/dominno/mail.php" method="post">
+				<form action="/feedback" method="post">
+					{{ csrf_field() }}
 					<input type="text" name="name" class="mb-22" placeholder="Ваше имя">
 					<input type="text" name="email" class="mb-22" placeholder="Ваш email">
-					<textarea name="message" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+					<textarea name="text" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
 					<div class="col-10 fix text-center">
 						<button type="submit" class="button submit-btn lemon mt-35">Отправить</button>
 					</div>
@@ -100,6 +102,43 @@
 	</div>
 </div>
 <!--End of Contact Form Area-->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	@if ( Session::has('status') )
+	<!-- The Modal -->
+        <div id="myModal" class="modal" style="display: block">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span id="btnClose" class="close">&times;</span>
+            {!! Session::get('status') !!}
+            <div id="cls" style="cursor: pointer; text-align: center;"><h3>Закрыть</h3></div>
+          </div>
+
+        </div>
+	@endif
+
+
 @endsection
 
 @section('scripts')
@@ -136,5 +175,8 @@
         myMap.geoObjects.add(myPlacemark2);
     }
 </script>
+
+
+
 
 @endsection
