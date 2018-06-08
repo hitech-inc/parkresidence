@@ -47,7 +47,13 @@
         <!-- Modernizr JS -->
         <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-        <!-- <link rel="shortcut icon" href="{{ asset('images/icons/favicon.png') }}" type="image/png"> -->   
+        <!-- <link rel="shortcut icon" href="{{ asset('images/icons/favicon.png') }}" type="image/png"> -->  
+        <!-- RedConnect -->
+        <script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async"
+        src="https://web.redhelper.ru/service/main.js?c=samata"></script>
+        <div style="display: none"><a class="rc-copyright" 
+        href="http://redconnect.ru">Сервис звонка с сайта RedConnect</a></div>
+        <!--/RedConnect -->
     </head>  
     <body>
         <!--[if lt IE 8]>
