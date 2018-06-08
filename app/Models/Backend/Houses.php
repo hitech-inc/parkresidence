@@ -39,7 +39,16 @@ class Houses extends Model
         'description',
         'plane',
         'video',
-        'alias'
+        'alias',
+        'name',
+        'kvadratura',
+        'uchastok',
+        'visota_potolka',
+        'visota_potolka_gostinaya',
+        'spalnie_comnati',
+        'vannie_comnati',
+        'terrasa',
+        'parking'
     ];
 
     /**
@@ -56,7 +65,16 @@ class Houses extends Model
         'small_img' => 'string',
         'description' => 'string',
         'plane' => 'string',
-        'video' => 'string'
+        'video' => 'string',
+        'name' => 'string',
+        'kvadratura',
+        'uchastok',
+        'visota_potolka',
+        'visota_potolka_gostinaya',
+        'spalnie_comnati',
+        'vannie_comnati',
+        'terrasa',
+        'parking'
     ];
 
     /**

@@ -28,6 +28,7 @@ return array(
     'App\\Http\\Requests\\Backend\\UpdateHousesRequest' => $baseDir . '/app/Http/Requests/Backend/UpdateHousesRequest.php',
     'App\\Http\\Requests\\Create' => $baseDir . '/app/Http/Requests/Create$MODEL_NAMERequest.php',
     'App\\Http\\Requests\\Update' => $baseDir . '/app/Http/Requests/Update$MODEL_NAMERequest.php',
+    'App\\Mail\\Feedback' => $baseDir . '/app/Mail/Feedback.php',
     'App\\Models\\Backend\\Houses' => $baseDir . '/app/Models/Backend/Houses.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',

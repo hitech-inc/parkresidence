@@ -22,6 +22,7 @@ Route::get('/about', 'SiteController@about');
 Route::get('/location', 'SiteController@location');
 Route::get('/infrastructure', 'SiteController@infrastructure');
 Route::get('/contacts', 'SiteController@contacts');
+Route::post('/feedback', 'SiteController@feedback');
 
 
 Auth::routes();

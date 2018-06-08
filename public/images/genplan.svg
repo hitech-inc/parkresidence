@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X8 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="162.557mm" height="63.839mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 16256 6384"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#ED3237;stroke-width:10}
+    .fil0 {fill:none}
+    .fil1 {fill:#FFF212}
+    .fil1:hover{opacity: 0}
+   ]]>
+  </style>
+   <clipPath id="id0">
+    <path d="M0 6384l16256 0 0 -6384 -16256 0 0 6384z"/>
+   </clipPath>
+    <clipPath id="id1">
+     <path d="M0 6384l16256 0 0 -6384 -16256 0 0 6384z"/>
+    </clipPath>
+    <clipPath id="id2">
+     <path d="M0 6384l16256 0 0 -6384 -16256 0 0 6384z"/>
+    </clipPath>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g>
+  </g>
+  <g style="clip-path:url(#id0)">
+   <g>
+   </g>
+   <g style="clip-path:url(#id1)">
+    <image x="0" y="0" width="16256" height="6384" xlink:href="genplan_Images\genplan_ImgID1.png"/>
+   </g>
+   <g style="clip-path:url(#id2)">
+   </g>
+  </g>
+  <polygon class="fil0" points="0,6384 16256,6384 16256,0 0,0 "/>
+  <polygon class="fil1 str0" points="11696,4305 12600,4467 12306,4944 11272,4909 "/>
+  <polygon class="fil1 str0" points="12663,4474 13528,4613 13350,4987 12383,4949 "/>
+  <polygon class="fil1 str0" points="13735,2880 13985,2919 13985,3021 14098,3024 14017,3213 13686,3175 13685,2964 "/>
+  <polygon class="fil1 str0" points="13478,2862 13735,2880 13685,2964 13686,3175 13268,3119 13380,2928 13442,2929 "/>
+ </g>
+</svg>

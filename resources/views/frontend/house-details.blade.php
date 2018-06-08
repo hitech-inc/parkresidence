@@ -24,7 +24,7 @@
 					<ol class="breadcrumb"> 
 						<li><a href="/">Главная</a></li> 
 						<li>Детали дома</li> 
-						<li class="active">{{ $house->title }}</li>
+						<li class="active">{{ $house->name }}</li>
 					</ol> 
 				</div>    
 			</div>
@@ -38,7 +38,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-				<h3 style="padding-bottom: 35px;">{{ $house->title }}</h3>
+				<h3 style="padding-bottom: 35px;">{{ $house->name }}</h3>
 				<div class="property-image mb-57">
 					<img src="{{ '/images/houses/house-details/' . $house->img }}" alt="">
 				</div>
@@ -59,7 +59,7 @@
 							<div class="single-property hover-effect-two">
 								<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
 									<div class="title-left">
-										<h4 class="text-white mb-12"><a href="properties-details.html">{{ $house->title }}</a></h4>
+										<h4 class="text-white mb-12"><a href="properties-details.html">{{ $house->name }}</a></h4>
 									</div>
 								</div>
 								<div class="property-image">

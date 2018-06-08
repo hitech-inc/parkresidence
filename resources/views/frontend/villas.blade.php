@@ -50,7 +50,7 @@
 				<div class="single-property hover-effect-two">
 					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
 						<div class="title-left pull_left">
-							<h4 class="text-white mb-12"><a href="#">{{$villa->title}}</a></h4>
+							<h4 class="text-white mb-12"><a href="#">{{$villa->name}}</a></h4>
 							<span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span>
 						</div>
 						<div class="fix pull_right">
