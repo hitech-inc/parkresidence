@@ -109,11 +109,14 @@ div.map {
 
 .tippy-tooltip.parkresidence-theme {
   /* Your styling here. Example: */
-  background-color: yellow;
-  border: 2px solid orange;
+  background-color: rgba(99,67,52, 0.7);
+  border: 2px solid #cecece;
+  box-shadow: 1px 1px 5px 2px #cecece, 1px 1px 5px 2px #cecece inset;
   font-weight: bold;
-  color: #333;
-  font-size: 18px;
+  color: #fff;
+  font-size: 1.5rem;
+  /*width: 150px;
+  height: 250px;*/
 }
 
 
