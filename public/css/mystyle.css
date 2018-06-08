@@ -114,10 +114,42 @@ div.map {
   box-shadow: 1px 1px 5px 2px #cecece, 1px 1px 5px 2px #cecece inset;
   font-weight: bold;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   /*width: 150px;
   height: 250px;*/
 }
+
+.statusBlock{
+  background-color: rgba(99,67,52, 0.8);
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  width: 300px;
+  /*height: 150px;*/
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 20px 60px; 
+}
+
+.statusBlock p{
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  padding: 2px 40px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.statusBlock p:nth-of-type(1){
+  background-image: url(../images/icons/map-marker-0.png);
+}
+.statusBlock p:nth-of-type(2){
+  background-image: url(../images/icons/map-marker-1.png);
+}
+.statusBlock p:nth-of-type(3){
+  background-image: url(../images/icons/map-marker-2.png);
+}
+
+
 
 
 

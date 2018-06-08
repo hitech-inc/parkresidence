@@ -55,21 +55,26 @@
 	<h2 class="uppercase wow fadeInUp" style="text-align: center; padding-bottom: 40px;">НОВЫЙ СТИЛЬ ЗАГОРОДНОЙ ЖИЗНИ</h2>
     
     <!-- Include svg -->
-    <div class="map" style="width: 100%; max-width: 1920px;">
+    <div id="map-picker" class="map" style="width: 100%; max-width: 1920px;">
         <svg viewBox="0 0 1920 754" class="svgMap"> 
         @foreach( $houses as $house )
             @if($house->slug == "vila13s") 
-            <a href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}">
+            <a href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}">
                 <path d="M {{$house->coords}} Z">
             </a>
             @else
-            <a href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}">
+            <a href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}">
                 <path d="m {{$house->coords}} z">
             </a>
             @endif
         @endforeach
         </svg>
         <img src="images/genplan.jpg" alt="" class="imgMap">
+        <div class="statusBlock">
+            <p> - Строится</p>
+            <p> - Продается</p>
+            <p> - Продан</p>
+        </div>
     </div>
     <!-- End svg -->
 
@@ -156,12 +161,12 @@
                 				<div class="single-property hover-effect-two">
                 					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
                 						<div class="title-left pull_left">
-                							<h4 class="text-white mb-12"><a href="{{ url('/house-details/' . $house->slug) }}">{{ $house->title }}</a></h4>
-                							<span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span>
+                							<h4 class="text-white mb-12"><a href="{{ url('/house-details/' . $house->slug) }}">{{ $house->name }}</a></h4>
+                							<!-- <span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span> -->
                 						</div>
-                						<div class="fix pull_right">
+                						<!-- <div class="fix pull_right">
                 							<h3>$52,354</h3>
-                						</div>
+                						</div> -->
                 					</div>
                 					<div class="property-image">
                 						<a href="{{ url('/house-details/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
@@ -200,4 +205,40 @@
                 @include('frontend.partials._clients')
                 <!--End of Client area-->
               
-@endsection()                
+@endsection() 
+
+@section('scripts')
+<script>
+    $(document).ready(function() {
+        let map = $('#map-picker');
+        map.css('position', 'relative');
+
+        let markers = [];
+
+        $('.myHouse').each(function() {
+            const icon = $(this).data('icon');
+
+            const position = $(this).offset();
+            const width = this.getBoundingClientRect().width;
+            const height = this.getBoundingClientRect().height;
+
+            console.log(position, width, height);
+
+            let marker = $('<img id="area-marker">');
+            marker.attr('src', icon);
+            marker.css('position', 'absolute');
+            marker.css('top', position.top - 860 - 10);
+            marker.css('left', position.left + (width / 2) - 20);
+            marker.css('width', '32px');
+            marker.css('height', '32px');
+            marker.css('pointer-events', 'none');
+
+            marker.appendTo('#map-picker');
+
+            markers.push(marker);
+        });
+
+    });
+</script>
+
+@endsection               

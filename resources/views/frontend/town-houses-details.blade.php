@@ -24,7 +24,7 @@
 					<ol class="breadcrumb"> 
 						<li><a href="/">Главная</a></li> 
 						<li><a href="/town-houses">Таунхаусы</a></li> 
-						<li class="active">{{ $house->title }}</li>
+						<li class="active">{{ $house->name }}</li>
 					</ol> 
 				</div>    
 			</div>
@@ -38,7 +38,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-				<h3 style="padding-bottom: 35px;">{{ $house->title }}</h3>
+				<h3 style="padding-bottom: 35px;">{{ $house->name }}</h3>
 				<div class="property-image mb-57">
 					<img src="{{ '/images/houses/house-details/' . $house->img }}" alt="">
 				</div>
@@ -59,7 +59,7 @@
 							<div class="single-property hover-effect-two">
 								<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
 									<div class="title-left">
-										<h4 class="text-white mb-12"><a href="properties-details.html">{{ $house->title }}</a></h4>
+										<h4 class="text-white mb-12"><a href="properties-details.html">{{ $house->name }}</a></h4>
 									</div>
 								</div>
 								<div class="property-image">
@@ -101,15 +101,15 @@
 							<div class="bg-gray fix pl-35 pt-42 pr-35 pb-39 left-column mb-56">
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-floor.png" alt="" class="pr-8">
-									<span>Площадь 450 квм</span>
+									<span>Площадь 263 квм</span>
 								</div>
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-shower.png" alt="" class="pr-8">
-									<span>Ванна 3</span>
+									<span>Ванна 4</span>
 								</div>
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
-									<span>Паркинг</span>
+									<span>Паркинг на 2 машины</span>
 								</div>
 							</div>
 						</div>
@@ -148,14 +148,14 @@
 									<i class="fa fa-check-square-o mr-9"></i>
 									<span>Кладовая комната</span>
 								</div>
-								<div class="desc-info">
+								<!-- <div class="desc-info">
 									<i class="fa fa-check-square-o mr-9"></i>
 									<span>Посудомечная машина</span>
 								</div>
 								<div class="desc-info">
 									<i class="fa fa-check-square-o mr-9"></i>
 									<span>Тостер</span>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
