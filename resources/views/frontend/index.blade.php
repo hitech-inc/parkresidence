@@ -16,7 +16,7 @@
 							<div class="text-content-wrapper">
 								<div class="text-content text-center">
 									<h3 style="display: none;" class="title-small wow fadeInUp text-uppercase text-white mb-10 special" data-wow-duration="2000ms" data-wow-delay="0s">Впервые в Казахстане и Центральной Азии!</h3>
-									<h1 style="display: none;" class="title1 wow fadeInUp text-uppercase text-white mb-20 special" data-wow-duration="2900ms" data-wow-delay=".5s"><span class="text-color">PARK RESIDENCE</span> <br>Новый стиль загородной жизни!</h1>
+									<h1 style="display: none;" class="title1 wow fadeInUp text-uppercase text-white mb-20 special" data-wow-duration="2900ms" data-wow-delay=".5s"><span class="text-color">PARK RESIDENCE</span> <br>Новый стиль загородной жизни</h1>
 									<p style="display: none;" class="sub-title wow fadeInUp hidden-xs special" data-wow-duration="3600ms" data-wow-delay=".6s"> Уникальный клубный городок Park Residence с особой инфраструктурой, который объединяет в территорию 36 гектаров: эксклюзивные виллы и таунхаусы, собственную парковую зону, современный фитнес центр, крытые и открытые бассейны, детский сад, и ресторан изысканной кухни.</p>
 									<div class="banner-readmore  mt-37">
 										<a class="button slider-btn  wow fadeInUp specialbutton" style="display: none !important;" href="#" data-wow-duration="4100ms" data-wow-delay=".7s">Читать больше</a>	                
@@ -133,10 +133,10 @@
                 					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
                 						<div class="title-left pull_left">
                 							<h4 class="text-white mb-12"><a href="{{ url('/house-details/' . $house->slug) }}">{{ $house->title }}</a></h4>
-                							<span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span>
+                							<!-- <span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span> -->
                 						</div>
                 						<div class="fix pull_right">
-                							<h3>$52,354</h3>
+                							<!-- <h3>$52,354</h3> -->
                 						</div>
                 					</div>
                 					<div class="property-image">

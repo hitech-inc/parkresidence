@@ -45,7 +45,7 @@
                                         <li><a href="/infrastructure">Инфраструктура</a></li>
                                         <li><a href="/town-houses">Таунхаусы</a></li>
                                         <li><a href="/town-houses">Виллы</a></li>
-                                        <li><a href="/contacts">Контакты</a></li>
+                                        <li><a href="/contacts">Контакты Отдела продаж</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -59,9 +59,9 @@
                                     </div>
                                     <div class="footer-contact-info mb-24">
                                     	<img src="images/icons/f-phone.png" alt="">
-                                    	<span class="pl-40 block">+7 7252 953595 <br>
-                                    	+7 701 505 0807  <br>
-                                        +7 701 9114404
+                                    	<span class="pl-40 block">+7 (7252) 95-35-95 <br>
+                                    	+7 (701) 911-77-44<br>
+                                        +7 (701) 505-08-07
                                         </span>
                                     </div>
                                     <div class="footer-contact-info">

@@ -148,14 +148,14 @@
 									<i class="fa fa-check-square-o mr-9"></i>
 									<span>Кладовая комната</span>
 								</div>
-								<div class="desc-info">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Посудомечная машина</span>
-								</div>
-								<div class="desc-info">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Тостер</span>
-								</div>
+<!-- 								<div class="desc-info">
+	<i class="fa fa-check-square-o mr-9"></i>
+	<span>Посудомечная машина</span>
+</div>
+<div class="desc-info">
+	<i class="fa fa-check-square-o mr-9"></i>
+	<span>Тостер</span>
+</div> -->
 							</div>
 						</div>
 					</div>
