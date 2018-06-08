@@ -200,4 +200,4 @@
                 @include('frontend.partials._clients')
                 <!--End of Client area-->
               
-@endsection()                
+@endsection                

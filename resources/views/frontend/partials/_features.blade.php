@@ -3,13 +3,9 @@
     <div class="row">
       <div class="col-md-12">
         <div class="section-title mb-38 mt-31">
-<<<<<<< HEAD
-          <span class="opacity-text text-uppercase ml-9 wow fadeIn">Infrastructure</span>
-          <h2 class="uppercase mb-24 wow fadeInLeft">Инфрастуктура</h2>
-=======
+
           <span class="opacity-text text-uppercase ml-9 wow fadeIn">Инфраструктура</span>
           <h2 class="uppercase mb-24 wow fadeInLeft">Инфраструктура</h2>
->>>>>>> 48edcc76684993845925032f1c7f420cde94be6d
           <p class="pb-20 wow fadeInLeft"><strong style="font-family: Bold">Park residence</strong> это больше чем коттеджный городок, это клуб единомышленников, предпочитающих активное времяпровождение и здоровый образ жизни на лоне природы.</p>
         </div>
       </div>
