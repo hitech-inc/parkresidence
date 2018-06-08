@@ -49,6 +49,7 @@
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <!-- <link rel="shortcut icon" href="{{ asset('images/icons/favicon.png') }}" type="image/png"> -->  
         <!-- RedConnect -->
+        <!-- RedConnect -->
         <script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async"
         src="https://web.redhelper.ru/service/main.js?c=samata"></script>
         <div style="display: none"><a class="rc-copyright" 
