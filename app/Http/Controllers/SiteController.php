@@ -15,10 +15,9 @@ class SiteController extends Controller
     {
 
         $houses = Houses::getHouses();
-        //$houses = Houses::where('alias', 'town-houses')->get();
+        $housesTake = Houses::take(7)->get();
         
-
-        return view('frontend.index', compact('houses'));   	
+        return view('frontend.index', compact('houses', 'housesTake'));   	
     }
 
     public function about()
@@ -35,7 +34,7 @@ class SiteController extends Controller
     {
         if (!$slug)
         {
-            $townhouses = Houses::where('alias', 'town-houses')->get();
+            $townhouses = Houses::where('alias', 'town-houses')->paginate(9);
         
             return view('frontend.town-houses', compact('townhouses'));
         }

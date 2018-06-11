@@ -51,7 +51,7 @@
 					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
 						<div class="title-left pull_left">
 
-							<h4 class="text-white mb-12"><a href="#">{{ $townhouse->title }}</a></h4>
+							<h4 class="text-white mb-12"><a href="#">{{ $townhouse->name }}</a></h4>
 							<!-- <span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span> -->
 
 						</div>
@@ -87,6 +87,8 @@
 			</div>
 			@empty <h3>Нет данных</h3>
 			@endforelse
+
+			{{ $townhouses->links() }}
 			<div class="col-md-12">
 				<div class="pagination-content text-center block">
 					<ul class="pagination fix mt-40 mb-0">

@@ -156,7 +156,7 @@
                 			</div>
                 		</div>
                 		<div class="row">
-                            @forelse($houses as $house)
+                            @forelse($housesTake as $house)
                 			<div class="col-lg-4 col-md-6 col-sm-6 mb-40 wow fadeInUp" data-wow-offset="300"  @if($loop->iteration % 3 == 2) data-wow-duration="2s" @endif @if($loop->iteration % 3 == 1) data-wow-duration="2.3s" @endif @if($loop->iteration % 3 == 0) data-wow-duration="1.8s" @endif>
                 				<div class="single-property hover-effect-two">
                 					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
