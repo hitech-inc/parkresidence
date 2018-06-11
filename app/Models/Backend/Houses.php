@@ -30,7 +30,7 @@ class Houses extends Model
 
 
     public $fillable = [
-        'shape',
+        'status',
         'coords',
         'title',
         'slug',
@@ -57,7 +57,7 @@ class Houses extends Model
      * @var array
      */
     protected $casts = [
-        'shape' => 'string',
+        'status' => 'string',
         'coords' => 'string',
         'title' => 'string',
         'slug' => 'string',

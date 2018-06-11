@@ -134,9 +134,9 @@ div.map {
 .statusBlock p{
   background-repeat: no-repeat;
   background-size: 30px 30px;
-  padding: 2px 40px;
+  padding: 2px 30px;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1em;
 }
 
 .statusBlock p:nth-of-type(1){
@@ -152,6 +152,18 @@ div.map {
 .housesSidebar{
   height: 500px; 
   overflow: auto;  
+}
+
+ul.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus{
+  /*background-color: #f5f5f5 ;*/
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+ul.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus{
+  background-color: #95c41f;
+  border-color: #ddd;
 }
 
 

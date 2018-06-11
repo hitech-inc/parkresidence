@@ -1,7 +1,7 @@
 <!-- Shape Field -->
 <div class="form-group col-sm-3">
-    {!! Form::label('shape', 'Shape:') !!}
-    {!! Form::text('shape', null, ['class' => 'form-control']) !!}
+    {!! Form::label('status', 'Status:') !!}
+    {!! Form::text('status', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Alias Field -->

@@ -87,11 +87,11 @@
 			</div>
 			@empty <h3>Нет данных</h3>
 			@endforelse
-
-			{{ $townhouses->links() }}
+			<!-- Пагинация, links() это специальный метод пагинации -->
 			<div class="col-md-12">
 				<div class="pagination-content text-center block">
 					<ul class="pagination fix mt-40 mb-0">
+						{{ $townhouses->links() }}
 						<li><a href="#"><i class="zmdi zmdi-long-arrow-left"></i></a></li>
 						<li><a href="#">1</a></li>
 						<li><a href="#">2</a></li>

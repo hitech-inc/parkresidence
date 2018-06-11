@@ -227,8 +227,8 @@
             let marker = $('<img id="area-marker">');
             marker.attr('src', icon);
             marker.css('position', 'absolute');
-            marker.css('top', position.top - 860 - 10);
-            marker.css('left', position.left + (width / 2) - 20);
+            marker.css('top', position.top - 875);
+            marker.css('left', position.left + (width / 2) - 15);
             marker.css('width', '32px');
             marker.css('height', '32px');
             marker.css('pointer-events', 'none');

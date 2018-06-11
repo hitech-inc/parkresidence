@@ -1,19 +1,19 @@
 @font-face{
   font-family: Light;
-  src: url(../fonts/DinProCondLight.otf);
+  src: url(../fonts/RobotoLight.ttf) format('truetype');
 }
 
 @font-face{
   font-family: Bold;
-  src: url(../fonts/DinProCondBold.otf);
+  src: url(../fonts/RobotoBold.ttf) format('truetype');
 }
 
 @font-face{
   font-family: Medium;
-  src: url(../fonts/DinProCondMedium.otf);
+  src: url(../fonts/RobotoMedium.ttf) format('truetype');
 }
 
 @font-face{
   font-family: Cond;
-  src: url(../fonts/DinProCond.otf);
+  src: url(../fonts/RobotoRegular.ttf) format('truetype');
 }
