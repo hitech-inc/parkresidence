@@ -78,18 +78,6 @@
 						@endforelse
 					</div>
 				</div>
-				<!-- <div class="single-sidebar-widget fix">
-					<div class="sidebar-widget-title mb-32">
-						<h5>Tags</h5>
-					</div>    
-					<ul class="tags">
-						<li><a href="properties-details.html" class="mb-15 mr-7">Real Estate</a></li>
-						<li><a href="index.html" class="mb-15 ml-7 mr-7">Home</a></li>
-						<li><a href="properties-details.html" class="mb-15 ml-7">Appartment</a></li>
-						<li><a href="properties-details.html" class="mb-15 mr-7">Duplex Villa</a></li>
-						<li><a href="properties-details.html" class="mb-15 ml-7">Buy Property</a></li>
-					</ul>
-				</div> -->
 			</div>
 		</div>
 		<div class="row">
@@ -104,12 +92,32 @@
 									<span>Площадь 263 квм</span>
 								</div>
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
+									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
+									<span>Участок 8.5 соток</span>
+								</div>
+								<div class="desc-info mb-37" style="float: initial; width: 100%">
+									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
+									<span>Высота потолка 3.4 метра</span>
+								</div>
+								<div class="desc-info mb-37" style="float: initial; width: 100%">
+									<img src="/images/icons/g-bed.png" alt="" class="pr-8">
+									<span>Спальные комнаты 4</span>
+								</div>
+								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-shower.png" alt="" class="pr-8">
-									<span>Ванна 4</span>
+									<span>Ванные комнаты 4</span>
+								</div>
+								<div class="desc-info mb-37" style="float: initial; width: 100%">
+									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
+									<span>Терраса 1</span>
 								</div>
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
 									<span>Паркинг на 2 машины</span>
+								</div>
+								<div class="desc-info mb-37" style="float: initial; width: 100%">
+									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
+									<span>Зона барбекю</span>
 								</div>
 							</div>
 						</div>
@@ -150,21 +158,29 @@
 								</div>
 							</div>
 						</div>
+						<div class="row">	
+							<div class="col-6 pl-15">
+								<h4 class="details-title mb-37">Поэтажный план</h4>
+								<div class="desc-images">
+									<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-4 pl-15">
 							<h4 class="details-title mb-37">Поэтажный план</h4>
 							<div class="desc-images">
 								<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">
 							</div>
 						</div>
-						<!-- <div class="col-6 pr-15">
+						<div class="col-6 pr-15">
 							<h4 class="details-title mb-37">Видео презинтация</h4>
 							<div class="desc-video">
 								<iframe src="https://player.vimeo.com/video/63953556?title=0&byline=0&portrait=0" width="475" height="267"></iframe>
 							</div>
-						</div> -->
-					</div>
+						</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

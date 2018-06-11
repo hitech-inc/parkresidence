@@ -12,9 +12,9 @@
 						<div class="text-content text-center">
 							<h3 class="title-small text-uppercase text-brown mb-30"><span class="tlt" data-in-effect="fadeInLeftBig" data-out-effect="fadeOutRight">Найдите дом своей мечты !</span></h3>
 							<h1 class="title1 text-uppercase text-brown mb-10"><span class="tlt" data-in-effect="rollIn" data-out-effect="fadeOutRight">Park residence</span></h1>
-							<div class="banner-readmore mt-37">
+							<!-- <div class="banner-readmore mt-37">
 								<a class="button slider-btn lemon" href="#">Читать больше</a>	                
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>

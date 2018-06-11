@@ -62,7 +62,7 @@ class SiteController extends Controller
             // $currentURL = \Request::segment(1);
             $house = Houses::whereSlug($slug)->first();
             $houses = Houses::where('alias', 'villas')->get();
-
+            //dd($house);
             return view('frontend.villas-details', compact('house', 'houses'));
         }
     }
