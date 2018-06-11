@@ -53,7 +53,7 @@
 					<div class="sidebar-widget-title mb-32">
 						<h5>Все виллы</h5>
 					</div>  
-					<div class="row">
+					<div class="row housesSidebar">
 						@forelse($houses as $house)
 						<div class="col-md-6 pr-9 mb-18 col-sm-3">
 							<div class="single-property hover-effect-two">

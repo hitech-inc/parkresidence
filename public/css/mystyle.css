@@ -149,6 +149,11 @@ div.map {
   background-image: url(../images/icons/map-marker-2.png);
 }
 
+.housesSidebar{
+  height: 500px; 
+  overflow: auto;  
+}
+
 
 
 

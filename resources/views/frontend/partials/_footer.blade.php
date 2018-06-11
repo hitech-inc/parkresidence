@@ -51,7 +51,7 @@
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                 <div class="single-footer-widget pull_right">
-                                    <h3 class="text-white text-uppercase mb-21">Контакты</h3>
+                                    <h3 class="text-white text-uppercase mb-21">Контакты отдела продаж</h3>
                                     <div class="footer-contact-info mb-24">
                                     	<img src="images/icons/f-map.png" alt="">
                                     	<span class="pl-40 block">ул. Мадели Кожа, 48Б

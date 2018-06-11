@@ -1,4 +1,4 @@
-<div class="client-area ptb-115" style="padding-top: 0">
+<!-- <div class="client-area ptb-115" style="padding-top: 0">
 	<div class="container">
 		<div class="row">
 			<div class="client-carousel carousel-none">
@@ -40,4 +40,4 @@
 			</div>	
 		</div>
 	</div>
-</div>
+</div> -->
