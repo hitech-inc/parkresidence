@@ -1,6 +1,40 @@
 @extends('frontend.layouts.master')
 
 @section('content')
+<style>
+
+@media (max-width: 576px) {
+	.area-marker {
+		width: 32px;
+		height: 32px;
+	}
+}
+@media (min-width: 576px) {
+	.area-marker {
+		width: 20px;
+		height: 20px;
+	}
+}
+@media (min-width: 768px) {
+	.area-marker {
+		width: 25px;
+		height: 25px;
+	}
+}
+@media (min-width: 992px) {
+	.area-marker {
+		width: 30px;
+		height: 30px;
+	}
+}
+@media (min-width: 1200px) {
+	.area-marker {
+		width: 32px;
+		height: 32px;
+	}
+}
+</style>
+
 <!--Start of Slider Area-->
 <div class="slider-area bg-overlay">
 	<div class="preview-2">
@@ -226,21 +260,18 @@
             var width = this.getBoundingClientRect().width / 2;
             var height = this.getBoundingClientRect().height / 2;
             
-            var top = housePosition.top - mapPosition.top + height - 32;
-            var left = housePosition.left - mapPosition.left + width - 16;
+            var top = housePosition.top - mapPosition.top + height - 25;
+            var left = housePosition.left - mapPosition.left + width - 12.5;
 
             console.log(width, height);
 
-            let marker = $('<img id="area-marker">');
-
-            hover = $('<img class="marker-hover" src="/images/houses/hover/32s.png">');
-
+            let marker = $('<img class="area-marker">');
             marker.attr('src', icon);
             marker.css('position', 'absolute');
             marker.css('top', top);
             marker.css('left', left);
-            marker.css('width', '32px');
-            marker.css('height', '32px');
+            marker.css('width', '25px');
+            marker.css('height', '25px');
             marker.css('pointer-events', 'none');
 
             marker.appendTo('#map-picker');
