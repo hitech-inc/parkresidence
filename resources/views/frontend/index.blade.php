@@ -275,7 +275,6 @@
             marker.css('pointer-events', 'none');
 
             marker.appendTo('#map-picker');
-            hover.appendTo(this);
 
             markers.push(marker);
         });
