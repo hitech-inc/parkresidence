@@ -70,7 +70,7 @@
 						<div class="pull_right contents mr-8"> 
 							<img src="images/icons/c-globe.png" alt="">
 							<div class="info-text pl-40">
-								<span class="block mb-7">Email : info@example.com</span>
+								<span class="block mb-7">Email : sales@otaugroup.kz</span>
 								<span class="block mb-7">Web : www.parkresidence.kz</span>
 							</div>
 						</div>

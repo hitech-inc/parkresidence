@@ -11,6 +11,8 @@ use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
+use App\Models\Backend\Facilitie;
+
 class HousesController extends AppBaseController
 {
     /** @var  HousesRepository */
@@ -102,6 +104,7 @@ class HousesController extends AppBaseController
         }
 
         return view('backend.houses.edit')->with('houses', $houses);
+
     }
 
     /**

@@ -23,6 +23,13 @@
     <!-- {!! Form::text('title', null, ['class' => 'form-control']) !!} -->
 </div>
 
+<!-- Удобства Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('udobstva', 'Удобства:') !!}
+    {!! Form::textarea('udobstva', null, ['class' => 'form-control ckeditor']) !!}
+    <!-- {!! Form::text('title', null, ['class' => 'form-control']) !!} -->
+</div>
+
 <!-- Slug Field -->
 <div class="form-group col-sm-3">
     {!! Form::label('slug', 'Slug:') !!}
@@ -52,10 +59,10 @@
     {!! Form::file('plane') !!}
 </div>
 
-<!-- Video Field -->
+<!-- Plane 2 floor Field -->
 <div class="form-group col-sm-3">
-    {!! Form::label('video', 'Video:') !!}
-    {!! Form::file('video') !!}
+    {!! Form::label('plane2', 'План 2го этажа:') !!}
+    {!! Form::file('plane2') !!}
 </div>
 
 <!-- Квадтратура Field -->
