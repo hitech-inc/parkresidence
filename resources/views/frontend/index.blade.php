@@ -214,21 +214,27 @@
         map.css('position', 'relative');
 
         let markers = [];
+        var mapPosition = map.offset();
 
         $('.myHouse').each(function() {
             const icon = $(this).data('icon');
 
-            const position = $(this).offset();
-            const width = this.getBoundingClientRect().width;
-            const height = this.getBoundingClientRect().height;
+            var housePosition = $(this).offset();
 
-            console.log(position, width, height);
+
+            var width = this.getBoundingClientRect().width / 2;
+            var height = this.getBoundingClientRect().height / 2;
+            
+            var top = housePosition.top - mapPosition.top + height - 32;
+            var left = housePosition.left - mapPosition.left + width - 16;
+
+            console.log(width, height);
 
             let marker = $('<img id="area-marker">');
             marker.attr('src', icon);
             marker.css('position', 'absolute');
-            marker.css('top', position.top - 875);
-            marker.css('left', position.left + (width / 2) - 15);
+            marker.css('top', top);
+            marker.css('left', left);
             marker.css('width', '32px');
             marker.css('height', '32px');
             marker.css('pointer-events', 'none');
