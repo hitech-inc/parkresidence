@@ -419,6 +419,7 @@ class ComposerStaticInite8fe56f7dcb6a5ac3686feec489336ca
         'App\\Http\\Requests\\Create' => __DIR__ . '/../..' . '/app/Http/Requests/Create$MODEL_NAMERequest.php',
         'App\\Http\\Requests\\Update' => __DIR__ . '/../..' . '/app/Http/Requests/Update$MODEL_NAMERequest.php',
         'App\\Mail\\Feedback' => __DIR__ . '/../..' . '/app/Mail/Feedback.php',
+        'App\\Models\\Backend\\Facilitie' => __DIR__ . '/../..' . '/app/Facilitie.php',
         'App\\Models\\Backend\\Houses' => __DIR__ . '/../..' . '/app/Models/Backend/Houses.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',

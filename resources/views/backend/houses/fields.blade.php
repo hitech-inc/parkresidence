@@ -53,6 +53,12 @@
     {!! Form::file('small_img') !!}
 </div>
 
+<!-- Hover_Img Field -->
+<div class="form-group col-sm-3">
+    {!! Form::label('hover_img', 'Hover_img:') !!}
+    {!! Form::file('hover_img') !!}
+</div>
+
 <!-- Plane Field -->
 <div class="form-group col-sm-3">
     {!! Form::label('plane', 'Plane:') !!}

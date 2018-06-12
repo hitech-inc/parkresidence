@@ -60,7 +60,7 @@
         @foreach( $houses as $house )
             @if($house->slug == "vila13s") 
             <a href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}">
-                <path d="M {{$house->coords}} Z">
+                <path d="M {{$house->coords}} Z" data-hover="/images/houses/hover/{{$house->hover_img}}">
             </a>
             @else
             <a href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}">
@@ -216,6 +216,7 @@
         let markers = [];
         var mapPosition = map.offset();
 
+    
         $('.myHouse').each(function() {
             const icon = $(this).data('icon');
 
@@ -231,6 +232,9 @@
             console.log(width, height);
 
             let marker = $('<img id="area-marker">');
+
+            hover = $('<img class="marker-hover" src="/images/houses/hover/32s.png">');
+
             marker.attr('src', icon);
             marker.css('position', 'absolute');
             marker.css('top', top);
@@ -240,6 +244,7 @@
             marker.css('pointer-events', 'none');
 
             marker.appendTo('#map-picker');
+            hover.appendTo(this);
 
             markers.push(marker);
         });

@@ -36,6 +36,7 @@ class Houses extends Model
         'slug',
         'img',
         'small_img',
+        'hover_img',
         'description',
         'plane',
         'plane2',
