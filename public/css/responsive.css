@@ -3,8 +3,8 @@
     .container, .wrapper .container {width: 1230px}
     .video-wrapper, .video-banner {height: 630px}
 	.gallery-img h2 {margin: 69px auto 10px;}
-	.banner-1{background: rgba(0, 0, 0, 0) url("../images/banner/1.jpg") no-repeat scroll 25% top / 29.5% auto}
-	.banner-2 {background: rgba(0, 0, 0, 0) url("../images/banner/2.jpg") no-repeat scroll 86% 48%;}
+	/*.banner-1{background: rgba(0, 0, 0, 0) url("../images/banner/1.jpg") no-repeat scroll 25% top / 29.5% auto}
+	.banner-2 {background: rgba(0, 0, 0, 0) url("../images/banner/2.jpg") no-repeat scroll 86% 48%;}*/
 	.custom-container {margin: auto 18.8% 0;}
 }
 
