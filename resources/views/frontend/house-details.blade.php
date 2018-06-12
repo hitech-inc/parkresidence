@@ -54,16 +54,16 @@
 						<h5>Все дома</h5>
 					</div>  
 					<div class="row housesSidebar">
-						@forelse(App\Models\Backend\Houses::getHouses() as $house)
+						@forelse(App\Models\Backend\Houses::getHouses() as $h)
 						<div class="col-md-6 pr-9 mb-18 col-sm-3">
 							<div class="single-property hover-effect-two">
 								<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
 									<div class="title-left">
-										<h4 class="text-white mb-12"><a href="properties-details.html">{{ $house->name }}</a></h4>
+										<h4 class="text-white mb-12"><a href="properties-details.html">{{ $h->name }}</a></h4>
 									</div>
 								</div>
 								<div class="property-image">
-									<a href="{{ url('/house-details/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
+									<a href="{{ url('/house-details/' . $h->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $h->small_img }}" alt="">
 										<span class="img-button text-uppercase">Подробнее</span>
 									</a>
 								</div>
@@ -78,20 +78,9 @@
 						@endforelse
 					</div>
 				</div>
-				<!-- <div class="single-sidebar-widget fix">
-					<div class="sidebar-widget-title mb-32">
-						<h5>Tags</h5>
-					</div>    
-					<ul class="tags">
-						<li><a href="properties-details.html" class="mb-15 mr-7">Real Estate</a></li>
-						<li><a href="index.html" class="mb-15 ml-7 mr-7">Home</a></li>
-						<li><a href="properties-details.html" class="mb-15 ml-7">Appartment</a></li>
-						<li><a href="properties-details.html" class="mb-15 mr-7">Duplex Villa</a></li>
-						<li><a href="properties-details.html" class="mb-15 ml-7">Buy Property</a></li>
-					</ul>
-				</div> -->
 			</div>
 		</div>
+		@if($house->alias != 'administrative-building')
 		<div class="row">
 			<div class="col-md-12">
 				<div class="property-details">
@@ -166,16 +155,11 @@
 								<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">
 							</div>
 						</div>
-						<!-- <div class="col-6 pr-15">
-							<h4 class="details-title mb-37">Видео презинтация</h4>
-							<div class="desc-video">
-								<iframe src="https://player.vimeo.com/video/63953556?title=0&byline=0&portrait=0" width="475" height="267"></iframe>
-							</div>
-						</div> -->
 					</div>
 				</div>
 			</div>
 		</div>
+		@endif
 	</div>
 </div>
 <!--End of Featured Property Area-->
