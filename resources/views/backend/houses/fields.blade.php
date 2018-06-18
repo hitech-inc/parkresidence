@@ -25,10 +25,15 @@
 
 <!-- Удобства Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('udobstva', 'Удобства:') !!}
-    {!! Form::textarea('udobstva', null, ['class' => 'form-control ckeditor']) !!}
-    <!-- {!! Form::text('title', null, ['class' => 'form-control']) !!} -->
+    {!! Form::label('udobstva', 'Udobstva:') !!}
+    {!! Form::textarea('udobstva', null, ['class' => 'form-control']) !!}
+    <!-- <input class="form-control" name="title" type="text" value="&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;/images/houses/title/taunhausWhite.jpg&quot; style=&quot;float:left; height:88px; margin-left:10px; margin-right:10px; width:134px&quot; /&gt;Имя: Таун хаус белый&lt;/p&gt;
+
+&lt;p&gt;Статус: Продается.&lt;/p&gt;
+
+&lt;p&gt;В Park Residence мы представляем уникальные ТАУНХАУСЫ площадью 263 квадратных метров с современным дизайном фасада и продуманной, функциональной планировкой. Вы можете приобрести ТАУНХАУСЫ как с черновой так и с чистой отделкой.&nbsp;&lt;/p&gt;" id="title"> -->
 </div>
+
 
 <!-- Slug Field -->
 <div class="form-group col-sm-3">
@@ -44,30 +49,44 @@
 
 <!-- Img Field -->
 <div class="form-group col-sm-3">
+    @if (isset($houses) && isset($houses->img))
+        <img src="{{ asset('images/houses/house-details/' . $houses->img) }}" alt="" class="img-responsive">
+        <br>
+    @endif
+
     {!! Form::label('img', 'Img:') !!}
     {!! Form::file('img') !!}
 </div>
 <!-- Small_Img Field -->
 <div class="form-group col-sm-3">
+    @if (isset($houses) && isset($houses->small_img))
+        <img src="{{ asset('images/houses/small_img/' . $houses->small_img) }}" alt="" class="img-responsive">
+        <br>
+    @endif
+
     {!! Form::label('small_img', 'Small_img:') !!}
     {!! Form::file('small_img') !!}
 </div>
 
-<!-- Hover_Img Field -->
-<div class="form-group col-sm-3">
-    {!! Form::label('hover_img', 'Hover_img:') !!}
-    {!! Form::file('hover_img') !!}
-</div>
-
 <!-- Plane Field -->
 <div class="form-group col-sm-3">
+    @if (isset($houses) && isset($houses->plane))
+        <img src="{{ asset('images/houses/house-details/' . $houses->plane) }}" alt="" class="img-responsive">
+        <br>
+    @endif
+
     {!! Form::label('plane', 'Plane:') !!}
     {!! Form::file('plane') !!}
 </div>
 
-<!-- Plane 2 floor Field -->
+<!-- Video Field -->
 <div class="form-group col-sm-3">
-    {!! Form::label('plane2', 'План 2го этажа:') !!}
+    @if (isset($houses) && isset($houses->plane2))
+        <img src="{{ asset('images/houses/house-details/' . $houses->plane2) }}" alt="" class="img-responsive">
+        <br>
+    @endif
+
+    {!! Form::label('plane2', 'Plane 2:') !!}
     {!! Form::file('plane2') !!}
 </div>
 

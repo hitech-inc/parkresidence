@@ -11,8 +11,6 @@ use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
-use App\Models\Backend\Facilitie;
-
 class HousesController extends AppBaseController
 {
     /** @var  HousesRepository */
@@ -57,8 +55,10 @@ class HousesController extends AppBaseController
      */
     public function store(CreateHousesRequest $request)
     {
-        $input = $request->all();
-
+        // $input = $request->all();
+        $data = $request->validated();
+        // dd($data);
+        
         $houses = $this->housesRepository->create($input);
 
         Flash::success('Houses saved successfully.');
@@ -104,7 +104,6 @@ class HousesController extends AppBaseController
         }
 
         return view('backend.houses.edit')->with('houses', $houses);
-
     }
 
     /**
@@ -117,7 +116,11 @@ class HousesController extends AppBaseController
      */
     public function update($id, UpdateHousesRequest $request)
     {
+        $data = $request->validated();
+        // dd($data);
+
         $houses = $this->housesRepository->findWithoutFail($id);
+
 
         if (empty($houses)) {
             Flash::error('Houses not found');
@@ -125,7 +128,39 @@ class HousesController extends AppBaseController
             return redirect(route('backend.houses.index'));
         }
 
-        $houses = $this->housesRepository->update($request->all(), $id);
+        if ($request->hasFile('img')) {
+            $file = $request->img;
+            $filename = date('y-m-d-H-i-s') . uniqid() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('/images/houses/house-details/'), $filename);
+            $data['img'] = $filename;
+        }
+
+        // dd($data);
+
+        if ($request->hasFile('small_img')) {
+            $file = $request->small_img;
+            $filename = date('y-m-d-H-i-s') . uniqid() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('/images/houses/small_img/'), $filename);
+            $data['small_img'] = $filename;
+        }
+
+        if ($request->hasFile('plane')) {
+            $file = $request->plane;
+            $filename = date('y-m-d-H-i-s') . uniqid() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('/images/houses/house-details/'), $filename);
+            $data['plane'] = $filename;
+        }
+
+        if ($request->hasFile('plane2')) {
+            $file = $request->plane_2;
+            $filename = date('y-m-d-H-i-s') . uniqid() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('/images/houses/house-details/'), $filename);
+            $data['plane2'] = $filename;
+        }
+
+
+        $houses = $this->housesRepository->update($data, $id);
+        // dd($houses);
 
         Flash::success('Houses updated successfully.');
 

@@ -93,11 +93,11 @@
         <svg viewBox="0 0 1920 754" class="svgMap"> 
         @foreach( $houses as $house )
             @if($house->slug == "vila13s") 
-            <a href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}">
-                <path d="M {{$house->coords}} Z" data-hover="/images/houses/hover/{{$house->hover_img}}">
+            <a id="link-{{ $house->slug }}" href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}" data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
+                <path d="M {{$house->coords}} Z" data-hover="/images/houses/hover/{{$house->hover_img}}" >
             </a>
             @else
-            <a href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}">
+            <a id="link-{{ $house->slug }}" href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}"  data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
                 <path d="m {{$house->coords}} z">
             </a>
             @endif
@@ -245,40 +245,782 @@
 @section('scripts')
 <script>
     $(document).ready(function() {
+
+
+        // tippy
+        const tip = tippy('.myHouse', {
+            delay: 100,
+            arrow: true,
+            arrowType: 'round',
+            size: 'large',
+            duration: 500,
+            animation: 'scale',
+            theme: 'parkresidence',
+            onHide(instance) {
+                let slug = instance.reference.id.substring(instance.reference.id.indexOf("-") + 1);
+                $('.hi-' + slug).fadeOut(200);
+            },
+            wait(show, event) {
+                // console.log(event.target.id);
+
+                // show highlight
+                let slug = event.target.id.substring(event.target.id.indexOf("-") + 1);
+                const villa = VILLAS[slug];
+                // console.log(slug, villa);
+
+                let markerWidth = MARKER_WIDTH * RATIO;
+                let markerHeight = markerWidth;
+                let top = villa.top * RATIO;
+                let left = villa.left * RATIO;
+                let bottom = villa.bottom * RATIO;
+                let right = villa.right * RATIO;
+                let width = (villa.right - villa.left) * RATIO;
+                let height = (villa.bottom - villa.top) * RATIO;
+
+                let position = {
+                    top: top - markerHeight / 2,
+                    left: left + (right - left) / 2 - markerWidth / 2
+                }
+
+                let center = {
+                    top: position.top + markerHeight,
+                    left: position.left + markerHeight / 2
+                }
+
+                const villaId = 'hi-' + slug;
+                let hInfo = villa.hightlight;
+                let hWidth = hInfo.width * RATIO;
+                let hHeight = hInfo.height * RATIO;
+
+                let hightlight = $('<img id="' + villaId + '" class="area-highlight hi-' + slug + '">');
+                hightlight.attr('src', hInfo.icon + '/' + slug + '.png');
+                hightlight.css('position', 'absolute');
+
+                if (villaId.indexOf("town-house-") !== -1) {
+                    // console.log(villaId);
+                    hightlight.css('top', center.top - hHeight / 2 - 5.0 * RATIO);
+                } else {
+                    hightlight.css('top', center.top - hHeight / 2 + 7.5 * RATIO);
+                }
+
+                hightlight.css('left', center.left - hWidth / 2);
+                hightlight.css('width', hWidth + 'px');
+                hightlight.css('height', hHeight + 'px');
+                hightlight.css('pointer-events', 'none');
+                // hightlight.css('outline', '1px solid blue');
+                hightlight.css('display', 'none');
+                hightlight.appendTo('#map-picker');
+                hightlight.fadeIn(200);
+
+                show();
+            }
+        });
+
+        // map markers
         let map = $('#map-picker');
         map.css('position', 'relative');
 
-        let markers = [];
-        var mapPosition = map.offset();
+        const MAP_WIDTH = 1920;
+        const MARKER_WIDTH = 32;
+        const RATIO = map.width() / MAP_WIDTH;
+        const MAP_POSITION = map.offset();
+        const BORDER_POSITIONS = {};
 
-    
-        $('.myHouse').each(function() {
-            const icon = $(this).data('icon');
+        const VILLAS = {
+            'vila13s': {
+                left: 564, 
+                top: 487,
+                right: 652,
+                bottom: 533,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 100,
+                    height: 57,
+                }
+            },
+            'vila15-62': {
+                left: 646, 
+                top: 504,
+                right: 736,
+                bottom: 554,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 100,
+                    height: 57,
+                }
+            },
+            'vila11': {
+                left: 696, 
+                top: 481,
+                right: 764,
+                bottom: 521,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 81,
+                    height: 51,
+                }
+            },
+            'villa36': {
+                left: 1592, 
+                top: 539,
+                right: 1652,
+                bottom: 591,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 68,
+                    height: 60,
+                }
+            },
+            'villa32': {
+                left: 1533, 
+                top: 480,
+                right: 1620,
+                bottom: 524,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 99,
+                    height: 56,
+                }
+            },
+            'detskyi-sad': {
+                left: 1687, 
+                top: 366,
+                right: 1833,
+                bottom: 413,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '4.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 157,
+                    height: 60,
+                }
+            },
+            'fitness-club': {
+                left: 57, 
+                top: 401 + 32.5,
+                right: 348,
+                bottom: 519,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '4.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 304,
+                    height: 130,
+                }
+            },
+            'town-house-36': {
+                left: 826, 
+                top: 238,
+                right: 853,
+                bottom: 269,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 34,
+                    height: 37,
+                }
+            },
+            'town-house-35': {
+                left: 853, 
+                top: 242,
+                right: 883,
+                bottom: 273,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 34,
+                    height: 37,
+                }
+            },
+            'town-house-34': {
+                left: 892, 
+                top: 246,
+                right: 923,
+                bottom: 278,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 34,
+                    height: 37,
+                }
+            },
+            'town-house-33': {
+                left: 917, 
+                top: 251,
+                right: 950,
+                bottom: 280,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-32': {
+                left: 961, 
+                top: 256,
+                right: 992,
+                bottom: 278,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-31': {
+                left: 992, 
+                top: 260,
+                right: 1021,
+                bottom: 288,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-30': {
+                left: 1033, 
+                top: 264,
+                right: 1065,
+                bottom: 292,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-29': {
+                left: 1059, 
+                top: 268,
+                right: 1092,
+                bottom: 292,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-28': {
+                left: 1106, 
+                top: 274,
+                right: 1140,
+                bottom: 303,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-27': {
+                left: 1132, 
+                top: 278,
+                right: 1166,
+                bottom: 308,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-26': {
+                left: 1179, 
+                top: 284,
+                right: 1214,
+                bottom: 314,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-25': {
+                left: 1207, 
+                top: 289,
+                right: 1242,
+                bottom: 319,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-24': {
+                left: 1257, 
+                top: 294,
+                right: 1292,
+                bottom: 324,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-23': {
+                left: 1285, 
+                top: 299,
+                right: 1320,
+                bottom: 329,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-22': {
+                left: 1336, 
+                top: 305,
+                right: 1369,
+                bottom: 336,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-21': {
+                left: 1365, 
+                top: 309,
+                right: 1400,
+                bottom: 341,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-20': {
+                left: 1426, 
+                top: 316,
+                right: 1440,
+                bottom: 346,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 48,
+                    height: 40,
+                }
+            },
+            'town-house-19': {
+                left: 1452, 
+                top: 321,
+                right: 1476,
+                bottom: 352,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-18': {
+                left: 1512, 
+                top: 328,
+                right: 1526,
+                bottom: 358,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-17': {
+                left: 1528, 
+                top: 334,
+                right: 1562,
+                bottom: 362,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-16': {
+                left: 1585, 
+                top: 338,
+                right: 1623,
+                bottom: 368,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-15': {
+                left: 1617, 
+                top: 342,
+                right: 1652,
+                bottom: 375,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 38,
+                }
+            },
+            'town-house-14': {
+                left: 1068, 
+                top: 304,
+                right: 1106,
+                bottom: 332,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+            'town-house-13': {
+                left: 1095, 
+                top: 307,
+                right: 1132,
+                bottom: 335,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+            'town-house-12': {
+                left: 1145, 
+                top: 314,
+                right: 1180,
+                bottom: 340,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+            'town-house-11': {
+                left: 1172, 
+                top: 317,
+                right: 1206,
+                bottom: 343,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+            'town-house-10': {
+                left: 1222, 
+                top: 325,
+                right: 1259,
+                bottom: 348,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+            'town-house-09': {
+                left: 1252, 
+                top: 328,
+                right: 1290,
+                bottom: 351,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+            'town-house-08': {
+                left: 1316, 
+                top: 338,
+                right: 1327,
+                bottom: 360,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+            'town-house-07': {
+                left: 1341, 
+                top: 341,
+                right: 1360,
+                bottom: 363,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+            'town-house-06': {
+                left: 1396, 
+                top: 349,
+                right: 1416,
+                bottom: 370,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+            'town-house-05': {
+                left: 1428, 
+                top: 352,
+                right: 1445,
+                bottom: 373,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+            'town-house-04': {
+                left: 1482, 
+                top: 359,
+                right: 1508,
+                bottom: 380,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 45,
+                }
+            },
+            'town-house-03': {
+                left: 1512, 
+                top: 365,
+                right: 1538,
+                bottom: 384,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 45,
+                }
+            },
+            'town-house-02': {
+                left: 1572, 
+                top: 375,
+                right: 1598,
+                bottom: 282,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 45,
+                }
+            },
+            'town-house-01': {
+                left: 1602, 
+                top: 378,
+                right: 1628,
+                bottom: 295,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 45,
+                }
+            },
 
-            var housePosition = $(this).offset();
+        };
+
+        let world = {};
+
+        // place div (hover) &  markers
+        for (var villa in VILLAS) {
+            if (VILLAS.hasOwnProperty(villa)) {
+                let linkHolder = '#link-' + villa;
+
+                let icon = VILLAS[villa].icon;
+                let markerWidth = MARKER_WIDTH * RATIO;
+                let markerHeight = markerWidth;
+                let top = VILLAS[villa].top * RATIO;
+                let left = VILLAS[villa].left * RATIO;
+                let bottom = VILLAS[villa].bottom * RATIO;
+                let right = VILLAS[villa].right * RATIO;
+                let width = (VILLAS[villa].right - VILLAS[villa].left) * RATIO;
+                let height = (VILLAS[villa].bottom - VILLAS[villa].top) * RATIO;
+
+                let position = {
+                    top: top - markerHeight / 2,
+                    left: left + (right - left) / 2 - markerWidth / 2
+                }
+
+                let center = {
+                    top: position.top + markerHeight,
+                    left: position.left + markerHeight / 2
+                }
+                
+                // marker
+                let marker = $('<img class="area-marker">');
+                marker.attr('src', icon);
+                marker.css('position', 'absolute');
+                marker.css('top', position.top);
+                marker.css('left', position.left);
+                marker.css('width', markerWidth);
+                marker.css('height', markerHeight);
+                marker.css('pointer-events', 'none');
+                // marker.css('outline', '1px solid red');
+                marker.appendTo('#map-picker');
+
+                // div
+                // let div = $('<div class="area-area">');
+                // div.css('position', 'absolute');
+                // div.css('top', top);
+                // div.css('left', left);
+                // div.css('width', width);
+                // div.css('height', height);
+                // div.css('pointer', 'cursor');
+                // // div.css('outline', '1px solid blue');
+                // div.css('pointer-events', 'none');
+                // // div.attr('title', 'Tippy tooltip!');
+                // div.appendTo(linkHolder);
+
+                // $(document).on('mouseenter', linkHolder, function(e) {
+                //     if (world.hasOwnProperty(villa)) {
+                //         return;
+                //     }
+
+                //     world[villa] = true;
+                //     console.log(world);
+
+                //     // show hightlight
+                //     const ID = 'hi-' + villa;
+                //     let hInfo = VILLAS[villa].hightlight;
+                //     let hWidth = hInfo.width * RATIO;
+                //     let hHeight = hInfo.height * RATIO;
+
+                //     let hightlight = $('<img id="' + ID + '" class="area-highlight hi-' + villa + '">');
+                //     hightlight.attr('src', hInfo.icon + '/' + villa + '.png');
+                //     hightlight.css('position', 'absolute');
+                //     hightlight.css('top', center.top - hHeight / 2 + 7.5);
+                //     hightlight.css('left', center.left - hWidth / 2);
+                //     hightlight.css('width', hWidth + 'px');
+                //     hightlight.css('height', hHeight + 'px');
+                //     // hightlight.css('pointer-events', 'none');
+                //     // hightlight.css('outline', '1px solid blue');
+                //     hightlight.css('display', 'block');
+                //     hightlight.appendTo('#map-picker');
+
+                //     // hightlight.fadeIn(200);
+
+                //     // show tippy
+                //     // const tip = tippy('#hi-' + villa, {
+                //     //     delay: 100,
+                //     //     arrow: true,
+                //     //     arrowType: 'round',
+                //     //     size: 'large',
+                //     //     duration: 500,
+                //     //     animation: 'scale',
+                //     //     theme: 'parkresidence',
+                //     // });
+                //     // const popper = tip.getPopperElement('#hi-' + villa);
+                //     // tip.show(popper);
+                // });
+
+                // $(document).on('mouseenter', linkHolder, function(e) {
+                //     $('#hi-' + villa).css('display', 'none');
+                //     $('.hi-' + villa).css('display', 'none');
+
+                //     delete world[villa];
+                //     console.log(world);
+                // });
+
+            }
+        }
 
 
-            var width = this.getBoundingClientRect().width / 2;
-            var height = this.getBoundingClientRect().height / 2;
+        // place markers above
+        // $('.myHouse').each(function(e) {
+        //     const ICON = $(this).data('icon');
+        //     const SLUG = $(this).data('slug');
+        //     const ICON_HIGHLIGHT = $(this).data('icon-highlight');
+        //     const HOUSE_POSITION = $(this).offset();
+
+        //     const WIDTH = this.getBoundingClientRect().width;
+        //     const HEIGHT = this.getBoundingClientRect().height;
             
-            var top = housePosition.top - mapPosition.top + height - 25;
-            var left = housePosition.left - mapPosition.left + width - 12.5;
+        //     const top = housePosition.top - mapPosition.top + height / 2 - 25;
+        //     const left = housePosition.left - mapPosition.left + width / 2 - 12.5;
 
-            console.log(width, height);
+        //     let marker = $('<img class="area-marker">');
+        //     marker.attr('src', icon);
+        //     marker.css('position', 'absolute');
+        //     marker.css('top', top);
+        //     marker.css('left', left);
+        //     marker.css('width', '25px');
+        //     marker.css('height', '25px');
+        //     marker.css('pointer-events', 'none');
+        //     marker.css('outline', '1px solid red');
 
-            let marker = $('<img class="area-marker">');
-            marker.attr('src', icon);
-            marker.css('position', 'absolute');
-            marker.css('top', top);
-            marker.css('left', left);
-            marker.css('width', '25px');
-            marker.css('height', '25px');
-            marker.css('pointer-events', 'none');
+        //     marker.appendTo('#map-picker');
+        //     markers.push(marker);
 
-            marker.appendTo('#map-picker');
+        //     let pivot = {
+        //         top: top + height,
+        //         left: left + width / 2
+        //     }
 
-            markers.push(marker);
-        });
+        //     let info = {slug: slug, icon: iconHightlight, position: pivot, width: 100, height: 57};
+        //     // console.log(info);
+
+        //     borderPositions[slug] = info;
+        //     // console.log(borderPositions);
+
+        //     $(this).mouseenter(function(event) {
+        //         const img = borderPositions[slug];
+        //         console.log('show ' + img.icon);
+
+        //         var hightlight = $('<img id="hi-' + img.slug + '" class="area-highlight hi-' + img.slug + '">'); //Equivalent: $(document.createElement('img'))
+        //         hightlight.attr('src', img.icon);
+        //         hightlight.css('position', 'absolute');
+
+        //         let hiTop = img.position.top - img.height * coef / 2;
+        //         let hiLeft = img.position.left - img.width * coef / 2;
+
+        //         console.log("hover", img.position, mapPosition, hiTop, hiLeft);
+
+        //         hightlight.css('top', hiTop);
+        //         hightlight.css('left', hiLeft);
+        //         hightlight.css('width', img.width * coef + 'px');
+        //         hightlight.css('height', img.height * coef + 'px');
+        //         hightlight.css('pointer-events', 'none');
+        //         hightlight.css('display', 'none');
+        //         hightlight.appendTo('#map-picker');
+        //         hightlight.fadeIn(200);
+
+        //     });
+
+        //     $(this).mouseleave(function(event) {
+        //         console.log('hide ' + slug + ' image');
+        //         $('#hi-' + slug).fadeOut(200);
+        //         $('.hi-' + slug).fadeOut(200);
+        //     });
+
+            
+        // });
 
     });
 </script>

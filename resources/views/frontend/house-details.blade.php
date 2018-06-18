@@ -105,46 +105,17 @@
 						<div class="col-md-9">
 							<h4 class="details-title mb-38">Удобства</h4>
 							<div class="bg-gray fix pl-50 pr-50 pt-44 pb-38 right-column mb-56" style="padding-bottom: 20px;">
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Система кондиционирования</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Прачечная комната</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Балкон</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Кабельное ТВ</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Высокоскоростной оптоволоконный интернет</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Парковка</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Котельная комната</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Кладовая комната</span>
-								</div>
-								<div class="desc-info">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Посудомечная машина</span>
-								</div>
-								<div class="desc-info">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Тостер</span>
-								</div>
+								@php //dd($house->udobstva) @endphp
+								@if ($house->udobstva !== "")
+									
+									@foreach (explode(",", $house->udobstva) as $ud)
+										<div class="desc-info mb-26">
+											<i class="fa fa-check-square-o mr-9"></i>
+											<span>{{ trim($ud) }}</span>
+										</div>
+									@endforeach
+
+								@endif
 							</div>
 						</div>
 					</div>

@@ -25,6 +25,28 @@ class UpdateHousesRequest extends FormRequest
      */
     public function rules()
     {
-        return Houses::$rules;
+        return [
+            'status' => 'required|numeric',
+            'alias' => 'required',
+            'coords' => 'required',
+            'title' => 'required',
+            'udobstva' => 'required',
+            'slug' => 'required|unique:houses,id,' . $this->get('id'),
+            'name' => 'required',
+            'img' => 'sometimes|mimes:jpg,jpeg,png',
+            'small_img' => 'sometimes|mimes:jpg,jpeg,png',
+            'plane' => 'sometimes|mimes:jpg,jpeg,png',
+            'plane2' => 'sometimes|mimes:jpg,jpeg,png',
+            'description' => 'required',
+            'kvadratura' => 'required',
+            'uchastok' => 'required',
+            'visota_potolka' => 'required',
+            'visota_potolka_gostinaya' => 'required',
+            'spalnie_comnati' => 'required',
+            'vannie_comnati' => 'required',
+            'terrasa' => 'required',
+            'parking' => 'required',
+
+        ];
     }
 }

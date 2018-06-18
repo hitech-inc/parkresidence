@@ -33,6 +33,7 @@ class Houses extends Model
         'status',
         'coords',
         'title',
+        'udobstva',
         'slug',
         'img',
         'small_img',

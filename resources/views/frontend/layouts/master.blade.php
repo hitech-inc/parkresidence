@@ -171,22 +171,13 @@
 
         ========================================================= -->       
         <script src="/js/main.js"></script>
-       
-        @yield('scripts')
-
         <!--Start Tippy js tooltips -->
         <script src="https://unpkg.com/tippy.js@2.5.2/dist/tippy.all.min.js"></script>
+
+        @yield('scripts')
+
         <script>
-            tippy('.myHouse', {
-                delay: 100,
-                arrow: true,
-                arrowType: 'round',
-                size: 'large',
-                duration: 500,
-                animation: 'scale',
-                theme: 'parkresidence',
-            });
-        </script>
+                    </script>
 
     </body>
 </html>
