@@ -99,10 +99,12 @@
 									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
 									<span>Высота потолка {{$house->visota_potolka}}</span>
 								</div>
+								@if($house->visota_potolka_gostinaya != null)
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-bed.png" alt="" class="pr-8">
-									<span>Высота потолка  гостинной {{$house->visota_potolka_gostinaya}}</span>
+									<span>Высота потолка в гостинной {{$house->visota_potolka_gostinaya}}</span>
 								</div>
+								@endif
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-bed.png" alt="" class="pr-8">
 									<span>Спальные комнаты {{$house->spalnie_comnati}}</span>
@@ -124,7 +126,18 @@
 						<div class="col-md-9">
 							<h4 class="details-title mb-38">Удобства</h4>
 							<div class="bg-gray fix pl-50 pr-50 pt-44 pb-38 right-column mb-56" style="padding-bottom: 20px;">
-								<div class="desc-info mb-26">
+								@php //dd($house->udobstva) @endphp
+								@if ($house->udobstva !== "")
+									
+									@foreach (explode(",", $house->udobstva) as $ud)
+										<div class="desc-info mb-26">
+											<i class="fa fa-check-square-o mr-9"></i>
+											<span>{{ trim($ud) }}</span>
+										</div>
+									@endforeach
+
+								@endif
+								<!-- <div class="desc-info mb-26">
 									<i class="fa fa-check-square-o mr-9"></i>
 									<span>Система кондиционирования</span>
 								</div>
@@ -163,7 +176,7 @@
 								<div class="desc-info">
 									<i class="fa fa-check-square-o mr-9"></i>
 									<span>Тостер</span>
-								</div>
+								</div> -->
 							</div>
 						</div>
 						<div class="row">

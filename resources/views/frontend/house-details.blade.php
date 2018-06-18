@@ -34,7 +34,7 @@
 <!-- End breadcrumbs -->
 
 <!--Start of Featured Property Area-->
-<div class="property-area ptb-120" style="padding-top: 50px;s">
+<div class="property-area ptb-120" style="padding-top: 50px;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
@@ -90,16 +90,44 @@
 							<div class="bg-gray fix pl-35 pt-42 pr-35 pb-39 left-column mb-56">
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-floor.png" alt="" class="pr-8">
-									<span>Площадь 450 квм</span>
+									<span>Площадь {{$house->kvadratura}} кв.м</span>
 								</div>
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-shower.png" alt="" class="pr-8">
-									<span>Ванна 3</span>
+									<span>Участок {{$house->uchastok}} соток</span>
 								</div>
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
-									<span>Паркинг</span>
+									<span>Высота потолка {{$house->visota_potolka}} метра</span>
 								</div>
+								@if( $house->visota_potolka_gostinaya != null)
+								<div class="desc-info mb-37" style="float: initial; width: 100%">
+									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
+									<span>Высота потолка  гостинной {{$house->visota_potolka_gostinaya}} метра</span>
+								</div>
+								@endif
+								<div class="desc-info mb-37" style="float: initial; width: 100%">
+									<img src="/images/icons/g-bed.png" alt="" class="pr-8">
+									<span>Спальные комнаты {{$house->spalnie_comnati}}</span>
+								</div>
+								<div class="desc-info mb-37" style="float: initial; width: 100%">
+									<img src="/images/icons/g-shower.png" alt="" class="pr-8">
+									<span>Ванные комнаты {{$house->vannie_comnati}}</span>
+								</div>
+								<div class="desc-info mb-37" style="float: initial; width: 100%">
+									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
+									<span>Терраса {{$house->terrasa}}</span>
+								</div>
+								<div class="desc-info mb-37" style="float: initial; width: 100%">
+									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
+									<span>Паркинг на {{$house->parking}} машины</span>
+								</div>
+								@if ( $house->alias == 'town-houses')
+								<div class="desc-info mb-37" style="float: initial; width: 100%">
+									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
+									<span>Зона барбекю</span>
+								</div>
+								@endif
 							</div>
 						</div>
 						<div class="col-md-9">
@@ -118,15 +146,16 @@
 								@endif
 							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-4 pl-15">
-							<h4 class="details-title mb-37">Поэтажный план</h4>
-							<div class="desc-images">
-								<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">
+						<div class="row">
+							<div class="col-4 pl-15">
+								<h4 class="details-title mb-37">Поэтажный план</h4>
+								<div class="desc-images">
+									<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">
+								</div>
 							</div>
 						</div>
 					</div>
+					
 				</div>
 			</div>
 		</div>

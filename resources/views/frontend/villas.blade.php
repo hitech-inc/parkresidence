@@ -49,10 +49,10 @@
 			<div class="col-lg-4 col-md-6 col-sm-6 mb-40">
 				<div class="single-property hover-effect-two">
 					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
-						<div class="title-left pull_left">
+						<!-- <div class="title-left pull_left">
 							<h4 class="text-white mb-12"><a href="#">{{$villa->name}}</a></h4>
 							<span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span>
-						</div>
+						</div> -->
 						<div class="fix pull_right">
 							<h3>$52,354</h3>
 						</div>
@@ -65,20 +65,20 @@
 						<div class="hover-container pl-15 pr-15 pt-16 pb-15">
 							<div class="hover-item">
 								<img class="mr-10" src="images/icons/floor.png" alt="">
-								<span>450 sqft</span>
+								<span>{{ $villa->kvadratura }}</span>
 							</div>
 							<div class="hover-item">
 								<img class="mr-10" src="images/icons/bed.png" alt="">
-								<span>5</span>
+								<span>{{$villa->spalnie_comnati}}</span>
 							</div>
 							<div class="hover-item">
 								<img class="mr-10" src="images/icons/shower.png" alt="">
-								<span>3</span>
+								<span>{{$villa->vannie_comnati}}</span>
 							</div>
-							<div class="hover-item">
+							<!-- <div class="hover-item">
 								<img class="mr-10" src="images/icons/garage.png" alt="">
 								<span>2</span>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>

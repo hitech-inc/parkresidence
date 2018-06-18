@@ -41,7 +41,7 @@ class UpdateHousesRequest extends FormRequest
             'kvadratura' => 'required',
             'uchastok' => 'required',
             'visota_potolka' => 'required',
-            'visota_potolka_gostinaya' => 'required',
+            // 'visota_potolka_gostinaya' => 'required',
             'spalnie_comnati' => 'required',
             'vannie_comnati' => 'required',
             'terrasa' => 'required',
