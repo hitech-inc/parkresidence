@@ -81,7 +81,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="footer-text">
-                                    <span class="block">Copyright&copy; 2018 <a href="index.html#">Park residence</a>. All rights reserved.</span>
+                                    <span class="block">Copyright&copy; 2018 <a href="/">Park residence</a>. All rights reserved.</span>
                                 </div>
                             </div>
                         </div>
