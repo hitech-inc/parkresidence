@@ -8,23 +8,23 @@
 				<div class="pull_right">
 					<nav id="primary-menu" class="height-large">              
 						<ul class="main-menu text-left">
-							<li class="mega-parent active"><a href="/">Главная</a>
+							<li class="mega-parent"><a href="/" class="mainIn">Главная</a>
 
 							</li>
-							<li><a href="/about">О Park residence</a>
+							<li><a href="/about" class="about">О Park residence</a>
 
 							</li>
-							<li><a href="/location">Расположение</a>
+							<li><a href="/location" class="rasp">Расположение</a>
 
 							</li>
-							<li class="mega-parent"><a href="/town-houses">Таунхаусы</a>
+							<li class="mega-parent"><a href="/town-houses" class="town-houses">Таунхаусы</a>
 
 							</li>
-							<li class="mega-parent"><a href="/villas">Виллы</a>
+							<li class="mega-parent"><a href="/villas" class="villas">Виллы</a>
 
 							</li>
 
-							<li><a href="/contacts">Контакты</a></li>
+							<li><a href="/contacts" class="contacts">Контакты</a></li>
 						</ul>
 					</nav>
 				</div>

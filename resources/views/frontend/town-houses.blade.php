@@ -1,6 +1,15 @@
 @extends('frontend.layouts.master')
 
 @section('content')
+
+<style>
+	@if ($currentUrl != null)
+    a.town-houses{
+        color: #95c41f !important;
+    }
+  @endif
+</style>
+
 <!-- Start of Background Area -->
 <div class="background-area">	
 	<img src="images/slider/cottages.jpg" alt="" title="#slider-1-caption1"/>

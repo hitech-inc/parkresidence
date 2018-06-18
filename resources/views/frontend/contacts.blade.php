@@ -2,6 +2,14 @@
 
 @section('content')
 
+<style>
+	@if ($currentUrl != null)
+    a.contacts{
+        color: #95c41f !important;
+    }
+  @endif
+</style>
+
 <!--Start of Banner Area-->
 <!-- Класс bg-overlay-2 придает темный фон -->
 <div class="banner-area bg-2 ptb-165">

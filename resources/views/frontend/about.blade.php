@@ -1,6 +1,14 @@
 @extends('frontend.layouts.master')
 
 @section('content')
+<style>
+  @if ($currentUrl != null)
+    a.about{
+        color: #95c41f !important;
+    }
+  @endif
+</style>
+
 <!-- Start of Background Area -->
 <div class="background-area"> 
   <img src="images/slider/about.jpg" alt="" title="#slider-1-caption1"/>

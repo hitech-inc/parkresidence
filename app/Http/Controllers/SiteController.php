@@ -13,30 +13,34 @@ class SiteController extends Controller
     //
     public function index()
     {
-
+        $currentUrl = \Request::segment(1);
         $houses = Houses::getHouses();
         $housesTake = Houses::take(7)->get();
         
-        return view('frontend.index', compact('houses', 'housesTake'));   	
+        return view('frontend.index', compact('houses', 'housesTake', 'currentUrl'));   	
     }
 
-    public function about()
+    public function about(Request $request)
     {
-    	return view('frontend.about');
+        $currentUrl = \Request::segment(1);
+
+    	return view('frontend.about', compact('currentUrl'));
     }
 
     public function location()
     {
-    	return view('frontend.location');
+        $currentUrl = \Request::segment(1);
+    	return view('frontend.location', compact('currentUrl'));
     }
 
     public function townHouses($slug = "")
     {
         if (!$slug)
         {
+            $currentUrl = \Request::segment(1);
             $townhouses = Houses::where('alias', 'town-houses')->paginate(9);
         
-            return view('frontend.town-houses', compact('townhouses'));
+            return view('frontend.town-houses', compact('townhouses', 'currentUrl'));
         }
 
         else
@@ -53,10 +57,11 @@ class SiteController extends Controller
     {
         if (!$slug)
         {
+            $currentUrl = \Request::segment(1);
             // $villas = Houses::where('alias', 'villas')->get();
             $villas = Houses::where('alias', 'villas')->paginate(9);
 
-            return view('frontend.villas', compact('villas'));
+            return view('frontend.villas', compact('villas', 'currentUrl'));
         }
         else 
         {
@@ -70,7 +75,8 @@ class SiteController extends Controller
 
     public function contacts()
     {
-    	return view('frontend.contacts');
+        $currentUrl = \Request::segment(1);
+    	return view('frontend.contacts', compact('currentUrl'));
     }
 
     public function feedback(Request $request)

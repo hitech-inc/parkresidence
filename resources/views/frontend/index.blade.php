@@ -33,6 +33,12 @@
 		height: 32px;
 	}
 }
+
+@if ($currentUrl == null)
+    a.mainIn{
+        color: #95c41f !important;
+    }
+@endif
 </style>
 
 <!--Start of Slider Area-->
