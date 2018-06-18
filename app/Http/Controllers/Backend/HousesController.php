@@ -152,10 +152,24 @@ class HousesController extends AppBaseController
         }
 
         if ($request->hasFile('plane2')) {
-            $file = $request->plane_2;
+            $file = $request->plane2;
             $filename = date('y-m-d-H-i-s') . uniqid() . '.' . $file->getClientOriginalExtension();
             $file->move(public_path('/images/houses/house-details/'), $filename);
             $data['plane2'] = $filename;
+        }
+
+        if ($request->hasFile('big_plane1')) {
+            $file = $request->big_plane1;
+            $filename = date('y-m-d-H-i-s') . uniqid() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('/images/houses/house-details/'), $filename);
+            $data['big_plane1'] = $filename;
+        }
+
+        if ($request->hasFile('big_plane2')) {
+            $file = $request->big_plane2;
+            $filename = date('y-m-d-H-i-s') . uniqid() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('/images/houses/house-details/'), $filename);
+            $data['big_plane2'] = $filename;
         }
 
 

@@ -77,6 +77,10 @@
 								<img class="mr-10" src="images/icons/shower.png" alt="">
 								<span>{{$townhouse->vannie_comnati}}</span>
 							</div>
+							<div class="hover-item">
+								<img class="mr-10" src="/images/icons/garage.png" alt="">
+								<span>{{$townhouse->parking}}</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -88,11 +92,11 @@
 				<div class="pagination-content text-center block">
 					<ul class="pagination fix mt-40 mb-0">
 						{{ $townhouses->links() }}
-						<li><a href="#"><i class="zmdi zmdi-long-arrow-left"></i></a></li>
+						<!-- <li><a href="#"><i class="zmdi zmdi-long-arrow-left"></i></a></li>
 						<li><a href="#">1</a></li>
 						<li><a href="#">2</a></li>
 						<li><a href="#">3</a></li>
-						<li class="current"><a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a></li>
+						<li class="current"><a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a></li> -->
 					</ul>
 				</div>
 			</div>

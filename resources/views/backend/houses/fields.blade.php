@@ -79,7 +79,7 @@
     {!! Form::file('plane') !!}
 </div>
 
-<!-- Video Field -->
+<!-- Plane2 Field -->
 <div class="form-group col-sm-3">
     @if (isset($houses) && isset($houses->plane2))
         <img src="{{ asset('images/houses/house-details/' . $houses->plane2) }}" alt="" class="img-responsive">
@@ -89,6 +89,31 @@
     {!! Form::label('plane2', 'Plane 2:') !!}
     {!! Form::file('plane2') !!}
 </div>
+
+<!--Big Plane1 Field -->
+<div class="form-group col-sm-3">
+    @if (isset($houses) && isset($houses->big_plane1))
+        <img src="{{ asset('images/houses/house-details/' . $houses->big_plane1) }}" alt="" class="img-responsive">
+        <br>
+    @endif
+
+    {!! Form::label('big_plane1', 'Big plane 1:') !!}
+    {!! Form::file('big_plane1') !!}
+</div>
+
+<!-- Big Plane2 Field -->
+<div class="form-group col-sm-3">
+    @if (isset($houses) && isset($houses->big_plane2))
+        <img src="{{ asset('images/houses/house-details/' . $houses->big_plane2) }}" alt="" class="img-responsive">
+        <br>
+    @endif
+
+    {!! Form::label('big_plane2', 'Big plane 2:') !!}
+    {!! Form::file('big_plane2') !!}
+</div>
+
+<div class="clearfix"></div>
+<hr></hr>
 
 <!-- Квадтратура Field -->
 <div class="form-group col-sm-3">

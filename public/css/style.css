@@ -203,7 +203,7 @@ span.text-dark{/*font-family: "montserratregular";*/font-family: "Bold";}
 .hover-item, .property-content .list-item {display: inline-block;}
 .hover-item > span {color: #fafafa; line-height: 20px;}
 .owl-carousel .owl-item .hover-item > img, .hover-item > img, .property-content .list-item > img {float: left; width: auto;}
-.hover-item:nth-child(1) {width: 35%;}
+.hover-item:nth-child(1) {width: 30%;}
 .hover-item:nth-child(2) {width: 26%;}
 .hover-item:nth-child(3) {width: 23%;}
 .property-image a{position: relative}

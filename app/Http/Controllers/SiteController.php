@@ -53,7 +53,8 @@ class SiteController extends Controller
     {
         if (!$slug)
         {
-            $villas = Houses::where('alias', 'villas')->get();
+            // $villas = Houses::where('alias', 'villas')->get();
+            $villas = Houses::where('alias', 'villas')->paginate(9);
 
             return view('frontend.villas', compact('villas'));
         }

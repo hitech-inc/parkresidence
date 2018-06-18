@@ -50,7 +50,9 @@ class Houses extends Model
         'spalnie_comnati',
         'vannie_comnati',
         'terrasa',
-        'parking'
+        'parking',
+        'big_plane1',
+        'big_plane2'
     ];
 
     /**

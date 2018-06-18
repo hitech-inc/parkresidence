@@ -54,6 +54,8 @@
         <div style="display: none"><a class="rc-copyright" 
         href="http://redconnect.ru">Сервис звонка с сайта RedConnect</a></div>
         <!--/RedConnect -->
+
+        <link rel="stylesheet" href="{{ asset('css/lightbox.min.css') }}">
     </head>  
     <body>
         <!--[if lt IE 8]>
@@ -176,8 +178,13 @@
 
         @yield('scripts')
 
+        <script src="{{ asset('js/lightbox.min.js') }}"></script>
         <script>
-                    </script>
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true
+            });
+        </script>
 
     </body>
 </html>

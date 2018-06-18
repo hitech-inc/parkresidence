@@ -137,71 +137,31 @@
 									@endforeach
 
 								@endif
-								<!-- <div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Система кондиционирования</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Прачечная комната</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Балкон</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Кабельное ТВ</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Высокоскоростной оптоволоконный интернет</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Парковка</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Котельная комната</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Кладовая комната</span>
-								</div>
-								<div class="desc-info">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Посудомечная машина</span>
-								</div>
-								<div class="desc-info">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Тостер</span>
-								</div> -->
 							</div>
 						</div>
 						<div class="row">
-						<div class="col-6 pl-15">
-							<h4 class="details-title mb-37">Поэтажный план</h4>
-							<div class="desc-images">
-								<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">
+							<div class="col-md-3 pl-15">
+								<h4 class="details-title mb-37">Поэтажный план</h4>
+								<div class="desc-images">
+									<a href="{{ '/images/houses/house-details/' . $house->big_plane1 }}" data-lightbox="roadtrip">
+										<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">
+									</a>
+								</div>
 							</div>
+							@if($house->plane2 != null)
+							<div class="col-md-3 offset-md-3 pr-15">
+								<h4 class="details-title mb-37">Второй этаж</h4>
+								<div class="desc-video">
+									<div class="desc-images">
+										<a href="{{ '/images/houses/house-details/' . $house->big_plane2 }}" data-lightbox="roadtrip">
+											<img src="{{ '/images/houses/house-details/' . $house->plane2 }}" alt="">
+										</a>
+								</div>
+								</div>
+							</div>
+							@endif
 						</div>
 					</div>
-					</div>
-					<!-- <div class="row">
-						<div class="col-4 pl-15">
-							<h4 class="details-title mb-37">Поэтажный план</h4>
-							<div class="desc-images">
-								<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">
-							</div>
-						</div>
-						<div class="col-6 pr-15">
-							<h4 class="details-title mb-37">Видео презинтация</h4>
-							<div class="desc-video">
-								<iframe src="https://player.vimeo.com/video/63953556?title=0&byline=0&portrait=0" width="475" height="267"></iframe>
-							</div>
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</div>

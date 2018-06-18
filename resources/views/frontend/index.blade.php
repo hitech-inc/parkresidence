@@ -212,19 +212,19 @@
                 						<div class="hover-container pl-15 pr-15 pt-16 pb-15">
                 							<div class="hover-item">
                 								<img class="mr-10" src="images/icons/floor.png" alt="">
-                								<span>450 sqft</span>
+                								<span>{{ $house->kvadratura }}</span>
                 							</div>
                 							<div class="hover-item">
                 								<img class="mr-10" src="images/icons/bed.png" alt="">
-                								<span>5</span>
+                								<span>{{ $house->spalnie_comnati }}</span>
                 							</div>
                 							<div class="hover-item">
                 								<img class="mr-10" src="images/icons/shower.png" alt="">
-                								<span>3</span>
+                								<span>{{$house->vannie_comnati}}</span>
                 							</div>
                 							<div class="hover-item">
                 								<img class="mr-10" src="images/icons/garage.png" alt="">
-                								<span>2</span>
+                								<span>{{$house->parking}}</span>
                 							</div>
                 						</div>
                 					</div>
