@@ -138,23 +138,6 @@
   </map>--}}
 </div>	
 <!--Start of Find Area-->
-                <!-- <div class="find-area pt-72 pb-72 bg-light">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="section-title text-center mb-55">
-                                    <h2 class="uppercase">Найдите дом своей мечты </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                            	
-                            	<img src="images/genplan18.jpg" alt="" style="max-width: 100%;">
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                 <!-- End of Find Area -->
                 <!--Start of About Area-->
                 <div class="about-area mt-120 pb-90 banner-1 wow fadeInUp" data-wow-duration="1.5s" data-wow-offset="100">

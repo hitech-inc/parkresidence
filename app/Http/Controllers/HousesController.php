@@ -12,6 +12,7 @@ class HousesController extends Controller
     public function houses( $slug = "" )
     {
     	$house = Houses::whereSlug( $slug )->first();
+    	//dd($house);
     	return view('frontend.house-details', compact('house'));
     }
 }

@@ -53,7 +53,15 @@
 <div class="about-area mt-130" style="margin-top: 50px; padding-bottom: 50px;">
     <div class="container">
         <div class="row">
-         <div class="col-md-6"><img src="images/banner/3.png" alt=""></div>
+         <div class="col-md-6">
+          <!-- <img src="images/banner/3.png" alt=""> -->
+          <div class="aImgBlock">
+            <img src="images/banner/203-166/3-1.png" alt="">
+            <img src="images/banner/203-166/3-2.png" alt="">
+            <img src="images/banner/203-166/3-3.png" alt="">
+            <img src="images/banner/203-166/3-4.png" alt="">
+          </div>
+        </div>
          <div class="col-md-6">
             <div class="section-title mb-38 mt-31">
                 <span class="opacity-text text-uppercase">О проекте</span>
