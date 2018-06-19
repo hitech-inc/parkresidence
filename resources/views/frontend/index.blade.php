@@ -357,7 +357,7 @@
                 top: 539,
                 right: 1652,
                 bottom: 591,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
                     width: 68,
@@ -369,7 +369,7 @@
                 top: 480,
                 right: 1620,
                 bottom: 524,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
                     width: 99,

@@ -166,6 +166,17 @@
 								</div>
 								</div>
 							</div>
+							@elseif( $house->cokolniy_etaj != "" )
+							<div class="col-md-3 offset-md-3 pr-15">
+								<h4 class="details-title mb-37">План цокольного этажа</h4>
+								<div class="desc-video">
+									<div class="desc-images">
+										<a href="{{ '/images/houses/house-details/' . $house->cokolniy_etaj }}" data-lightbox="roadtrip">
+											<img src="{{ '/images/houses/house-details/' . $house->cokolniy_etaj }}" alt="">
+										</a>
+								</div>
+								</div>
+							</div>
 							@endif
 						</div>
 					</div>
