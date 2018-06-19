@@ -69,7 +69,7 @@
 						</div> -->
 					</div>
 					<div class="property-image">
-						<a href="{{url('town-houses/' . $townhouse->slug)}}" class="block dark-hover"><img src="/images/houses/small_img/{{$townhouse->img}}" alt="">
+						<a href="{{url('town-houses/' . $townhouse->slug)}}" class="block dark-hover"><img src="/images/houses/house-details/{{$townhouse->img}}" alt="">
 							<span class="img-button text-uppercase">Узнать больше</span>
 							<span class="p-tag bg-lemon">Продается</span>
 						</a>
