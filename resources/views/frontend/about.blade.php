@@ -56,10 +56,10 @@
          <div class="col-md-6">
           <!-- <img src="images/banner/3.png" alt=""> -->
           <div class="aImgBlock">
-            <img src="images/banner/203-166/3-1.png" alt="">
-            <img src="images/banner/203-166/3-2.png" alt="">
-            <img src="images/banner/203-166/3-3.png" alt="">
-            <img src="images/banner/203-166/3-4.png" alt="">
+            <img src="images/banner/203-166/3-1.png" alt="" class="wow fadeIn" data-wow-delay=".7s" data-wow-duration="1000ms">
+            <img src="images/banner/203-166/3-2.png" alt="" class="wow fadeIn" data-wow-delay=".10s" data-wow-duration="2000ms">
+            <img src="images/banner/203-166/3-3.png" alt="" class="wow fadeIn" data-wow-delay=".15s" data-wow-duration="3000ms">
+            <img src="images/banner/203-166/3-4.png" alt="" class="wow fadeIn" data-wow-delay=".20s" data-wow-duration="4000ms">
           </div>
         </div>
          <div class="col-md-6">
