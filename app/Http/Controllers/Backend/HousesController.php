@@ -172,6 +172,13 @@ class HousesController extends AppBaseController
             $data['big_plane2'] = $filename;
         }
 
+        if($request->hasFile('cokolniy_etaj')) {
+            $file = $request->cokolniy_etaj;
+            $filename = date('y-m-d-H-i-s') . uniqid() . '.' . $file->getClientOriginalExtension();
+            $file->move( public_path('/images/houses/house-details/'), $filename );
+            $data['cokolniy_etaj'] = $filename;
+        }
+
 
         $houses = $this->housesRepository->update($data, $id);
         // dd($houses);

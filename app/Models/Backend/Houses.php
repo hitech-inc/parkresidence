@@ -52,7 +52,8 @@ class Houses extends Model
         'terrasa',
         'parking',
         'big_plane1',
-        'big_plane2'
+        'big_plane2',
+        'cokolniy_etaj'
     ];
 
     /**

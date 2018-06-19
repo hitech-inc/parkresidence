@@ -149,16 +149,27 @@
 								</div>
 							</div>
 							@if($house->plane2 != null)
-							<div class="col-md-3 offset-md-3 pr-15">
-								<h4 class="details-title mb-37">Второй этаж</h4>
-								<div class="desc-video">
-									<div class="desc-images">
-										<a href="{{ '/images/houses/house-details/' . $house->big_plane2 }}" data-lightbox="roadtrip">
-											<img src="{{ '/images/houses/house-details/' . $house->plane2 }}" alt="">
-										</a>
+								<div class="col-md-3 offset-md-3 pr-15">
+									<h4 class="details-title mb-37">Второй этаж</h4>
+									<div class="desc-video">
+										<div class="desc-images">
+											<a href="{{ '/images/houses/house-details/' . $house->big_plane2 }}" data-lightbox="roadtrip">
+												<img src="{{ '/images/houses/house-details/' . $house->plane2 }}" alt="">
+											</a>
+									</div>
+									</div>
 								</div>
+							@elseif($house->cokolniy_etaj != null)
+								<div class="col-md-3 offset-md-3 pr-15">
+									<h4 class="details-title mb-37">План цокольного этажа</h4>
+									<div class="desc-video">
+										<div class="desc-images">
+											<a href="{{ '/images/houses/house-details/' . $house->cokolniy_etaj }}" data-lightbox="roadtrip">
+												<img src="{{ '/images/houses/house-details/' . $house->cokolniy_etaj }}" alt="">
+											</a>
+									</div>
+									</div>
 								</div>
-							</div>
 							@endif
 						</div>
 					</div>

@@ -112,6 +112,17 @@
     {!! Form::file('big_plane2') !!}
 </div>
 
+<!-- Цокольный этаж Field -->
+<div class="form-group col-sm-3">
+    @if (isset($houses) && isset($houses->cokolniy_etaj))
+        <img src="{{ asset('images/houses/house-details/' . $houses->big_plane2) }}" alt="" class="img-responsive">
+        <br>
+    @endif
+
+    {!! Form::label('cokolniy_etaj', 'Цокольный этаж:') !!}
+    {!! Form::file('cokolniy_etaj') !!}
+</div>
+
 <div class="clearfix"></div>
 <hr></hr>
 
