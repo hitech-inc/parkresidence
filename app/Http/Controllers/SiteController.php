@@ -38,8 +38,9 @@ class SiteController extends Controller
         if (!$slug)
         {
             $currentUrl = \Request::segment(1);
-            $townhouses = Houses::where('alias', 'town-houses')->paginate(9);
-        
+            //$townhouses = Houses::where('alias', 'town-houses')->paginate(9);
+            $townhouses = Houses::where('alias', 'town-houses')->take(2)->get();
+
             return view('frontend.town-houses', compact('townhouses', 'currentUrl'));
         }
 

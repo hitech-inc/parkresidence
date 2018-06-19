@@ -144,7 +144,7 @@
                 	<div class="container">
                 		<div class="row">
                 			<div class="col-md-6 col-md-offset-6">
-                				<div class="section-title mb-38 mt-31">
+                				<div class="section-title mb-38 mt-31" style="margin-top: 0">
                 					<span class="opacity-text text-uppercase wow fadeIn" data-wow-delay="0.5s">О нас</span>
                 					<h2 class="uppercase wow fadeInUp" data-wow-delay="0.5s">O <span class="text-color">Park residence</span></h2>
                 				</div>

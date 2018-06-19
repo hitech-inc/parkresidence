@@ -7,7 +7,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="banner-title text-center">
-					<h1 class="text-uppercase text-white">Детали</h1>
+					<h1 class="text-uppercase text-white">Параметры</h1>
 				</div>
 			</div>
 		</div>
@@ -124,7 +124,17 @@
 						<div class="col-md-9">
 							<h4 class="details-title mb-38">Удобства</h4>
 							<div class="bg-gray fix pl-50 pr-50 pt-44 pb-38 right-column mb-56" style="padding-bottom: 20px;">
-								<div class="desc-info mb-26">
+								@if( $house->udobstva !== "" )
+
+									@foreach( explode( ",", $house->udobstva ) as $ud )
+										<div class="desc-info mb-26">
+											<i class="fa fa-check-square-o mr-9"></i>
+											<span>{{ trim($ud) }}</span>
+										</div>
+									@endforeach	
+								
+								@endif
+								<!-- <div class="desc-info mb-26">
 									<i class="fa fa-check-square-o mr-9"></i>
 									<span>Система кондиционирования</span>
 								</div>
@@ -156,6 +166,10 @@
 									<i class="fa fa-check-square-o mr-9"></i>
 									<span>Кладовая комната</span>
 								</div>
+								<div class="desc-info mb-26">
+									<i class="fa fa-check-square-o mr-9"></i>
+									<span>Персональная терасса</span>
+								</div> -->
 							</div>
 						</div>
 						<div class="row">	

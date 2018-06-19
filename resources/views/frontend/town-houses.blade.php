@@ -17,7 +17,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="text-content-wrapper">
+					<div class="text-content-wrapper" style="margin-top: -100px;">
 						<div class="text-content text-center">
 							<h3 class="title-small text-uppercase text-brown mb-30"><span class="tlt" data-in-effect="fadeInLeftBig" data-out-effect="fadeOutRight">Найдите дом своей мечты !</span></h3>
 							<h1 class="title1 text-uppercase text-brown mb-10"><span class="tlt" data-in-effect="rollIn" data-out-effect="fadeOutRight">Park residence</span></h1>
@@ -55,7 +55,7 @@
 	<div class="container">
 		<div class="row">
 			@forelse($townhouses as $townhouse)
-			<div class="col-lg-4 col-md-6 col-sm-6 mb-40">
+			<div class="col-lg-6 col-md-6 col-sm-6 mb-40">
 				<div class="single-property hover-effect-two">
 					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
 						<div class="title-left pull_left">
@@ -97,7 +97,7 @@
 			@empty <h3>Нет данных</h3>
 			@endforelse
 			<!-- Пагинация, links() это специальный метод пагинации -->
-			<div class="col-md-12">
+			{{--<div class="col-md-12">
 				<div class="pagination-content text-center block">
 					<ul class="pagination fix mt-40 mb-0">
 						{{ $townhouses->links() }}
@@ -108,7 +108,7 @@
 						<li class="current"><a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a></li> -->
 					</ul>
 				</div>
-			</div>
+			</div>--}}
 		</div>
 	</div>
 </div>

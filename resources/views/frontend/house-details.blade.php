@@ -7,7 +7,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="banner-title text-center">
-					<h1 class="text-uppercase text-white">Детали</h1>
+					<h1 class="text-uppercase text-white">Параметры</h1>
 				</div>
 			</div>
 		</div>
