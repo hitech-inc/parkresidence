@@ -43,7 +43,7 @@
 					<img src="{{ '/images/houses/house-details/' . $house->img }}" alt="">
 				</div>
 				<div class="property-desc mb-56">
-					<h4 class="details-title mb-22">Описание</h4>
+					<h4 class="details-title mb-22" style="font-size: 25px;">Описание</h4>
 					<p class="mb-24">{!! $house->description !!}</p>
 				</div>
 				
@@ -156,7 +156,7 @@
 								</div>
 							</div>
 							@if($house->plane2 != null)
-							<div class="col-md-3 offset-md-3 pr-15">
+							<div class="col-3 pl-15">
 								<h4 class="details-title mb-37">Второй этаж</h4>
 								<div class="desc-video">
 									<div class="desc-images">
