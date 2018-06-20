@@ -123,7 +123,7 @@ div.map {
   background-color: rgba(99,67,52, 0.8);
   border: 1px solid #cecece;
   border-radius: 5px;
-  width: 300px;
+  width: 250px;
   /*height: 150px;*/
   position: absolute;
   bottom: 0;
@@ -136,7 +136,8 @@ div.map {
   background-size: 30px 30px;
   padding: 2px 30px;
   color: #fff;
-  font-size: .90em;
+  font-size: .70em;
+  margin-bottom: 5px;
 }
 
 .statusBlock p:nth-of-type(1){
