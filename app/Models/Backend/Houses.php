@@ -98,4 +98,16 @@ class Houses extends Model
         return $houses;
     }
 
+    public static function getVillas()
+    {
+        $villas = self::where('alias', 'villas')->get();
+        return $villas;
+    } 
+
+    public static function getTownhouses()
+    {
+        $townhouses = self::where('alias', 'town-houses')->take(3)->get();
+        return $townhouses;
+    }
+
 }

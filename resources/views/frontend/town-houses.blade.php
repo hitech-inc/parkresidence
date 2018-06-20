@@ -55,13 +55,13 @@
 	<div class="container">
 		<div class="row">
 			@forelse($townhouses as $townhouse)
-			@if ($loop->index == 0)
+			@if ($townhouse->slug == 'town-house-01')
 				<div class="col-lg-6 col-md-6 col-sm-6 mb-40">
 					<div class="single-property hover-effect-two">
 						<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
 							<div class="title-left pull_left">
 
-								<h4 class="text-white mb-12"><a href="#">{{ $townhouse->name }}&nbsp;(фасад: коричневый клинкер)</a></h4>
+								<h4 class="text-white mb-12"><a href="#">{{ $townhouse->name }}&nbsp;(фасад: черный клинкер)</a></h4>
 								<!-- <span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span> -->
 
 							</div>
@@ -95,13 +95,13 @@
 						</div>
 					</div>
 				</div>
-			@else
+			@elseif ($townhouse->slug == 'town-house-03')
 				<div class="col-lg-6 col-md-6 col-sm-6 mb-40">
 					<div class="single-property hover-effect-two">
 						<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
 							<div class="title-left pull_left">
 
-								<h4 class="text-white mb-12"><a href="#">{{ $townhouse->name }}&nbsp;(фасад: черный клинкер)</a></h4>
+								<h4 class="text-white mb-12"><a href="#">{{ $townhouse->name }}&nbsp;(фасад: коричневый клинкер)</a></h4>
 								<!-- <span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span> -->
 
 							</div>

@@ -34,11 +34,11 @@
 	}
 }
 
-@if ($currentUrl == null)
-    a.mainIn{
-        color: #95c41f !important;
-    }
-@endif
+    @if ($currentUrl == null)
+        a.mainIn{
+            color: #95c41f !important;
+        }
+    @endif
 </style>
 
 <!--Start of Slider Area-->
@@ -180,47 +180,94 @@
                 			</div>
                 		</div>
                 		<div class="row">
-                            @forelse($housesTake as $house)
-                			<div class="col-lg-4 col-md-6 col-sm-6 mb-40 wow fadeInUp" data-wow-offset="300"  @if($loop->iteration % 3 == 2) data-wow-duration="2s" @endif @if($loop->iteration % 3 == 1) data-wow-duration="2.3s" @endif @if($loop->iteration % 3 == 0) data-wow-duration="1.8s" @endif>
-                				<div class="single-property hover-effect-two">
-                					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
-                						<div class="title-left pull_left">
+                    <!-- Показываем все виллы -->
+                      @forelse($villas as $house)
+                  			<div class="col-lg-4 col-md-6 col-sm-6 mb-40 wow fadeInUp" data-wow-offset="300"  @if($loop->iteration % 3 == 2) data-wow-duration="2s" @endif @if($loop->iteration % 3 == 1) data-wow-duration="2.3s" @endif @if($loop->iteration % 3 == 0) data-wow-duration="1.8s" @endif>
+                  				<div class="single-property hover-effect-two">
+                  					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
+                  						<div class="title-left pull_left">
 
-                							<h4 class="text-white mb-12"><a href="{{ url('/house-details/' . $house->slug) }}">{{ $house->name }}</a></h4>
-                							<!-- <span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span> -->
-                						</div>
-                						<!-- <div class="fix pull_right">
-                							<h3>$52,354</h3>
-                						</div> -->
-                					</div>
-                					<div class="property-image">
-                						<a href="{{ url('/house-details/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
-                							<span class="img-button text-uppercase">Узнать больше</span>
-                							<span class="p-tag bg-lemon">Продается</span>
-                						</a>
-                						<div class="hover-container pl-15 pr-15 pt-16 pb-15">
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/floor.png" alt="">
-                								<span>{{ $house->kvadratura }}</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/bed.png" alt="">
-                								<span>{{ $house->spalnie_comnati }}</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/shower.png" alt="">
-                								<span>{{$house->vannie_comnati}}</span>
-                							</div>
-                							<div class="hover-item">
-                								<img class="mr-10" src="images/icons/garage.png" alt="">
-                								<span>{{$house->parking}}</span>
-                							</div>
-                						</div>
-                					</div>
-                				</div>
-                			</div>
-                            @empty <h3>Нет данных</h3>
-                            @endforelse
+                  							<h4 class="text-white mb-12"><a href="{{ url('/house-details/' . $house->slug) }}">{{ $house->name }}</a></h4>
+                  							<!-- <span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span> -->
+                  						</div>
+                  						<!-- <div class="fix pull_right">
+                  							<h3>$52,354</h3>
+                  						</div> -->
+                  					</div>
+                  					<div class="property-image">
+                  						<a href="{{ url('/house-details/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
+                  							<span class="img-button text-uppercase">Узнать больше</span>
+                  							<span class="p-tag bg-lemon">Продается</span>
+                  						</a>
+                  						<div class="hover-container pl-15 pr-15 pt-16 pb-15">
+                  							<div class="hover-item">
+                  								<img class="mr-10" src="images/icons/floor.png" alt="">
+                  								<span>{{ $house->kvadratura }}</span>
+                  							</div>
+                  							<div class="hover-item">
+                  								<img class="mr-10" src="images/icons/bed.png" alt="">
+                  								<span>{{ $house->spalnie_comnati }}</span>
+                  							</div>
+                  							<div class="hover-item">
+                  								<img class="mr-10" src="images/icons/shower.png" alt="">
+                  								<span>{{$house->vannie_comnati}}</span>
+                  							</div>
+                  							<div class="hover-item">
+                  								<img class="mr-10" src="images/icons/garage.png" alt="">
+                  								<span>{{$house->parking}}</span>
+                  							</div>
+                  						</div>
+                  					</div>
+                  				</div>
+                  			</div>
+                      @empty <h3>Нет данных</h3>
+                      @endforelse
+                      <!-- Конец показ вилл -->
+                      
+                      <!-- Показываем 2 таунхауса черный и коричневый -->
+                      @forelse($townHouses as $town)
+                        @if($loop->index % 2 == 0)
+                          <div class="col-lg-4 col-md-6 col-sm-6 mb-40 wow fadeInUp" data-wow-offset="300"  @if($loop->iteration % 3 == 2) data-wow-duration="2s" @endif @if($loop->iteration % 3 == 1) data-wow-duration="2.3s" @endif @if($loop->iteration % 3 == 0) data-wow-duration="1.8s" @endif>
+                            <div class="single-property hover-effect-two">
+                              <div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
+                                <div class="title-left pull_left">
+                                  <h4 class="text-white mb-12"><a href="{{ url('/house-details/' . $town->slug) }}">{{ $town->name }}</a></h4>
+                                  <!-- <span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span> -->
+                                </div>
+                                <!-- <div class="fix pull_right">
+                                  <h3>$52,354</h3>
+                                </div> -->
+                              </div>
+                              <div class="property-image">
+                                <a href="{{ url('/house-details/' . $town->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $town->small_img }}" alt="">
+                                  <span class="img-button text-uppercase">Узнать больше</span>
+                                  <span class="p-tag bg-lemon">Продается</span>
+                                </a>
+                                <div class="hover-container pl-15 pr-15 pt-16 pb-15">
+                                  <div class="hover-item">
+                                    <img class="mr-10" src="images/icons/floor.png" alt="">
+                                      <span>{{ $town->kvadratura }}</span>
+                                  </div>
+                                  <div class="hover-item">
+                                    <img class="mr-10" src="images/icons/bed.png" alt="">
+                                      <span>{{ $town->spalnie_comnati }}</span>
+                                  </div>
+                                  <div class="hover-item">
+                                    <img class="mr-10" src="images/icons/shower.png" alt="">
+                                    <span>{{$town->vannie_comnati}}</span>
+                                  </div>
+                                  <div class="hover-item">
+                                    <img class="mr-10" src="images/icons/garage.png" alt="">
+                                    <span>{{$town->parking}}</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        @endif
+                      @empty <h3>Нет данных</h3>
+                      @endforelse
+                      <!-- Конец показ танхаусов -->
                 		</div>
                 	</div>
                 </div>

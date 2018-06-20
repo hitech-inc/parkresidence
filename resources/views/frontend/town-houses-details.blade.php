@@ -51,28 +51,29 @@
 			<div class="col-md-4 pl-35">
 				<div class="single-sidebar-widget fix mb-60 hidden-sm hidden-xs">
 					<div class="sidebar-widget-title mb-32">
-						<h5>Все таунхаусы</h5>
+						<h5>Таунхаусы</h5>
 					</div>  
 					<div class="row housesSidebar">
 						@forelse($houses as $h)
-						<div class="col-md-6 pr-9 mb-18 col-sm-3">
-							<div class="single-property hover-effect-two">
-								<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
-									<div class="title-left">
-										<h4 class="text-white mb-12"><a href="{{ url('/town-houses/' . $h->slug) }}">{{ $h->name }}</a></h4>
+							@if ($loop->index % 2 == 0)
+								<div class="col-md-6 pr-9 mb-18 col-sm-3">
+									<div class="single-property hover-effect-two">
+										<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet" @if($loop->index == 0 ) style="padding-bottom: 15px;" @endif>
+											<div class="title-left">
+												<h4 class="text-white mb-12"><a href="{{ url('/town-houses/' . $h->slug) }}">{{ $h->name }}</a></h4>
+											</div>
+										</div>
+										<div class="property-image">
+											<a href="{{ url('/town-houses/' . $h->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $h->small_img }}" alt="">
+												<span class="img-button text-uppercase">Подробнее</span>
+											</a>
+										</div>
+										<div class="property-title fix pl-18 pr-18 pt-9 pb-9 bg-violet">
+											<!-- <h3>$52,354</h3> -->
+										</div>
 									</div>
 								</div>
-								<div class="property-image">
-									<a href="{{ url('/town-houses/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $h->small_img }}" alt="">
-										<span class="img-button text-uppercase">Подробнее</span>
-									</a>
-								</div>
-								<div class="property-title fix pl-18 pr-18 pt-9 pb-9 bg-violet">
-									<!-- <h3>$52,354</h3> -->
-								</div>
-							</div>
-						</div>
-
+							@endif
 						@empty <h4>Нет данных</h4>
 
 						@endforelse

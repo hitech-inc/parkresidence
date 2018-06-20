@@ -54,7 +54,8 @@
 						<h5>Все дома</h5>
 					</div>  
 					<div class="row housesSidebar">
-						@forelse(App\Models\Backend\Houses::getHouses() as $h)
+						<!-- Показываем все виллы -->
+						@forelse(App\Models\Backend\Houses::getVillas() as $h)
 						<div class="col-md-6 pr-9 mb-18 col-sm-3">
 							<div class="single-property hover-effect-two">
 								<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
@@ -76,6 +77,33 @@
 						@empty <h4>Нет данных</h4>
 
 						@endforelse
+						<!-- Конец показа всех вилл -->
+
+						<!-- Показываем 2 таунхауса черный и коричневый -->
+						@forelse(App\Models\Backend\Houses::getTownhouses() as $townHouse)
+							@if ($loop->index % 2 == 0)
+							<div class="col-md-6 pr-9 mb-18 col-sm-3">
+								<div class="single-property hover-effect-two">
+									<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet">
+										<div class="title-left">
+											<h4 class="text-white mb-12"><a href="{{ url('/house-details/' . $townHouse->slug) }}">{{ $townHouse->name }}</a></h4>
+										</div>
+									</div>
+									<div class="property-image">
+										<a href="{{ url('/house-details/' . $townHouse->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $townHouse->small_img }}" alt="">
+											<span class="img-button text-uppercase">Подробнее</span>
+										</a>
+									</div>
+									<div class="property-title fix pl-18 pr-18 pt-9 pb-9 bg-violet">
+										<!-- <h3>$52,354</h3> -->
+									</div>
+								</div>
+							</div>
+							@endif
+						@empty <h4>Нет данных</h4>
+
+						@endforelse					
+						<!-- Конец показа 2 таунхауса черный и коричневый -->
 					</div>
 				</div>
 			</div>

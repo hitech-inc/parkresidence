@@ -51,7 +51,7 @@
 			<div class="col-md-4 pl-35">
 				<div class="single-sidebar-widget fix mb-60 hidden-sm hidden-xs">
 					<div class="sidebar-widget-title mb-32">
-						<h5>Все виллы</h5>
+						<h5>Виллы</h5>
 					</div>  
 					<div class="row housesSidebar">
 						@forelse($houses as $h)
