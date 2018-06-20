@@ -55,45 +55,88 @@
 	<div class="container">
 		<div class="row">
 			@forelse($townhouses as $townhouse)
-			<div class="col-lg-6 col-md-6 col-sm-6 mb-40">
-				<div class="single-property hover-effect-two">
-					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
-						<div class="title-left pull_left">
+			@if ($loop->index == 0)
+				<div class="col-lg-6 col-md-6 col-sm-6 mb-40">
+					<div class="single-property hover-effect-two">
+						<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
+							<div class="title-left pull_left">
 
-							<h4 class="text-white mb-12"><a href="#">{{ $townhouse->name }}</a></h4>
-							<!-- <span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span> -->
+								<h4 class="text-white mb-12"><a href="#">{{ $townhouse->name }}&nbsp;(фасад: коричневый клинкер)</a></h4>
+								<!-- <span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span> -->
 
+							</div>
+							<!-- <div class="fix pull_right">
+								<h3>$52,354</h3>
+							</div> -->
 						</div>
-						<!-- <div class="fix pull_right">
-							<h3>$52,354</h3>
-						</div> -->
-					</div>
-					<div class="property-image">
-						<a href="{{url('town-houses/' . $townhouse->slug)}}" class="block dark-hover"><img src="/images/houses/house-details/{{$townhouse->img}}" alt="">
-							<span class="img-button text-uppercase">Узнать больше</span>
-							<span class="p-tag bg-lemon">Продается</span>
-						</a>
-						<div class="hover-container pl-15 pr-15 pt-16 pb-15">
-							<div class="hover-item">
-								<img class="mr-10" src="images/icons/floor.png" alt="">
-								<span>{{ $townhouse->kvadratura }}</span>
-							</div>
-							<div class="hover-item">
-								<img class="mr-10" src="images/icons/bed.png" alt="">
-								<span>{{$townhouse->spalnie_comnati}}</span>
-							</div>
-							<div class="hover-item">
-								<img class="mr-10" src="images/icons/shower.png" alt="">
-								<span>{{$townhouse->vannie_comnati}}</span>
-							</div>
-							<div class="hover-item">
-								<img class="mr-10" src="/images/icons/garage.png" alt="">
-								<span>{{$townhouse->parking}}</span>
+						<div class="property-image">
+							<a href="{{url('town-houses/' . $townhouse->slug)}}" class="block dark-hover"><img src="/images/houses/house-details/{{$townhouse->img}}" alt="">
+								<span class="img-button text-uppercase">Узнать больше</span>
+								<span class="p-tag bg-lemon">Продается</span>
+							</a>
+							<div class="hover-container pl-15 pr-15 pt-16 pb-15">
+								<div class="hover-item">
+									<img class="mr-10" src="images/icons/floor.png" alt="">
+									<span>{{ $townhouse->kvadratura }}</span>
+								</div>
+								<div class="hover-item">
+									<img class="mr-10" src="images/icons/bed.png" alt="">
+									<span>{{$townhouse->spalnie_comnati}}</span>
+								</div>
+								<div class="hover-item">
+									<img class="mr-10" src="images/icons/shower.png" alt="">
+									<span>{{$townhouse->vannie_comnati}}</span>
+								</div>
+								<div class="hover-item">
+									<img class="mr-10" src="/images/icons/garage.png" alt="">
+									<span>{{$townhouse->parking}}</span>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			@else
+				<div class="col-lg-6 col-md-6 col-sm-6 mb-40">
+					<div class="single-property hover-effect-two">
+						<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
+							<div class="title-left pull_left">
+
+								<h4 class="text-white mb-12"><a href="#">{{ $townhouse->name }}&nbsp;(фасад: черный клинкер)</a></h4>
+								<!-- <span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span> -->
+
+							</div>
+							<!-- <div class="fix pull_right">
+								<h3>$52,354</h3>
+							</div> -->
+						</div>
+						<div class="property-image">
+							<a href="{{url('town-houses/' . $townhouse->slug)}}" class="block dark-hover"><img src="/images/houses/house-details/{{$townhouse->img}}" alt="">
+								<span class="img-button text-uppercase">Узнать больше</span>
+								<span class="p-tag bg-lemon">Продается</span>
+							</a>
+							<div class="hover-container pl-15 pr-15 pt-16 pb-15">
+								<div class="hover-item">
+									<img class="mr-10" src="images/icons/floor.png" alt="">
+									<span>{{ $townhouse->kvadratura }}</span>
+								</div>
+								<div class="hover-item">
+									<img class="mr-10" src="images/icons/bed.png" alt="">
+									<span>{{$townhouse->spalnie_comnati}}</span>
+								</div>
+								<div class="hover-item">
+									<img class="mr-10" src="images/icons/shower.png" alt="">
+									<span>{{$townhouse->vannie_comnati}}</span>
+								</div>
+								<div class="hover-item">
+									<img class="mr-10" src="/images/icons/garage.png" alt="">
+									<span>{{$townhouse->parking}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			@endif
+
 			@empty <h3>Нет данных</h3>
 			@endforelse
 			<!-- Пагинация, links() это специальный метод пагинации -->
