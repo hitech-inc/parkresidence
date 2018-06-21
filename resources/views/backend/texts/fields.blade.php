@@ -24,8 +24,8 @@
 
 <!-- Img Field -->
 <div class="form-group col-sm-6">
-    @if ( isset( $texts ) && isset( $texts->img ))
-        <img src="{{ asset('images/texts-blocks/' . $texts->img) }}" alt="" class="img-responsive">
+    @if (isset($texts) && isset($texts->img))
+        <img src="{{ asset('images/textsblocks/' . $texts->img) }}" alt="" class="img-responsive">
         <br>
     @endif
 

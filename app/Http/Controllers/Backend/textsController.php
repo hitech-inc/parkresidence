@@ -131,7 +131,7 @@ class textsController extends AppBaseController
         {
             $file = $request->img;
             $filename = date('y-m-d-H-i-s') . uniqid() . '.' . $file->getClientOriginalExtension();
-            $file->move( public_path('/img/textsblocks/'), $filename );
+            $file->move( public_path('/images/textsblocks/'), $filename );
             $data['img'] = $filename;
             //dd($data['img']);
         }
