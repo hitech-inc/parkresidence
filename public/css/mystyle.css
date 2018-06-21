@@ -114,8 +114,10 @@ div.map {
   box-shadow: 1px 1px 5px 2px #cecece, 1px 1px 5px 2px #cecece inset;
   font-weight: bold;
   color: #fff;
-  font-size: 1.3rem;
+  /*font-size: 1.3rem;*/
+  font-size: .70em;
   width: 300px;
+  /*text-align: left !important;*/
   /*height: 250px;*/
 }
 
