@@ -440,7 +440,17 @@
     	font-size: 0.70em;
     }
     
+    img.mImg{
+    	width: 100%;
+    }
+
+    div.desc-text{
+    	font-size: 0.70em;
+    }
     
+    .statusBlock{
+    	display: none;
+    }
 }
  
 /* Large Mobile :480px. */

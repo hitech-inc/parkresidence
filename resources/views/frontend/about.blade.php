@@ -54,7 +54,7 @@
     <div class="container">
       <div class="row">
         @foreach( $texts as $text )
-          <div class="col-md-4 col-sm-12">
+          <div class="col-md-4 col-sm-12 myGrid">
             <div class="main-block">
               <div class="title-block">
                 <h4 class="f-title">{{$text->title}}</h4>
