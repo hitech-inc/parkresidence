@@ -52,28 +52,84 @@
 <!--Start of About Area-->
 <div class="about-area mt-130" style="margin-top: 50px; padding-bottom: 50px;">
     <div class="container">
-        <div class="row">
-         <div class="col-md-6">
-          <!-- <img src="images/banner/3.png" alt=""> -->
-          <div class="aImgBlock">
-            <img src="images/banner/203-166/3-1.png" alt="" class="wow fadeIn" data-wow-delay=".7s" data-wow-duration="1000ms">
-            <img src="images/banner/203-166/3-2.png" alt="" class="wow fadeIn" data-wow-delay=".10s" data-wow-duration="2000ms">
-            <img src="images/banner/203-166/3-3.png" alt="" class="wow fadeIn" data-wow-delay=".15s" data-wow-duration="3000ms">
-            <img src="images/banner/203-166/3-4.png" alt="" class="wow fadeIn" data-wow-delay=".20s" data-wow-duration="4000ms">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="main-block">
+            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
+            <h4 class="f-title">ЗАСТРОЙЩИК</h4>
+            <div class="desc-text">
+              <h5>ЗАСТРОЙЩИК</h5>
+              <p>OTAU GROUP ведущий  строительный холдинг, лидер на рынке недвижимости ЮКО. Холдинг работает с 2002 года и за это время заслужил репутацию профессионала и надежного партнера.  За годы работы OTAU GROUP заработала не только высочайшую репутацию лидера строительной индустрии, но и множество наград и дважды была признана ЛУЧШЕЙ СТРОИТЕЛЬНОЙ КОМПАНИЕЙ ЮЖНО КАЗАХСТАНСКОЙ ОБЛАСТИ.</p>
+              <p>OTAU GROUP  меняет облик города и сам формат жизни, создавая продуманные архитектурные проекты.    Park Residence – новый район для современного человека, полностью отличного от всего, к чему МЫ привыкли. Компания OTAU GROUP строит масштабно без ущерба эстетике, с особым вниманием к деталям и комфорту.</p>
+            </div>
           </div>
         </div>
-         <div class="col-md-6">
-            <div class="section-title mb-38 mt-31">
-                <span class="opacity-text text-uppercase">О проекте</span>
-                <h2 class="uppercase">У знайте больше о проекте <span class="text-color">Park residence</span></h2>
+        <div class="col-md-4">
+          <div class="main-block">
+            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
+            <h4></h4>
+            <div class="desc-text">
+
             </div>
-            <p class="23"><span class="text-dark text-uppercase">Впервые в Казахстане и Центральной Азии.  </span> Уникальный клубный Park Residence  с особой инфраструктурой, который объединяет в территорию 36 гектаров: эксклюзивные виллы и таунхаусы, собственную парковую зону, современный фитнес центр, крытые  и открытые бассейны, детский сад, и ресторан изысканной кухни.</p>
-            <p class="34"><span class="text-dark text-uppercase">Park Residence .  </span>клубный поселок класса ЛЮКС – выбор особенных людей, истинных ценителей высокого комфорта и элегантности, уважающие семейные традиции и заботящихся о своем здоровье и безопасности. Park Residence - это предпочтение леди и джентльменов с безупречным вкусом. Новый район для современного человека, полностью отличного от всего, к чему мы привыкли.</p>
-            <!-- <div class="link mb-33">
-              <a href="about.html#">Скачать каталог</a><span class="text pl-12">и просмотреть иллюстрации</span>
-          </div> -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="main-block">
+            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
+            <div class="desc-text">
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="main-block">
+            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
+            <div class="desc-text">
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="main-block">
+            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
+            <div class="desc-text">
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="main-block">
+            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
+            <div class="desc-text">
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="main-block">
+            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
+            <div class="desc-text">
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="main-block">
+            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
+            <div class="desc-text">
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="main-block">
+            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
+            <div class="desc-text">
+              
+            </div>
+          </div>
+        </div>
       </div>
-  </div>
 </div>
 </div>
 <!-- End of About Area -->
@@ -90,4 +146,19 @@
 <!--Start of Client area-->
 @include('frontend.partials._clients')
 <!--End of Client area-->
+@endsection
+
+@section('scripts')
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.main-block').hover(function(){
+        //alert('hello');
+        $('div.desc-text').css({"display" : "block", "z-index" : "99"});
+        $('.f-title').css({"display" : 'none'});
+      }, function(){
+        $('div.desc-text').css({"display" : "none", "z-index" : "99"});
+        $('.f-title').css({"display" : 'block'});
+      });
+    });
+  </script>
 @endsection

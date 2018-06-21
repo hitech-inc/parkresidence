@@ -175,7 +175,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-3 pl-15">
+							<div class="col-md-3 col-sm-12 pl-15">
 								<h4 class="details-title mb-37">Поэтажный план</h4>
 								<div class="desc-images">
 									<a href="{{ '/images/houses/house-details/' . $house->big_plane1 }}" data-lightbox="roadtrip">
@@ -184,7 +184,7 @@
 								</div>
 							</div>
 							@if($house->plane2 != null)
-							<div class="col-3 pl-15">
+							<div class="col-md-3 col-sm-12 pl-15">
 								<h4 class="details-title mb-37">Второй этаж</h4>
 								<div class="desc-video">
 									<div class="desc-images">

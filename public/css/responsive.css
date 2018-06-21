@@ -207,7 +207,7 @@
     .footer-container span {text-align: center; display: block}
     .sticky .logo img {width: auto;}
     .logo img {transition: none 0s ease 0s ;}   
-	.banner-readmore {display: block; margin: 0 auto; text-align: center; line-height: 12px;}
+	.banner-readmore {display: block; margin: 0 auto; text-align: center; line-height: 12px; margin-top: 25px;}
     .sticky.header-area {position: inherit;}
     .video-section img, .select, .single-service-image > a, .single-service-image > a > img, .single-sidebar-widget .form-box, .single-sidebar-widget .price_filter, .property-container, .single-post-area button, .single-client a  {
 		width: 100%;
@@ -223,8 +223,8 @@
 	}
     .video-wrapper, .video-banner {height: 280px}
 	.fixed {position: inherit;}
-	h1.title1 {font-size: 24px; margin-bottom: 5px; text-align: center; margin-top: 0}
-	.button.slider-btn {padding: 6px 17px;}
+	h1.title1 {font-size: 1em; margin-bottom: 5px; text-align: center; margin-top: 0}
+	.button.slider-btn {padding: 2px 17px;}
 	.section-title h2 {font-size: 20px;}
 	.find-area {padding: 40px 0;}
 	.form-box, .form-box.large, .single-post-area .col-7, .single-post-area .col-3, .comment-form .col-5, .contact .comment-form .col-5, .form-box, .form-box.large {
@@ -398,7 +398,47 @@
       padding: 6px 10px;
     }
     
-    
+    /*my style*/
+    h3.title-small{
+    	font-size: 0.65em;
+    }
+
+    h1.title1 span{
+    	font-size: 1em;
+    }
+
+    .button.slider-btn{
+    	font-size: 0.55em;
+    }
+
+    h2{
+    	font-size: 1.5em;
+    }
+
+    .hover-item > span{
+    	font-size: 0.80em;
+    }
+
+    .footer-logo img{
+    	max-width: 80%;
+    }
+
+    .single-footer-widget p, .footer-list a{
+    	font-size: 1em;
+    }
+
+    div.text-content h3.mytitle-small{
+    	display: block;
+    	margin-bottom: 15px;
+    }
+
+    div.contact-information span.mb-7{
+		font-size: 0.82em;
+    }
+
+    .breadcrumb li{
+    	font-size: 0.70em;
+    }
     
     
 }

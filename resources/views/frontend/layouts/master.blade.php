@@ -137,6 +137,7 @@
         <script type="text/javascript" src="/js/jquery.maphilight.min.js"></script>
         <script>
             $(document).ready(function() {
+                
                 $('map').imageMapResize();
 
                 //initialize highlight это подсветска при наведении мыши на объект на карте

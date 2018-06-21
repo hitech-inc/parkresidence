@@ -297,7 +297,7 @@ ul.dropdown > li:hover > ul.inside-menu {
 	background: #ffffff none repeat scroll 0 0;
 	color: #1f223e;
 	display: block;
-	font-family: "montserratregular";
+	font-family: "Medium";
 	font-weight: 400;
 }
 .mean-container .mean-nav ul li a.mean-expand {background: none; top: -4px;}

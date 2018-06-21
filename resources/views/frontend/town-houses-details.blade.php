@@ -135,46 +135,10 @@
 									@endforeach	
 								
 								@endif
-								<!-- <div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Система кондиционирования</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Прачечная комната</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Балкон</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Кабельное ТВ</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Высокоскоростной оптоволоконный интернет</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Парковка</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Котельная комната</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Кладовая комната</span>
-								</div>
-								<div class="desc-info mb-26">
-									<i class="fa fa-check-square-o mr-9"></i>
-									<span>Персональная терасса</span>
-								</div> -->
 							</div>
 						</div>
 						<div class="row">	
-							<div class="col-3 pl-15">
+							<div class="col-md-3 col-sm-12 pl-15">
 								<h4 class="details-title mb-37">Поэтажный план</h4>
 								<div class="desc-images">
 									<a href="{{ '/images/houses/house-details/' . $house->big_plane1 }}" data-lightbox="roadtrip">
@@ -183,7 +147,7 @@
 								</div>
 							</div>
 							@if ($house->plane2 != null)
-							<div class="col-3 pl-15">
+							<div class="col-md-3 col-sm-12 pl-15">
 								<h4 class="details-title mb-37">Второй этаж</h4>
 								<div class="desc-images">
 									<a href="{{ '/images/houses/house-details/' . $house->big_plane2 }}" data-lightbox="roadtrip">

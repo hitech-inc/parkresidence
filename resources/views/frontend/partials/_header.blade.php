@@ -11,7 +11,7 @@
 							<li class="mega-parent"><a href="/" class="mainIn">Главная</a>
 
 							</li>
-							<li><a href="/about" class="about">О Park residence</a>
+							<li><a href="/about" class="about">Почему Park Residence</a>
 
 							</li>
 							<li><a href="/location" class="rasp">Расположение</a>
@@ -40,20 +40,24 @@
 				<div class="mobile-menu">
 					<nav id="dropdown">
 						<ul>
-							<li><a href="/">Главная<a>
+							<li>
+								<a href="/">Главная<a>
 							</li>
-							<li><a href="/about">O Park residence</a>
+							<li>
+								<a href="/about">O Park residence</a>
 							</li>
-							<li><a href="/features">Особенности</a>
-								
+							<li>
+								<a href="/location">Расположение</a>
 							</li>
-							<li><a href="/cottages">Котеджи</a>
-								
+							<li>
+								<a href="/town-houses">Таунхаусы</a>
 							</li>
-							<li><a href="/3D-tour">3D тур</a>
-								
+							<li>
+								<a href="/villas">Виллы</a>
 							</li>
-							<li><a href="/contacts">Контакты</a></li>
+							<li>
+								<a href="/contacts">Контакты</a>
+							</li>
 						</ul>
 					</nav>
 				</div>					
