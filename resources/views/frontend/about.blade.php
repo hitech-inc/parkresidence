@@ -117,11 +117,3 @@
     });
   </script>
 @endsection
-
-width: 100%;
-    height: 100%;
-    opacity: 1;
-    position: absolute; top: 0; left: 0;
-    background: rgba(0,0,0,0.3);
-    color: #fff;
-    transition: 0.8s;
