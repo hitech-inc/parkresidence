@@ -1,0 +1,41 @@
+<!-- Name Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('name', 'Name:') !!}
+    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Title Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('title', 'Title:') !!}
+    {!! Form::text('title', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Text Field -->
+<div class="form-group col-sm-12 col-lg-12">
+    {!! Form::label('text', 'Text:') !!}
+    {!! Form::textarea('text', null, ['class' => 'form-control ckeditor']) !!}
+</div>
+
+<!-- Link Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('link', 'Link:') !!}
+    {!! Form::text('link', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Img Field -->
+<div class="form-group col-sm-6">
+    @if ( isset( $texts ) && isset( $texts->img ))
+        <img src="{{ asset('images/texts-blocks/' . $texts->img) }}" alt="" class="img-responsive">
+        <br>
+    @endif
+
+    {!! Form::label('img', 'Img:') !!}
+    {!! Form::file('img') !!}
+</div>
+<div class="clearfix"></div>
+
+<!-- Submit Field -->
+<div class="form-group col-sm-12">
+    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+    <a href="{!! route('backend.texts.index') !!}" class="btn btn-default">Cancel</a>
+</div>

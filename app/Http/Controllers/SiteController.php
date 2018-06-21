@@ -8,6 +8,8 @@ use App\Models\Backend\Houses;
 use App\Mail\Feedback;
 use Mail;
 
+use App\Models\Backend\texts;
+
 class SiteController extends Controller
 {
     //
@@ -26,8 +28,9 @@ class SiteController extends Controller
     public function about(Request $request)
     {
         $currentUrl = \Request::segment(1);
+        $texts = texts::render();
 
-    	return view('frontend.about', compact('currentUrl'));
+    	return view('frontend.about', compact('currentUrl', 'texts'));
     }
 
     public function location()

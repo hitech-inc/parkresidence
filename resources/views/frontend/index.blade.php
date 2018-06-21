@@ -281,8 +281,6 @@
 @section('scripts')
 <script>
     $(document).ready(function() {
-
-
         // tippy
         const tip = tippy('.myHouse', {
             delay: 100,

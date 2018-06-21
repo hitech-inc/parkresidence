@@ -53,82 +53,21 @@
 <div class="about-area mt-130" style="margin-top: 50px; padding-bottom: 50px;">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
-          <div class="main-block">
-            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
-            <h4 class="f-title">ЗАСТРОЙЩИК</h4>
-            <div class="desc-text">
-              <h5>ЗАСТРОЙЩИК</h5>
-              <p>OTAU GROUP ведущий  строительный холдинг, лидер на рынке недвижимости ЮКО. Холдинг работает с 2002 года и за это время заслужил репутацию профессионала и надежного партнера.  За годы работы OTAU GROUP заработала не только высочайшую репутацию лидера строительной индустрии, но и множество наград и дважды была признана ЛУЧШЕЙ СТРОИТЕЛЬНОЙ КОМПАНИЕЙ ЮЖНО КАЗАХСТАНСКОЙ ОБЛАСТИ.</p>
-              <p>OTAU GROUP  меняет облик города и сам формат жизни, создавая продуманные архитектурные проекты.    Park Residence – новый район для современного человека, полностью отличного от всего, к чему МЫ привыкли. Компания OTAU GROUP строит масштабно без ущерба эстетике, с особым вниманием к деталям и комфорту.</p>
+        @foreach( $texts as $text )
+          <div class="col-md-4 col-sm-12">
+            <div class="main-block">
+              <div class="title-block">
+                <h4 class="f-title">{{$text->title}}</h4>
+              </div>
+              <img src="{{ 'images/textsblocks/' . $text->img }}" alt="" style="max-width: 100%" class="mImg">
+              <div class="block-hidden"></div>
+              <div class="desc-text">
+                <h5>{{$text->title}}</h5>
+                <p>{!! $text->text !!}</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="main-block">
-            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
-            <h4></h4>
-            <div class="desc-text">
-
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="main-block">
-            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
-            <div class="desc-text">
-              
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="main-block">
-            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
-            <div class="desc-text">
-              
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="main-block">
-            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
-            <div class="desc-text">
-              
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="main-block">
-            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
-            <div class="desc-text">
-              
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="main-block">
-            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
-            <div class="desc-text">
-              
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="main-block">
-            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
-            <div class="desc-text">
-              
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="main-block">
-            <img src="http://via.placeholder.com/426x600" alt="" style="max-width: 100%">
-            <div class="desc-text">
-              
-            </div>
-          </div>
-        </div>
+        @endforeach
       </div>
 </div>
 </div>
@@ -153,12 +92,36 @@
     $(document).ready(function(){
       $('.main-block').hover(function(){
         //alert('hello');
-        $('div.desc-text').css({"display" : "block", "z-index" : "99"});
-        $('.f-title').css({"display" : 'none'});
+        // this это значит обращаюсь к элементу в нутри блока .main-block, далее find и в нем узазываю класс элемента к которому нужно применить стили
+        $(this).find('.f-title').fadeOut(100);
+        $(this).find('div.desc-text').show(10).animate({
+          top: '20',
+        });
+
+        $(this).find('.block-hidden').css({
+          "width" : "100%",
+          "height" : "100%",
+          "opacity" : "1",
+          "position" : "absolute",
+          "top" : "0",
+          "left" : "0",
+          "background" : "rgba(0,0,0,0.7)",
+          "transition" : "0.8s"
+        });
+
       }, function(){
-        $('div.desc-text').css({"display" : "none", "z-index" : "99"});
-        $('.f-title').css({"display" : 'block'});
+        $(this).find('div.desc-text').animate({top: '100%'}).hide(10);
+        $(this).find('.f-title').fadeIn(10);
+        $(this).find('.block-hidden').css({"opacity" : '0'});
       });
     });
   </script>
 @endsection
+
+width: 100%;
+    height: 100%;
+    opacity: 1;
+    position: absolute; top: 0; left: 0;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    transition: 0.8s;

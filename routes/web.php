@@ -46,3 +46,14 @@ Route::get('backend/houses/{houses}/edit', ['as'=> 'backend.houses.edit', 'uses'
 Route::get('house-details/{slug?}', 'HousesController@houses');
 Route::get('town-houses/{slug?}', 'SiteController@townHouses');
 Route::get('/villas/{slug?}', 'SiteController@villas');
+
+
+
+Route::get('backend/texts', ['as'=> 'backend.texts.index', 'uses' => 'Backend\textsController@index']);
+Route::post('backend/texts', ['as'=> 'backend.texts.store', 'uses' => 'Backend\textsController@store']);
+Route::get('backend/texts/create', ['as'=> 'backend.texts.create', 'uses' => 'Backend\textsController@create']);
+Route::put('backend/texts/{texts}', ['as'=> 'backend.texts.update', 'uses' => 'Backend\textsController@update']);
+Route::patch('backend/texts/{texts}', ['as'=> 'backend.texts.update', 'uses' => 'Backend\textsController@update']);
+Route::delete('backend/texts/{texts}', ['as'=> 'backend.texts.destroy', 'uses' => 'Backend\textsController@destroy']);
+Route::get('backend/texts/{texts}', ['as'=> 'backend.texts.show', 'uses' => 'Backend\textsController@show']);
+Route::get('backend/texts/{texts}/edit', ['as'=> 'backend.texts.edit', 'uses' => 'Backend\textsController@edit']);
