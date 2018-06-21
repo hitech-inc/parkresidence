@@ -281,8 +281,15 @@
 @section('scripts')
 <script>
     $(document).ready(function() {
-        // tippy
-        const tip = tippy('.myHouse', {
+
+        // Определяю ширину окна
+        var size = $(window).width();
+
+        // Если ширина окна больше 991px то только в этом случае инициализируем tippy, это для того что бы при мобильной версии при щелчке на карте изображения по дому, не выходила всплывающий блок с информацией. Он будет срабатывать только при desktop версии.
+        if(size > '991')
+        {
+          // tippy
+          const tip = tippy('.myHouse', {
             delay: 100,
             arrow: true,
             arrowType: 'round',
@@ -348,7 +355,8 @@
 
                 show();
             }
-        });
+          });
+        } 
 
         // map markers
         let map = $('#map-picker');
@@ -918,143 +926,8 @@
                 marker.css('pointer-events', 'none');
                 // marker.css('outline', '1px solid red');
                 marker.appendTo('#map-picker');
-
-                // div
-                // let div = $('<div class="area-area">');
-                // div.css('position', 'absolute');
-                // div.css('top', top);
-                // div.css('left', left);
-                // div.css('width', width);
-                // div.css('height', height);
-                // div.css('pointer', 'cursor');
-                // // div.css('outline', '1px solid blue');
-                // div.css('pointer-events', 'none');
-                // // div.attr('title', 'Tippy tooltip!');
-                // div.appendTo(linkHolder);
-
-                // $(document).on('mouseenter', linkHolder, function(e) {
-                //     if (world.hasOwnProperty(villa)) {
-                //         return;
-                //     }
-
-                //     world[villa] = true;
-                //     console.log(world);
-
-                //     // show hightlight
-                //     const ID = 'hi-' + villa;
-                //     let hInfo = VILLAS[villa].hightlight;
-                //     let hWidth = hInfo.width * RATIO;
-                //     let hHeight = hInfo.height * RATIO;
-
-                //     let hightlight = $('<img id="' + ID + '" class="area-highlight hi-' + villa + '">');
-                //     hightlight.attr('src', hInfo.icon + '/' + villa + '.png');
-                //     hightlight.css('position', 'absolute');
-                //     hightlight.css('top', center.top - hHeight / 2 + 7.5);
-                //     hightlight.css('left', center.left - hWidth / 2);
-                //     hightlight.css('width', hWidth + 'px');
-                //     hightlight.css('height', hHeight + 'px');
-                //     // hightlight.css('pointer-events', 'none');
-                //     // hightlight.css('outline', '1px solid blue');
-                //     hightlight.css('display', 'block');
-                //     hightlight.appendTo('#map-picker');
-
-                //     // hightlight.fadeIn(200);
-
-                //     // show tippy
-                //     // const tip = tippy('#hi-' + villa, {
-                //     //     delay: 100,
-                //     //     arrow: true,
-                //     //     arrowType: 'round',
-                //     //     size: 'large',
-                //     //     duration: 500,
-                //     //     animation: 'scale',
-                //     //     theme: 'parkresidence',
-                //     // });
-                //     // const popper = tip.getPopperElement('#hi-' + villa);
-                //     // tip.show(popper);
-                // });
-
-                // $(document).on('mouseenter', linkHolder, function(e) {
-                //     $('#hi-' + villa).css('display', 'none');
-                //     $('.hi-' + villa).css('display', 'none');
-
-                //     delete world[villa];
-                //     console.log(world);
-                // });
-
             }
         }
-
-
-        // place markers above
-        // $('.myHouse').each(function(e) {
-        //     const ICON = $(this).data('icon');
-        //     const SLUG = $(this).data('slug');
-        //     const ICON_HIGHLIGHT = $(this).data('icon-highlight');
-        //     const HOUSE_POSITION = $(this).offset();
-
-        //     const WIDTH = this.getBoundingClientRect().width;
-        //     const HEIGHT = this.getBoundingClientRect().height;
-            
-        //     const top = housePosition.top - mapPosition.top + height / 2 - 25;
-        //     const left = housePosition.left - mapPosition.left + width / 2 - 12.5;
-
-        //     let marker = $('<img class="area-marker">');
-        //     marker.attr('src', icon);
-        //     marker.css('position', 'absolute');
-        //     marker.css('top', top);
-        //     marker.css('left', left);
-        //     marker.css('width', '25px');
-        //     marker.css('height', '25px');
-        //     marker.css('pointer-events', 'none');
-        //     marker.css('outline', '1px solid red');
-
-        //     marker.appendTo('#map-picker');
-        //     markers.push(marker);
-
-        //     let pivot = {
-        //         top: top + height,
-        //         left: left + width / 2
-        //     }
-
-        //     let info = {slug: slug, icon: iconHightlight, position: pivot, width: 100, height: 57};
-        //     // console.log(info);
-
-        //     borderPositions[slug] = info;
-        //     // console.log(borderPositions);
-
-        //     $(this).mouseenter(function(event) {
-        //         const img = borderPositions[slug];
-        //         console.log('show ' + img.icon);
-
-        //         var hightlight = $('<img id="hi-' + img.slug + '" class="area-highlight hi-' + img.slug + '">'); //Equivalent: $(document.createElement('img'))
-        //         hightlight.attr('src', img.icon);
-        //         hightlight.css('position', 'absolute');
-
-        //         let hiTop = img.position.top - img.height * coef / 2;
-        //         let hiLeft = img.position.left - img.width * coef / 2;
-
-        //         console.log("hover", img.position, mapPosition, hiTop, hiLeft);
-
-        //         hightlight.css('top', hiTop);
-        //         hightlight.css('left', hiLeft);
-        //         hightlight.css('width', img.width * coef + 'px');
-        //         hightlight.css('height', img.height * coef + 'px');
-        //         hightlight.css('pointer-events', 'none');
-        //         hightlight.css('display', 'none');
-        //         hightlight.appendTo('#map-picker');
-        //         hightlight.fadeIn(200);
-
-        //     });
-
-        //     $(this).mouseleave(function(event) {
-        //         console.log('hide ' + slug + ' image');
-        //         $('#hi-' + slug).fadeOut(200);
-        //         $('.hi-' + slug).fadeOut(200);
-        //     });
-
-            
-        // });
 
     });
 </script>
