@@ -44,7 +44,7 @@
 								<a href="/">Главная<a>
 							</li>
 							<li>
-								<a href="/about">O Park residence</a>
+								<a href="/about">Почему Park Residence</a>
 							</li>
 							<li>
 								<a href="/location">Расположение</a>
