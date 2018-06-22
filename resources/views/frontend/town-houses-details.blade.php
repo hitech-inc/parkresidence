@@ -139,7 +139,7 @@
 						</div>
 						<div class="row">	
 							<div class="col-md-3 col-sm-12 pl-15">
-								<h4 class="details-title mb-37">Поэтажный план</h4>
+								<h4 class="details-title mb-37">Первый этаж</h4>
 								<div class="desc-images">
 									<a href="{{ '/images/houses/house-details/' . $house->big_plane1 }}" data-lightbox="roadtrip">
 										<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">

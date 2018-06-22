@@ -140,15 +140,15 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-3 pl-15">
-								<h4 class="details-title mb-37">Поэтажный план</h4>
-								<div class="desc-images">
-									<a href="{{ '/images/houses/house-details/' . $house->big_plane1 }}" data-lightbox="roadtrip">
-										<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">
-									</a>
-								</div>
-							</div>
 							@if($house->plane2 != null)
+								<div class="col-md-3 pl-15">
+									<h4 class="details-title mb-37">Первый этаж</h4>
+									<div class="desc-images">
+										<a href="{{ '/images/houses/house-details/' . $house->big_plane1 }}" data-lightbox="roadtrip">
+											<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">
+										</a>
+									</div>
+								</div>
 								<div class="col-md-3 offset-md-3 pr-15">
 									<h4 class="details-title mb-37">Второй этаж</h4>
 									<div class="desc-video">
@@ -156,10 +156,28 @@
 											<a href="{{ '/images/houses/house-details/' . $house->big_plane2 }}" data-lightbox="roadtrip">
 												<img src="{{ '/images/houses/house-details/' . $house->plane2 }}" alt="">
 											</a>
-									</div>
+										</div>
 									</div>
 								</div>
-							@elseif($house->cokolniy_etaj != null)
+							@elseif($house->plane2 != null && $house->cokolniy_etaj != null)
+								<div class="col-md-3 pl-15">
+									<h4 class="details-title mb-37">Первый этаж</h4>
+									<div class="desc-images">
+										<a href="{{ '/images/houses/house-details/' . $house->big_plane1 }}" data-lightbox="roadtrip">
+											<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 offset-md-3 pr-15">
+									<h4 class="details-title mb-37">Второй этаж</h4>
+									<div class="desc-video">
+										<div class="desc-images">
+											<a href="{{ '/images/houses/house-details/' . $house->big_plane2 }}" data-lightbox="roadtrip">
+												<img src="{{ '/images/houses/house-details/' . $house->plane2 }}" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
 								<div class="col-md-3 offset-md-3 pr-15">
 									<h4 class="details-title mb-37">План цокольного этажа</h4>
 									<div class="desc-video">
@@ -167,9 +185,37 @@
 											<a href="{{ '/images/houses/house-details/' . $house->cokolniy_etaj }}" data-lightbox="roadtrip">
 												<img src="{{ '/images/houses/house-details/' . $house->cokolniy_etaj }}" alt="">
 											</a>
+										</div>
 									</div>
+								</div>	
+							@elseif($house->plane != null && $house->cokolniy_etaj != null)
+								<div class="col-md-3 pl-15">
+									<h4 class="details-title mb-37">Поэтажный план</h4>
+									<div class="desc-images">
+										<a href="{{ '/images/houses/house-details/' . $house->big_plane1 }}" data-lightbox="roadtrip">
+											<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">
+										</a>
 									</div>
 								</div>
+								<div class="col-md-3 offset-md-3 pr-15">
+									<h4 class="details-title mb-37">План цокольного этажа</h4>
+									<div class="desc-video">
+										<div class="desc-images">
+											<a href="{{ '/images/houses/house-details/' . $house->cokolniy_etaj }}" data-lightbox="roadtrip">
+												<img src="{{ '/images/houses/house-details/' . $house->cokolniy_etaj }}" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+							@else
+								<div class="col-md-3 pl-15">
+									<h4 class="details-title mb-37">Поэтажный план</h4>
+									<div class="desc-images">
+										<a href="{{ '/images/houses/house-details/' . $house->big_plane1 }}" data-lightbox="roadtrip">
+											<img src="{{ '/images/houses/house-details/' . $house->plane }}" alt="">
+										</a>
+									</div>
+								</div>	
 							@endif
 						</div>
 					</div>
