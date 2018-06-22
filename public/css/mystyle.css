@@ -280,4 +280,17 @@ div.myGrid{
   padding-left: 0;
 }
 
+.header-i{
+  background-color: #95c41f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 100px;
+}
+
+.header-i h4{
+  /*color: #634334;*/
+  text-align: center;
+}
+
 

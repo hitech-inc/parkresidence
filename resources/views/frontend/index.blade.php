@@ -146,7 +146,7 @@
                 			<div class="col-md-6 col-md-offset-6">
                 				<div class="section-title mb-38 mt-31" style="margin-top: 0">
                 					<span class="opacity-text text-uppercase wow fadeIn" data-wow-delay="0.5s">О нас</span>
-                					<h2 class="uppercase wow fadeInUp" data-wow-delay="0.5s">O <span class="text-color">Park residence</span></h2>
+                					<h2 class="uppercase wow fadeInUp" data-wow-delay="0.5s">ПОЧЕМУ<span class="text-color">PARK RESIDENCE</span></h2>
                 				</div>
                 				<p class="23 wow fadeInUp" data-wow-delay="0.5s"><span class="text-dark text-uppercase">PARK Residence</span> это больше чем коттеджный городок, это клуб единомышленников, предпочитающих активное времяпровождение и здоровый образ жизни на лоне природы.</p>
                 				<p class="34 wow fadeInUp" data-wow-delay="0.5s"><strong>Park Residence</strong> - для тех, кто ценит личный комфорт и личное пространство, сегодня существует способ окружить себя и свою семью спокойствием и достойным обществом. Жизнь за городом, это тот случай, когда место обитания человека, в буквальном смысле слова, отражает высоту его положения. Нужно лишь выбрать, где жить! </p>

@@ -53,6 +53,9 @@
 <div class="about-area mt-130" style="margin-top: 50px; padding-bottom: 50px;">
     <div class="container">
       <div class="row">
+        <div class="header-i">
+          <h4>Otau Group представляет новый проект премиум-класса Park Residence – место, где соединились смелые архитектурные решения, великолепное окружение и комфортная инфраструктура.</h4>
+        </div>
         @foreach( $texts as $text )
           <div class="col-md-4 col-sm-12 myGrid">
             <div class="main-block">
