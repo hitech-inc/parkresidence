@@ -299,4 +299,8 @@ div.myGrid{
   text-transform: uppercase;
 }
 
+.text-shadow{
+  text-shadow: 2px 2px 3px #634334, -2px -2px 5px #634334;
+}
+
 

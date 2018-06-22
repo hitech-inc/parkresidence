@@ -11,15 +11,15 @@
 
 <!-- Start of Background Area -->
 <div class="background-area"> 
-  <img src="images/slider/about.jpg" alt="" title="#slider-1-caption1"/>
+  <img src="images/slider/genplan.jpg" alt="" title="#slider-1-caption1"/>
   <div class="banner-content static-text">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="text-content-wrapper">
+          <div class="text-content-wrapper" style="margin-top: -100px;">
             <div class="text-content text-center">
-              <h3 class="title-small text-uppercase text-brown mb-30"><span class="tlt" data-in-effect="fadeInLeftBig" data-out-effect="fadeOutRight">Найдите дом своей мечты !</span></h3>
-              <h1 class="title1 text-uppercase text-white mb-10"><span class="tlt" data-in-effect="rollIn" data-out-effect="fadeOutRight">Park residence</span></h1>
+              <h3 class="title-small text-uppercase text-white text-shadow mb-30"><span class="tlt" data-in-effect="fadeInLeftBig" data-out-effect="fadeOutRight">Найдите дом своей мечты !</span></h3>
+              <h1 class="title1 text-uppercase text-white text-shadow mb-10"><span class="tlt" data-in-effect="rollIn" data-out-effect="fadeOutRight">Park residence</span></h1>
               <!-- <div class="banner-readmore mt-37">
                 <a class="button slider-btn lemon" href="#">Читать больше</a>                  
               </div> -->
