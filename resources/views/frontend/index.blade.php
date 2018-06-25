@@ -98,10 +98,17 @@
     <div id="map-picker" class="map" style="width: 100%; max-width: 1920px;">
         <svg viewBox="0 0 1920 754" class="svgMap"> 
         @foreach( $houses as $house )
+            
             @if($house->slug == "vila13s") 
             <a id="link-{{ $house->slug }}" href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}" data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
                 <path d="M {{$house->coords}} Z" data-hover="/images/houses/hover/{{$house->hover_img}}" >
             </a>
+
+            @elseif($house->slug == "villa13" )
+            <a id="link-{{ $house->slug }}" href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}" data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
+                <path d="M {{$house->coords}} Z" data-hover="/images/houses/hover/{{$house->hover_img}}" >
+            </a>
+            
             @else
             <a id="link-{{ $house->slug }}" href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}"  data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
                 <path d="m {{$house->coords}} z">
@@ -427,6 +434,114 @@
                     icon: '{{ asset('/images/highlights/') }}',
                     width: 99,
                     height: 56,
+                }
+            },
+            'villa46': {
+                left: 1266, 
+                top: 350,
+                right: 1324,
+                bottom: 395,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 58,
+                    height: 45,
+                }
+            },
+            'villa47': {
+                left: 1322, 
+                top: 361,
+                right: 1380,
+                bottom: 405,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 61,
+                    height: 47,
+                }
+            },
+            'villa13-4c': {
+                left: 859, 
+                top: 497,
+                right: 931,
+                bottom: 555,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 72,
+                    height: 58,
+                }
+            },
+            'villa10-6c': {
+                left: 1056, 
+                top: 526,
+                right: 1131,
+                bottom: 577,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 80,
+                    height: 51,
+                }
+            },
+            'villa10-7c': {
+                left: 950, 
+                top: 514,
+                right: 1027,
+                bottom: 566,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 77,
+                    height: 53,
+                }
+            },
+            'villa39': {
+                left: 1339, 
+                top: 407,
+                right: 1413,
+                bottom: 455,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 77,
+                    height: 51,
+                }
+            },
+            'villa13': {
+                left: 741, 
+                top: 492,
+                right: 861,
+                bottom: 548,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 123,
+                    height: 57,
+                }
+            },
+            'vila37': {
+                left: 902, 
+                top: 346,
+                right: 996,
+                bottom: 389,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 95,
+                    height: 44,
+                }
+            },
+            'villa9': {
+                left: 554, 
+                top: 453,
+                right: 663,
+                bottom: 500,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 109,
+                    height: 50,
                 }
             },
             'detskyi-sad': {

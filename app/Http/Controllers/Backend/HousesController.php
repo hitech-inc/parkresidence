@@ -55,8 +55,8 @@ class HousesController extends AppBaseController
      */
     public function store(CreateHousesRequest $request)
     {
-        // $input = $request->all();
-        $data = $request->validated();
+        $input = $request->all();
+        //$data = $request->validated();
         // dd($data);
         
         $houses = $this->housesRepository->create($input);
@@ -116,7 +116,8 @@ class HousesController extends AppBaseController
      */
     public function update($id, UpdateHousesRequest $request)
     {
-        $data = $request->validated();
+        $data = $request->except('_token');
+        // $data = $request->validated();
         // dd($data);
 
         $houses = $this->housesRepository->findWithoutFail($id);
