@@ -308,9 +308,12 @@ ul.pagination li:last-of-type{
   display: none;
 }
 
-.aboutBlockTitle p{
-    font-size: 16px;
-    line-height: 20px;
+/*До 1366px*/
+@media (max-width: 1366px){
+  .aboutBlockTitle p{
+      font-size: 16px;
+      line-height: 20px;
+  }
 }
 
 
