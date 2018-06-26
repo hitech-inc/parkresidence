@@ -115,7 +115,7 @@
 					<div class="row">
 						<div class="col-md-3">
 							<h4 class="details-title mb-38">Детали</h4>
-							<div class="bg-gray fix pl-35 pt-42 pr-35 pb-39 left-column mb-56">
+							<div class="bg-gray fix pl-35 pt-42 pr-35 pb-39 left-column mb-56" style="padding-left: 30px;">
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-floor.png" alt="" class="pr-8">
 									<span>Площадь {{$house->kvadratura}} кв.м</span>
@@ -131,7 +131,7 @@
 								@if( $house->visota_potolka_gostinaya != null)
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
-									<span>Высота потолка  гостинной {{$house->visota_potolka_gostinaya}} метра</span>
+									<span>Высота потолка в гостинной {{$house->visota_potolka_gostinaya}} метра</span>
 								</div>
 								@endif
 								<div class="desc-info mb-37" style="float: initial; width: 100%">

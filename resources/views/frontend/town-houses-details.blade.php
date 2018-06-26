@@ -87,18 +87,18 @@
 					<div class="row">
 						<div class="col-md-3">
 							<h4 class="details-title mb-38">Детали</h4>
-							<div class="bg-gray fix pl-35 pt-42 pr-35 pb-39 left-column mb-56">
+							<div class="bg-gray fix pl-35 pt-42 pr-35 pb-39 left-column mb-56" style="padding-left: 30px;">
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-floor.png" alt="" class="pr-8">
-									<span>Площадь {{$house->kvadratura}}</span>
+									<span>Площадь {{$house->kvadratura}} кв.м</span>
 								</div>
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
-									<span>Участок {{$house->uchastok}}</span>
+									<span>Участок {{$house->uchastok}} соток</span>
 								</div>
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-garage.png" alt="" class="pr-8">
-									<span>Высота потолка {{$house->visota_potolka}}</span>
+									<span>Высота потолка {{$house->visota_potolka}} м</span>
 								</div>
 								<div class="desc-info mb-37" style="float: initial; width: 100%">
 									<img src="/images/icons/g-bed.png" alt="" class="pr-8">

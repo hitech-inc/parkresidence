@@ -55,7 +55,7 @@
 	<div class="container">
 		<div class="row">
 			@forelse($townhouses as $townhouse)
-			@if ($loop->index % 2 == 0)
+			{{--@if ($loop->index % 2 == 0)--}}
 				<div class="col-lg-6 col-md-6 col-sm-6 mb-40">
 					<div class="single-property hover-effect-two">
 						<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
@@ -95,7 +95,7 @@
 						</div>
 					</div>
 				</div>
-			@endif
+			{{--@endif--}}
 
 			@empty <h3>Нет данных</h3>
 			@endforelse
