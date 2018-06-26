@@ -150,7 +150,7 @@
                 <div class="about-area mt-120 pb-90 banner-1 wow fadeInUp" data-wow-duration="1.5s" data-wow-offset="100">
                 	<div class="container">
                 		<div class="row">
-                			<div class="col-md-6 col-md-offset-6">
+                			<div class="col-md-6 col-md-offset-6 aboutBlockTitle">
                 				<!-- <div class="section-title mb-38 mt-31" style="margin-top: 0">
                 					<span class="opacity-text text-uppercase wow fadeIn" data-wow-delay="0.5s">О нас</span>
                 					<h2 class="uppercase wow fadeInUp" data-wow-delay="0.5s">ПОЧЕМУ<span class="text-color">PARK RESIDENCE</span></h2>
