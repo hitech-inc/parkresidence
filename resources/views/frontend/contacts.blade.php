@@ -57,7 +57,7 @@
 						<div class="pull_left contents ml-8"> 
 							<img src="images/icons/c-map.png" alt="">
 							<div class="info-text pl-40">
-								<span class="block mb-7">Казахстан, ЮКО</span>
+								<span class="block mb-7">Казахстан, г. Шымкент</span>
 								<span class="block mb-7">ул. К. Тулеметова — угол ул. Утегенова</span>
 							</div>
 						</div>

@@ -83,6 +83,9 @@
                                 <div class="footer-text">
                                     <span class="block">Copyright&copy; 2018 <a href="/">Park residence</a>. All rights reserved.</span>
                                 </div>
+                                <div class="footer-text">
+                                    <span class="block">Разработка сайта: <a href="http://hitech-hq.kz/" target="_blank">www.hitech-hq.kz</a></span>
+                                </div>
                             </div>
                         </div>
                     </div>
