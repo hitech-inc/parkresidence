@@ -18,7 +18,10 @@ class SiteController extends Controller
         $currentUrl = \Request::segment(1);
         $houses = Houses::getHouses();
         $villas = Houses::where('alias', 'villas')->get();
-        $townHouses = Houses::where('alias', 'town-houses')->take(3)->get();
+        $townHouses = Houses::where('slug', 'town-house-14')
+                              ->orWhere('slug', 'town-house-12')
+                              ->get();
+        // $townHouses = Houses::where('alias', 'town-houses')->take(3)->get();
         // $housesTake = Houses::take(7)->get();
         //dd($townHouses);
         
