@@ -66,9 +66,9 @@
 								</span>568 E ул. Мадели Кожа, Шымкент -->
 							</span>
 						</div>
-						<div class="fix pull_right">
+						<!-- <div class="fix pull_right">
 							<h3>$52,354</h3>
-						</div>
+						</div> -->
 					</div>
 					<div class="property-image">
 						<a href="{{ url('villas/' . $villa->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{$villa->small_img}}" alt="">

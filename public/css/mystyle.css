@@ -303,4 +303,9 @@ div.myGrid{
   text-shadow: 2px 2px 3px #634334, -2px -2px 5px #634334;
 }
 
+ul.pagination li:first-of-type,
+ul.pagination li:last-of-type{
+  display: none;
+}
+
 
