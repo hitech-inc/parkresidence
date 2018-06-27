@@ -414,6 +414,18 @@
                     height: 51,
                 }
             },
+            'villa33': {
+                left: 1279, 
+                top: 482,
+                right: 1364,
+                bottom: 531,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 84,
+                    height: 51,
+                }
+            },
             'villa36': {
                 left: 1592, 
                 top: 539,
