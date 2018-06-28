@@ -192,17 +192,28 @@
         });
 
         admincentr = new ymaps.Placemark([42.38294, 69.590929], {
-  			hintContent: 'Детский садик на 200 мест, на территории парка'
+  			hintContent: 'Администранивный центр'
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '/images/icons/new/sadik.png',
-            iconImageSize: [156, 81],
-            iconImageOffset: [-10, -60]
+            iconImageHref: '/images/icons/new/admincentr.png',
+            iconImageSize: [150, 35],
+            iconImageOffset: [60, 100]
+        });
+
+        dendro = new ymaps.Placemark([42.372594, 69.616655], {
+  			hintContent: 'Дендропарк'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '/images/icons/new/dendro.png',
+            iconImageSize: [116, 35],
+            iconImageOffset: [-60, -20]
         });
 
         myMap.geoObjects.add(myPlacemark);
         myMap.geoObjects.add(myPlacemark2);
         myMap.geoObjects.add(detsad);
+        myMap.geoObjects.add(admincentr);
+        myMap.geoObjects.add(dendro);
     }
 </script>
 

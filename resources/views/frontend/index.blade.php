@@ -1268,20 +1268,6 @@
                 }
             },
 
-            // 'prodan-16': {
-            //     left: 442, 
-            //     top: 472,
-            //     right: 570,
-            //     bottom: 519,
-            //     alias: "prodan",
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '0.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 135,
-            //         height: 54,
-            //     }
-            // },
-
             'prodan-17': {
                 left: 1539, 
                 top: 441,
