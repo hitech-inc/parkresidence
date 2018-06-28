@@ -18,10 +18,11 @@ class SiteController extends Controller
         $currentUrl = \Request::segment(1);
         $houses = Houses::getHouses();
         $villas = Houses::where('alias', 'villas')->get();
-        $townHouses = Houses::where('slug', 'town-house-14')
-                              ->orWhere('slug', 'town-house-12')
+        $townHouses = Houses::where('slug', 'town-house-01')
+                              ->orWhere('slug', 'town-house-03')
+                              ->orderBy('name', 'asc')
                               ->get();
-        //dd($prodano);
+        //dd($townHouses);
         
         return view('frontend.index', compact('houses', 'villas', 'currentUrl', 'townHouses'));   	
     }

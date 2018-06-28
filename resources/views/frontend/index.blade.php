@@ -201,53 +201,9 @@
                 			</div>
                 		</div>
                 		<div class="row">
-                    <!-- Показываем все виллы -->
-                      @forelse($villas as $house)
-                  			<div class="col-lg-4 col-md-6 col-sm-6 mb-40 wow fadeInUp" data-wow-offset="300"  @if($loop->iteration % 3 == 2) data-wow-duration="2s" @endif @if($loop->iteration % 3 == 1) data-wow-duration="2.3s" @endif @if($loop->iteration % 3 == 0) data-wow-duration="1.8s" @endif>
-                  				<div class="single-property hover-effect-two">
-                  					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
-                  						<div class="title-left pull_left">
-
-                  							<h4 class="text-white mb-12"><a href="{{ url('/house-details/' . $house->slug) }}">{{ $house->name }}</a></h4>
-                  							<!-- <span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span> -->
-                  						</div>
-                  						<!-- <div class="fix pull_right">
-                  							<h3>$52,354</h3>
-                  						</div> -->
-                  					</div>
-                  					<div class="property-image">
-                  						<a href="{{ url('/house-details/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
-                  							<span class="img-button text-uppercase">Узнать больше</span>
-                  							<span class="p-tag bg-lemon">Продается</span>
-                  						</a>
-                  						<div class="hover-container pl-15 pr-15 pt-16 pb-15">
-                  							<div class="hover-item">
-                  								<img class="mr-10" src="images/icons/floor.png" alt="">
-                  								<span>{{ $house->kvadratura }}</span>
-                  							</div>
-                  							<div class="hover-item">
-                  								<img class="mr-10" src="images/icons/bed.png" alt="">
-                  								<span>{{ $house->spalnie_comnati }}</span>
-                  							</div>
-                  							<div class="hover-item">
-                  								<img class="mr-10" src="images/icons/shower.png" alt="">
-                  								<span>{{$house->vannie_comnati}}</span>
-                  							</div>
-                  							<div class="hover-item">
-                  								<img class="mr-10" src="images/icons/garage.png" alt="">
-                  								<span>{{$house->parking}}</span>
-                  							</div>
-                  						</div>
-                  					</div>
-                  				</div>
-                  			</div>
-                      @empty <h3>Нет данных</h3>
-                      @endforelse
-                      <!-- Конец показ вилл -->
-                      
                       <!-- Показываем 2 таунхауса черный и коричневый -->
                       @forelse($townHouses as $town)
-                        {{--@if($loop->index % 2 == 0)--}}
+                        {{--@if($town->slug == 'town-house-14')--}}
                           <div class="col-lg-4 col-md-6 col-sm-6 mb-40 wow fadeInUp" data-wow-offset="300"  @if($loop->iteration % 3 == 2) data-wow-duration="2s" @endif @if($loop->iteration % 3 == 1) data-wow-duration="2.3s" @endif @if($loop->iteration % 3 == 0) data-wow-duration="1.8s" @endif>
                             <div class="single-property hover-effect-two">
                               <div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
@@ -291,6 +247,50 @@
                       
                       @endforelse
                       <!-- Конец показ танхаусов -->
+
+                      <!-- Показываем все виллы -->
+                      @forelse($villas as $house)
+                  			<div class="col-lg-4 col-md-6 col-sm-6 mb-40 wow fadeInUp" data-wow-offset="300"  @if($loop->iteration % 3 == 2) data-wow-duration="2s" @endif @if($loop->iteration % 3 == 1) data-wow-duration="2.3s" @endif @if($loop->iteration % 3 == 0) data-wow-duration="1.8s" @endif>
+                  				<div class="single-property hover-effect-two">
+                  					<div class="property-title fix pl-18 pr-18 pt-22 pb-18 bg-violet">
+                  						<div class="title-left pull_left">
+
+                  							<h4 class="text-white mb-12"><a href="{{ url('/house-details/' . $house->slug) }}">{{ $house->name }}</a></h4>
+                  							<!-- <span><span class="mr-10"><img src="images/icons/map.png" alt=""></span>568 E ул. Мадели Кожа, Шымкент</span> -->
+                  						</div>
+                  						<!-- <div class="fix pull_right">
+                  							<h3>$52,354</h3>
+                  						</div> -->
+                  					</div>
+                  					<div class="property-image">
+                  						<a href="{{ url('/house-details/' . $house->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{ $house->small_img }}" alt="">
+                  							<span class="img-button text-uppercase">Узнать больше</span>
+                  							<span class="p-tag bg-lemon">Продается</span>
+                  						</a>
+                  						<div class="hover-container pl-15 pr-15 pt-16 pb-15">
+                  							<div class="hover-item">
+                  								<img class="mr-10" src="images/icons/floor.png" alt="">
+                  								<span>{{ $house->kvadratura }}</span>
+                  							</div>
+                  							<div class="hover-item">
+                  								<img class="mr-10" src="images/icons/bed.png" alt="">
+                  								<span>{{ $house->spalnie_comnati }}</span>
+                  							</div>
+                  							<div class="hover-item">
+                  								<img class="mr-10" src="images/icons/shower.png" alt="">
+                  								<span>{{$house->vannie_comnati}}</span>
+                  							</div>
+                  							<div class="hover-item">
+                  								<img class="mr-10" src="images/icons/garage.png" alt="">
+                  								<span>{{$house->parking}}</span>
+                  							</div>
+                  						</div>
+                  					</div>
+                  				</div>
+                  			</div>
+                      @empty <h3>Нет данных</h3>
+                      @endforelse
+                      <!-- Конец показ вилл -->
                 		</div>
                 	</div>
                 </div>
@@ -859,163 +859,9 @@
                     height: 38,
                 }
             },
+
+            // Мои переделки
             'town-house-14': {
-                left: 1068, 
-                top: 304,
-                right: 1106,
-                bottom: 332,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 50,
-                    height: 41,
-                }
-            },
-            'town-house-13': {
-                left: 1095, 
-                top: 307,
-                right: 1132,
-                bottom: 335,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 50,
-                    height: 41,
-                }
-            },
-            'town-house-12': {
-                left: 1145, 
-                top: 314,
-                right: 1180,
-                bottom: 340,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 50,
-                    height: 41,
-                }
-            },
-            'town-house-11': {
-                left: 1172, 
-                top: 317,
-                right: 1206,
-                bottom: 343,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 50,
-                    height: 41,
-                }
-            },
-            'town-house-10': {
-                left: 1222, 
-                top: 325,
-                right: 1259,
-                bottom: 348,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 50,
-                    height: 41,
-                }
-            },
-            'town-house-09': {
-                left: 1252, 
-                top: 328,
-                right: 1290,
-                bottom: 351,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 50,
-                    height: 41,
-                }
-            },
-            'town-house-08': {
-                left: 1316, 
-                top: 338,
-                right: 1327,
-                bottom: 360,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 50,
-                    height: 41,
-                }
-            },
-            'town-house-07': {
-                left: 1341, 
-                top: 341,
-                right: 1360,
-                bottom: 363,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 50,
-                    height: 41,
-                }
-            },
-            'town-house-06': {
-                left: 1396, 
-                top: 349,
-                right: 1416,
-                bottom: 370,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 50,
-                    height: 41,
-                }
-            },
-            'town-house-05': {
-                left: 1428, 
-                top: 352,
-                right: 1445,
-                bottom: 373,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 50,
-                    height: 41,
-                }
-            },
-            'town-house-04': {
-                left: 1482, 
-                top: 359,
-                right: 1508,
-                bottom: 380,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 50,
-                    height: 45,
-                }
-            },
-            'town-house-03': {
-                left: 1512, 
-                top: 365,
-                right: 1538,
-                bottom: 384,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 50,
-                    height: 45,
-                }
-            },
-            'town-house-02': {
-                left: 1572, 
-                top: 375,
-                right: 1598,
-                bottom: 282,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 50,
-                    height: 45,
-                }
-            },
-            'town-house-01': {
                 left: 1602, 
                 top: 378,
                 right: 1628,
@@ -1027,6 +873,345 @@
                     height: 45,
                 }
             },
+            'town-house-13': {
+              left: 1572, 
+                top: 375,
+                right: 1598,
+                bottom: 282,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 45,
+                }
+            },
+
+            'town-house-12': {
+                left: 1512, 
+                top: 365,
+                right: 1538,
+                bottom: 384,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 45,
+                }
+            },
+
+            'town-house-11': {
+              left: 1482, 
+                top: 359,
+                right: 1508,
+                bottom: 380,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 45,
+                }
+            },
+
+            'town-house-10': {
+              left: 1428, 
+                top: 352,
+                right: 1445,
+                bottom: 373,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+
+            'town-house-09': {
+              left: 1396, 
+                top: 349,
+                right: 1416,
+                bottom: 370,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+
+            'town-house-08': {
+              left: 1341, 
+                top: 341,
+                right: 1360,
+                bottom: 363,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+
+            'town-house-07': {
+              left: 1316, 
+                top: 338,
+                right: 1327,
+                bottom: 360,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+
+            'town-house-06': {
+              left: 1252, 
+                top: 328,
+                right: 1290,
+                bottom: 351,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+
+            'town-house-05': {
+              left: 1222, 
+                top: 325,
+                right: 1259,
+                bottom: 348,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+
+            'town-house-04': {
+              left: 1172, 
+                top: 317,
+                right: 1206,
+                bottom: 343,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+
+            'town-house-03': {
+              left: 1145, 
+                top: 314,
+                right: 1180,
+                bottom: 340,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+
+            'town-house-02': {
+              left: 1095, 
+                top: 307,
+                right: 1132,
+                bottom: 335,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }
+            },
+
+            'town-house-01': {
+              left: 1068, 
+                top: 304,
+                right: 1106,
+                bottom: 332,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 50,
+                    height: 41,
+                }  
+            },
+            // Конец мои переделки
+
+            // Старый код рабочий
+            // 'town-house-14': {
+            //     left: 1068, 
+            //     top: 304,
+            //     right: 1106,
+            //     bottom: 332,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 50,
+            //         height: 41,
+            //     }
+            // },
+            // 'town-house-13': {
+            //     left: 1095, 
+            //     top: 307,
+            //     right: 1132,
+            //     bottom: 335,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 50,
+            //         height: 41,
+            //     }
+            // },
+            // 'town-house-12': {
+            //     left: 1145, 
+            //     top: 314,
+            //     right: 1180,
+            //     bottom: 340,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 50,
+            //         height: 41,
+            //     }
+            // },
+            // 'town-house-11': {
+            //     left: 1172, 
+            //     top: 317,
+            //     right: 1206,
+            //     bottom: 343,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 50,
+            //         height: 41,
+            //     }
+            // },
+            // 'town-house-10': {
+            //     left: 1222, 
+            //     top: 325,
+            //     right: 1259,
+            //     bottom: 348,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 50,
+            //         height: 41,
+            //     }
+            // },
+            // 'town-house-09': {
+            //     left: 1252, 
+            //     top: 328,
+            //     right: 1290,
+            //     bottom: 351,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 50,
+            //         height: 41,
+            //     }
+            // },
+            // 'town-house-08': {
+            //     left: 1316, 
+            //     top: 338,
+            //     right: 1327,
+            //     bottom: 360,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 50,
+            //         height: 41,
+            //     }
+            // },
+            // 'town-house-07': {
+            //     left: 1341, 
+            //     top: 341,
+            //     right: 1360,
+            //     bottom: 363,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 50,
+            //         height: 41,
+            //     }
+            // },
+            // 'town-house-06': {
+            //     left: 1396, 
+            //     top: 349,
+            //     right: 1416,
+            //     bottom: 370,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 50,
+            //         height: 41,
+            //     }
+            // },
+            // 'town-house-05': {
+            //     left: 1428, 
+            //     top: 352,
+            //     right: 1445,
+            //     bottom: 373,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 50,
+            //         height: 41,
+            //     }
+            // },
+            // 'town-house-04': {
+            //     left: 1482, 
+            //     top: 359,
+            //     right: 1508,
+            //     bottom: 380,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 50,
+            //         height: 45,
+            //     }
+            // },
+            // 'town-house-03': {
+            //     left: 1512, 
+            //     top: 365,
+            //     right: 1538,
+            //     bottom: 384,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 50,
+            //         height: 45,
+            //     }
+            // },
+            // 'town-house-02': {
+            //     left: 1572, 
+            //     top: 375,
+            //     right: 1598,
+            //     bottom: 282,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 50,
+            //         height: 45,
+            //     }
+            // },
+            // 'town-house-01': {
+            //     left: 1602, 
+            //     top: 378,
+            //     right: 1628,
+            //     bottom: 295,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 50,
+            //         height: 45,
+            //     }
+            // },
 
             //Проданные Вилы
             'prodan-1': {
@@ -1538,105 +1723,6 @@
                 marker.appendTo('#map-picker');
             }
         }
-
-        // Проданные
-        // if(size > '991')
-        // {
-        //   // tippy
-        //   const tip = tippy('.prodannie', {
-        //     delay: 100,
-        //     arrow: true,
-        //     arrowType: 'round',
-        //     size: 'large',
-        //     duration: 500,
-        //     animation: 'scale',
-        //     theme: 'prodano',
-        //     onHide(instance) {
-        //         let slug = instance.reference.id.substring(instance.reference.id.indexOf("-") + 1);
-        //         $('.hi-' + slug).fadeOut(200);
-        //     },
-        //     wait(show, event) {
-        //         // console.log(event.target.id);
-
-        //         // show highlight
-        //         let slug = event.target.id.substring(event.target.id.indexOf("-") + 1);
-        //         const PRODAN = PRODANO[slug];
-        //         // console.log(slug, villa);
-
-        //         let markerWidth = MARKER_WIDTH * RATIO;
-        //         let markerHeight = markerWidth;
-        //         let top = PRODAN.top * RATIO;
-        //         let left = PRODAN.left * RATIO;
-        //         let bottom = PRODAN.bottom * RATIO;
-        //         let right = PRODAN.right * RATIO;
-        //         let width = (PRODAN.right - villa.left) * RATIO;
-        //         let height = (PRODAN.bottom - villa.top) * RATIO;
-
-        //         let position = {
-        //             top: top - markerHeight / 2,
-        //             left: left + (right - left) / 2 - markerWidth / 2
-        //         }
-
-        //         let center = {
-        //             top: position.top + markerHeight,
-        //             left: position.left + markerHeight / 2
-        //         }
-
-        //         const villaId = 'hi-' + slug;
-        //         let hInfo = villa.hightlight;
-        //         let hWidth = hInfo.width * RATIO;
-        //         let hHeight = hInfo.height * RATIO;
-
-        //         let hightlight = $('<img id="' + villaId + '" class="area-highlight hi-' + slug + '">');
-        //         hightlight.attr('src', hInfo.icon + '/' + slug + '.png');
-        //         hightlight.css('position', 'absolute');
-
-        //         if (villaId.indexOf("town-house-") !== -1) {
-        //             // console.log(villaId);
-        //             hightlight.css('top', center.top - hHeight / 2 - 5.0 * RATIO);
-        //         } else {
-        //             hightlight.css('top', center.top - hHeight / 2 + 7.5 * RATIO);
-        //         }
-
-        //         hightlight.css('left', center.left - hWidth / 2);
-        //         hightlight.css('width', hWidth + 'px');
-        //         hightlight.css('height', hHeight + 'px');
-        //         hightlight.css('pointer-events', 'none');
-        //         // hightlight.css('outline', '1px solid blue');
-        //         hightlight.css('display', 'none');
-        //         hightlight.appendTo('#map-picker');
-        //         hightlight.fadeIn(200);
-
-        //         show();
-        //     }
-        //   });
-        // } 
-
-        // //map markers
-        // // let map = $('#map-picker');
-        // map.css('position', 'relative');
-
-        // // const MAP_WIDTH = 1920;
-        // // const MARKER_WIDTH = 32;
-        // // const RATIO = map.width() / MAP_WIDTH;
-        // // const MAP_POSITION = map.offset();
-        // // const BORDER_POSITIONS = {};
-
-        // const PRODANO = {
-        //     'prodano-1': {
-        //         left: 1467, 
-        //         top: 528,
-        //         right: 1586,
-        //         bottom: 593,
-        //         icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
-        //         hightlight: {
-        //             icon: '{{ asset('/images/highlights/') }}',
-        //             width: 127,
-        //             height: 64,
-        //         }
-        //     }, 
-
-        // };
 
     });
 </script>

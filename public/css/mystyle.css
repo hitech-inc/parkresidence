@@ -118,9 +118,9 @@ div.map {
   font-size: .70em;
   min-width: 100px;
   min-height: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /*display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;*/
   /*text-align: left !important;*/
   /*height: 250px;*/
 }
