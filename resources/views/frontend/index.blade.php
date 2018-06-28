@@ -1041,177 +1041,21 @@
                     height: 41,
                 }  
             },
-            // Конец мои переделки
 
-            // Старый код рабочий
-            // 'town-house-14': {
-            //     left: 1068, 
-            //     top: 304,
-            //     right: 1106,
-            //     bottom: 332,
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 50,
-            //         height: 41,
-            //     }
-            // },
-            // 'town-house-13': {
-            //     left: 1095, 
-            //     top: 307,
-            //     right: 1132,
-            //     bottom: 335,
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 50,
-            //         height: 41,
-            //     }
-            // },
-            // 'town-house-12': {
-            //     left: 1145, 
-            //     top: 314,
-            //     right: 1180,
-            //     bottom: 340,
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 50,
-            //         height: 41,
-            //     }
-            // },
-            // 'town-house-11': {
-            //     left: 1172, 
-            //     top: 317,
-            //     right: 1206,
-            //     bottom: 343,
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 50,
-            //         height: 41,
-            //     }
-            // },
-            // 'town-house-10': {
-            //     left: 1222, 
-            //     top: 325,
-            //     right: 1259,
-            //     bottom: 348,
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 50,
-            //         height: 41,
-            //     }
-            // },
-            // 'town-house-09': {
-            //     left: 1252, 
-            //     top: 328,
-            //     right: 1290,
-            //     bottom: 351,
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 50,
-            //         height: 41,
-            //     }
-            // },
-            // 'town-house-08': {
-            //     left: 1316, 
-            //     top: 338,
-            //     right: 1327,
-            //     bottom: 360,
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 50,
-            //         height: 41,
-            //     }
-            // },
-            // 'town-house-07': {
-            //     left: 1341, 
-            //     top: 341,
-            //     right: 1360,
-            //     bottom: 363,
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 50,
-            //         height: 41,
-            //     }
-            // },
-            // 'town-house-06': {
-            //     left: 1396, 
-            //     top: 349,
-            //     right: 1416,
-            //     bottom: 370,
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 50,
-            //         height: 41,
-            //     }
-            // },
-            // 'town-house-05': {
-            //     left: 1428, 
-            //     top: 352,
-            //     right: 1445,
-            //     bottom: 373,
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 50,
-            //         height: 41,
-            //     }
-            // },
-            // 'town-house-04': {
-            //     left: 1482, 
-            //     top: 359,
-            //     right: 1508,
-            //     bottom: 380,
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 50,
-            //         height: 45,
-            //     }
-            // },
-            // 'town-house-03': {
-            //     left: 1512, 
-            //     top: 365,
-            //     right: 1538,
-            //     bottom: 384,
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 50,
-            //         height: 45,
-            //     }
-            // },
-            // 'town-house-02': {
-            //     left: 1572, 
-            //     top: 375,
-            //     right: 1598,
-            //     bottom: 282,
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 50,
-            //         height: 45,
-            //     }
-            // },
-            // 'town-house-01': {
-            //     left: 1602, 
-            //     top: 378,
-            //     right: 1628,
-            //     bottom: 295,
-            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-            //     hightlight: {
-            //         icon: '{{ asset('/images/highlights/') }}',
-            //         width: 50,
-            //         height: 45,
-            //     }
-            // },
+            'villa-stroitsya': {
+                left: 442, 
+                top: 472,
+                right: 570,
+                bottom: 519,
+                alias: "prodan",
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '0.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 135,
+                    height: 54,
+                }
+            },
+            // Конец мои переделки
 
             //Проданные Вилы
             'prodan-1': {
@@ -1424,19 +1268,19 @@
                 }
             },
 
-            'prodan-16': {
-                left: 442, 
-                top: 472,
-                right: 570,
-                bottom: 519,
-                alias: "prodan",
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 135,
-                    height: 54,
-                }
-            },
+            // 'prodan-16': {
+            //     left: 442, 
+            //     top: 472,
+            //     right: 570,
+            //     bottom: 519,
+            //     alias: "prodan",
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '0.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 135,
+            //         height: 54,
+            //     }
+            // },
 
             'prodan-17': {
                 left: 1539, 
