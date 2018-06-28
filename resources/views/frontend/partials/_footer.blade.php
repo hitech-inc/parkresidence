@@ -8,10 +8,10 @@
                         </div>
                         	<div class="col-md-12">
                         		<div class="social-links mt-25 mb-80">
-                        			<a href="index.html#"><i class="fa fa-facebook"></i></a>
-                        			<a href="index.html#"><i class="fa fa-twitter"></i></a>
-                        			<a href="index.html#"><i class="fa fa-linkedin"></i></a>
-                        			<a href="index.html#"><i class="fa fa-google-plus"></i></a>
+                        			<a href="#"><i class="fa fa-facebook"></i></a>
+                        			<a href="#"><i class="fa fa-twitter"></i></a>
+                        			<a href="#"><i class="fa fa-linkedin"></i></a>
+                        			<a href="#"><i class="fa fa-google-plus"></i></a>
                         		</div>
                         	</div>
                         </div>

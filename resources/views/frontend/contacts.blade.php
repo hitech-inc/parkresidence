@@ -50,6 +50,8 @@
 				<!--Start of Map Section-->
 				<div id="contacts" class="map-area">
 					<div id="map" style="width: 100%; height: 475px;"></div>
+					<!-- <div id="map" style="width: 100%; height: 750px;"></div> -->
+
 					<!--End of Map Section-->
 				</div>
 				<div class="contact-information">
@@ -157,7 +159,7 @@
     function init(){     
         myMap = new ymaps.Map("map", {
             center: [42.38217392, 69.59299179],
-            zoom: 16
+            zoom: 14
         });
 
         myPlacemark = new ymaps.Placemark([42.38294, 69.590929], { 
@@ -173,12 +175,34 @@
   			hintContent: 'Назарбаев Интеллектуальная школа'
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '/images/icons/new/nMarker.svg',
-            iconImageSize: [80, 80],
-            iconImageOffset: [-40, -80]
+            iconImageHref: '/images/icons/new/naz.png',
+            iconImageSize: [156, 81],
+            // iconImageHref: '/images/icons/new/nMarker.svg',
+            // iconImageSize: [80, 80],
+            iconImageOffset: [-125, -3]
         });
+
+        detsad = new ymaps.Placemark([42.382872, 69.593807], {
+  			hintContent: 'Детский садик на 200 мест, на территории парка'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '/images/icons/new/sadik.png',
+            iconImageSize: [156, 81],
+            iconImageOffset: [-10, -60]
+        });
+
+        admincentr = new ymaps.Placemark([42.38294, 69.590929], {
+  			hintContent: 'Детский садик на 200 мест, на территории парка'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '/images/icons/new/sadik.png',
+            iconImageSize: [156, 81],
+            iconImageOffset: [-10, -60]
+        });
+
         myMap.geoObjects.add(myPlacemark);
         myMap.geoObjects.add(myPlacemark2);
+        myMap.geoObjects.add(detsad);
     }
 </script>
 
