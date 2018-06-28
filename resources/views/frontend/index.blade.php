@@ -97,24 +97,30 @@
     <!-- Include svg -->
     <div id="map-picker" class="map" style="width: 100%; max-width: 1920px;">
         <svg viewBox="0 0 1920 754" class="svgMap"> 
-        @foreach( $houses as $house )
-            
-            @if($house->slug == "vila13s") 
-            <a id="link-{{ $house->slug }}" href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}" data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
-                <path d="M {{$house->coords}} Z" data-hover="/images/houses/hover/{{$house->hover_img}}" >
-            </a>
+          @foreach( $houses as $house )
+              @php
+                
+                $title = '<div style="width: 324px">' . $house->title . '</div>';
+                if($house->alias == "prodan") $title = $house->title
 
-            @elseif($house->slug == "villa13" )
-            <a id="link-{{ $house->slug }}" href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}" data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
-                <path d="M {{$house->coords}} Z" data-hover="/images/houses/hover/{{$house->hover_img}}" >
-            </a>
-            
-            @else
-            <a id="link-{{ $house->slug }}" href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $house->title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}"  data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
-                <path d="m {{$house->coords}} z">
-            </a>
-            @endif
-        @endforeach
+              @endphp
+
+              @if($house->slug == "vila13s") 
+              <a id="link-{{ $house->slug }}" href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}" data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
+                  <path d="M {{$house->coords}} Z" data-hover="/images/houses/hover/{{$house->hover_img}}" >
+              </a>
+
+              @elseif($house->slug == "villa13" )
+              <a id="link-{{ $house->slug }}" href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}" data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
+                  <path d="M {{$house->coords}} Z" data-hover="/images/houses/hover/{{$house->hover_img}}" >
+              </a>
+              
+              @else
+              <a id="link-{{ $house->slug }}" href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}"  data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
+                  <path d="m {{$house->coords}} z">
+              </a>
+              @endif
+          @endforeach
         </svg>
         <img src="images/genplan.jpg" alt="" class="imgMap">
         <div class="statusBlock">
@@ -294,7 +300,7 @@
         // Определяю ширину окна
         var size = $(window).width();
 
-        // Если ширина окна больше 991px то только в этом случае инициализируем tippy, это для того что бы при мобильной версии при щелчке на карте изображения по дому, не выходила всплывающий блок с информацией. Он будет срабатывать только при desktop версии.
+        // Если ширина окна больше 991px то только в этом случае инициализируем tippy, это для того что бы при мобильной версии при щелчке на карте изображения по дому, не выходил всплывающий блок с информацией. Он будет срабатывать только при desktop версии.
         if(size > '991')
         {
           // tippy
@@ -316,7 +322,7 @@
                 // show highlight
                 let slug = event.target.id.substring(event.target.id.indexOf("-") + 1);
                 const villa = VILLAS[slug];
-                // console.log(slug, villa);
+                console.log(slug, villa);
 
                 let markerWidth = MARKER_WIDTH * RATIO;
                 let markerHeight = markerWidth;
@@ -357,7 +363,6 @@
                 hightlight.css('width', hWidth + 'px');
                 hightlight.css('height', hHeight + 'px');
                 hightlight.css('pointer-events', 'none');
-                // hightlight.css('outline', '1px solid blue');
                 hightlight.css('display', 'none');
                 hightlight.appendTo('#map-picker');
                 hightlight.fadeIn(200);
@@ -1015,6 +1020,307 @@
                 }
             },
 
+            //Проданные Вилы
+            'prodan-1': {
+                left: 1483, 
+                top: 530,
+                alias: "prodan",
+                right: 1581,
+                bottom: 576,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 106,
+                    height: 54,
+                }
+            }, 
+
+            'prodan-2': {
+                left: 1375, 
+                top: 510,
+                right: 1475,
+                bottom: 563,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 128,
+                    height: 73,
+                }
+            }, 
+
+            'prodan-3': {
+                left: 1260, 
+                top: 530,
+                right: 1336,
+                bottom: 581,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 78,
+                    height: 60,
+                }
+            },
+
+            'prodan-4': {
+                left: 1195, 
+                top: 475,
+                right: 1251,
+                bottom: 514,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 57,
+                    height: 43,
+                }
+            },
+
+            'prodan-5': {
+                left: 1157, 
+                top: 502,
+                right: 1239,
+                bottom: 550,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 84,
+                    height: 50,
+                }
+            },
+
+            'prodan-6': {
+                left: 1097, 
+                top: 468,
+                right: 1164,
+                bottom: 506,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 72,
+                    height: 39,
+                }
+            },
+
+            'prodan-7': {
+                left: 1056, 
+                top: 486,
+                right: 1133,
+                bottom: 537,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 81,
+                    height: 54,
+                }
+            },
+
+            'prodan-8': {
+                left: 1001, 
+                top: 448,
+                right: 1070,
+                bottom: 486,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 70,
+                    height: 36,
+                }
+            },
+
+            'prodan-9': {
+                left: 966, 
+                top: 476,
+                right: 1031,
+                bottom: 519,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 73,
+                    height: 51,
+                }
+            },
+
+            'prodan-10': {
+                left: 921, 
+                top: 431,
+                right: 969,
+                bottom: 469,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 55,
+                    height: 45,
+                }
+            },
+
+            'prodan-11': {
+                left: 872, 
+                top: 460,
+                right: 931,
+                bottom: 498,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 68,
+                    height: 46,
+                }
+            },
+
+            'prodan-12': {
+                left: 831, 
+                top: 417,
+                right: 879,
+                bottom: 454,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 54,
+                    height: 45,
+                }
+            },
+
+            'prodan-13': {
+                left: 800, 
+                top: 450,
+                right: 846,
+                bottom: 480,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 54,
+                    height: 37,
+                }
+            },
+
+            'prodan-14': {
+                left: 675, 
+                top: 425,
+                right: 762,
+                bottom: 468,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 94,
+                    height: 49,
+                }
+            },
+
+            'prodan-15': {
+                left: 742, 
+                top: 401,
+                right: 796,
+                bottom: 439,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 54,
+                    height: 38,
+                }
+            },
+
+            'prodan-16': {
+                left: 442, 
+                top: 472,
+                right: 570,
+                bottom: 519,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 135,
+                    height: 54,
+                }
+            },
+
+            'prodan-17': {
+                left: 1539, 
+                top: 441,
+                right: 1616,
+                bottom: 419,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 83,
+                    height: 56,
+                }
+            },
+
+            'prodan-18': {
+                left: 1452, 
+                top: 429,
+                right: 1524,
+                bottom: 468,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 77,
+                    height: 45,
+                }
+            },
+
+            'prodan-19': {
+                left: 1419, 
+                top: 462,
+                right: 1518,
+                bottom: 503,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 105,
+                    height: 48,
+                }
+            },
+
+            'prodan-20': {
+                left: 1319, 
+                top: 450,
+                right: 1388,
+                bottom: 487,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 75,
+                    height: 40,
+                }
+            },
+
+            'prodan-21': {
+                left: 1190, 
+                top: 395,
+                right: 1277,
+                bottom: 432,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 95,
+                    height: 41,
+                }
+            },
+
+            'prodan-22': {
+                left: 1163, 
+                top: 420,
+                right: 1250,
+                bottom: 463,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 94,
+                    height: 45,
+                }
+            },
+
+            'prodan-23': {
+                left: 1027, 
+                top: 370,
+                right: 1115,
+                bottom: 406,
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 94,
+                    height: 38,
+                }
+            },
+
         };
 
         let world = {};
@@ -1045,6 +1351,11 @@
                 }
                 
                 // marker
+                if (VILLAS[villa].alias == "prodan")
+                {
+                  continue;
+                }
+
                 let marker = $('<img class="area-marker">');
                 marker.attr('src', icon);
                 marker.css('position', 'absolute');
@@ -1057,6 +1368,105 @@
                 marker.appendTo('#map-picker');
             }
         }
+
+        // Проданные
+        // if(size > '991')
+        // {
+        //   // tippy
+        //   const tip = tippy('.prodannie', {
+        //     delay: 100,
+        //     arrow: true,
+        //     arrowType: 'round',
+        //     size: 'large',
+        //     duration: 500,
+        //     animation: 'scale',
+        //     theme: 'prodano',
+        //     onHide(instance) {
+        //         let slug = instance.reference.id.substring(instance.reference.id.indexOf("-") + 1);
+        //         $('.hi-' + slug).fadeOut(200);
+        //     },
+        //     wait(show, event) {
+        //         // console.log(event.target.id);
+
+        //         // show highlight
+        //         let slug = event.target.id.substring(event.target.id.indexOf("-") + 1);
+        //         const PRODAN = PRODANO[slug];
+        //         // console.log(slug, villa);
+
+        //         let markerWidth = MARKER_WIDTH * RATIO;
+        //         let markerHeight = markerWidth;
+        //         let top = PRODAN.top * RATIO;
+        //         let left = PRODAN.left * RATIO;
+        //         let bottom = PRODAN.bottom * RATIO;
+        //         let right = PRODAN.right * RATIO;
+        //         let width = (PRODAN.right - villa.left) * RATIO;
+        //         let height = (PRODAN.bottom - villa.top) * RATIO;
+
+        //         let position = {
+        //             top: top - markerHeight / 2,
+        //             left: left + (right - left) / 2 - markerWidth / 2
+        //         }
+
+        //         let center = {
+        //             top: position.top + markerHeight,
+        //             left: position.left + markerHeight / 2
+        //         }
+
+        //         const villaId = 'hi-' + slug;
+        //         let hInfo = villa.hightlight;
+        //         let hWidth = hInfo.width * RATIO;
+        //         let hHeight = hInfo.height * RATIO;
+
+        //         let hightlight = $('<img id="' + villaId + '" class="area-highlight hi-' + slug + '">');
+        //         hightlight.attr('src', hInfo.icon + '/' + slug + '.png');
+        //         hightlight.css('position', 'absolute');
+
+        //         if (villaId.indexOf("town-house-") !== -1) {
+        //             // console.log(villaId);
+        //             hightlight.css('top', center.top - hHeight / 2 - 5.0 * RATIO);
+        //         } else {
+        //             hightlight.css('top', center.top - hHeight / 2 + 7.5 * RATIO);
+        //         }
+
+        //         hightlight.css('left', center.left - hWidth / 2);
+        //         hightlight.css('width', hWidth + 'px');
+        //         hightlight.css('height', hHeight + 'px');
+        //         hightlight.css('pointer-events', 'none');
+        //         // hightlight.css('outline', '1px solid blue');
+        //         hightlight.css('display', 'none');
+        //         hightlight.appendTo('#map-picker');
+        //         hightlight.fadeIn(200);
+
+        //         show();
+        //     }
+        //   });
+        // } 
+
+        // //map markers
+        // // let map = $('#map-picker');
+        // map.css('position', 'relative');
+
+        // // const MAP_WIDTH = 1920;
+        // // const MARKER_WIDTH = 32;
+        // // const RATIO = map.width() / MAP_WIDTH;
+        // // const MAP_POSITION = map.offset();
+        // // const BORDER_POSITIONS = {};
+
+        // const PRODANO = {
+        //     'prodano-1': {
+        //         left: 1467, 
+        //         top: 528,
+        //         right: 1586,
+        //         bottom: 593,
+        //         icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+        //         hightlight: {
+        //             icon: '{{ asset('/images/highlights/') }}',
+        //             width: 127,
+        //             height: 64,
+        //         }
+        //     }, 
+
+        // };
 
     });
 </script>
