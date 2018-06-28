@@ -100,23 +100,31 @@
           @foreach( $houses as $house )
               @php
                 
+                $url = url('/house-details/'.$house->slug);
                 $title = '<div style="width: 324px">' . $house->title . '</div>';
-                if($house->alias == "prodan") $title = $house->title
+                $href = 'href=' . $url . '';
+
+                if($house->alias == "prodan")
+                {
+                  $title = $house->title;
+                  $url = "#";
+                  $href = "";
+                } 
 
               @endphp
 
               @if($house->slug == "vila13s") 
-              <a id="link-{{ $house->slug }}" href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}" data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
+              <a id="link-{{ $house->slug }}" {{ $href }} class="myHouse" title="{{ $title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}" data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
                   <path d="M {{$house->coords}} Z" data-hover="/images/houses/hover/{{$house->hover_img}}" >
               </a>
 
               @elseif($house->slug == "villa13" )
-              <a id="link-{{ $house->slug }}" href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}" data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
+              <a id="link-{{ $house->slug }}" {{ $href }} class="myHouse" title="{{ $title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}" data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
                   <path d="M {{$house->coords}} Z" data-hover="/images/houses/hover/{{$house->hover_img}}" >
               </a>
               
               @else
-              <a id="link-{{ $house->slug }}" href="{{ url('/house-details/'.$house->slug) }}" class="myHouse" title="{{ $title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}"  data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
+              <a id="link-{{ $house->slug }}" {{ $href }} class="myHouse" title="{{ $title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}"  data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
                   <path d="m {{$house->coords}} z">
               </a>
               @endif
@@ -1024,9 +1032,9 @@
             'prodan-1': {
                 left: 1483, 
                 top: 530,
-                alias: "prodan",
                 right: 1581,
                 bottom: 576,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1040,6 +1048,7 @@
                 top: 510,
                 right: 1475,
                 bottom: 563,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1053,6 +1062,7 @@
                 top: 530,
                 right: 1336,
                 bottom: 581,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1066,6 +1076,7 @@
                 top: 475,
                 right: 1251,
                 bottom: 514,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1079,6 +1090,7 @@
                 top: 502,
                 right: 1239,
                 bottom: 550,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1092,6 +1104,7 @@
                 top: 468,
                 right: 1164,
                 bottom: 506,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1105,6 +1118,7 @@
                 top: 486,
                 right: 1133,
                 bottom: 537,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1118,6 +1132,7 @@
                 top: 448,
                 right: 1070,
                 bottom: 486,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1131,6 +1146,7 @@
                 top: 476,
                 right: 1031,
                 bottom: 519,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1144,6 +1160,7 @@
                 top: 431,
                 right: 969,
                 bottom: 469,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1157,6 +1174,7 @@
                 top: 460,
                 right: 931,
                 bottom: 498,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1170,6 +1188,7 @@
                 top: 417,
                 right: 879,
                 bottom: 454,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1183,6 +1202,7 @@
                 top: 450,
                 right: 846,
                 bottom: 480,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1196,6 +1216,7 @@
                 top: 425,
                 right: 762,
                 bottom: 468,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1209,6 +1230,7 @@
                 top: 401,
                 right: 796,
                 bottom: 439,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1222,6 +1244,7 @@
                 top: 472,
                 right: 570,
                 bottom: 519,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1235,6 +1258,7 @@
                 top: 441,
                 right: 1616,
                 bottom: 419,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1248,6 +1272,7 @@
                 top: 429,
                 right: 1524,
                 bottom: 468,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1261,6 +1286,7 @@
                 top: 462,
                 right: 1518,
                 bottom: 503,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1274,6 +1300,7 @@
                 top: 450,
                 right: 1388,
                 bottom: 487,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1287,6 +1314,7 @@
                 top: 395,
                 right: 1277,
                 bottom: 432,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1300,6 +1328,7 @@
                 top: 420,
                 right: 1250,
                 bottom: 463,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
@@ -1313,11 +1342,152 @@
                 top: 370,
                 right: 1115,
                 bottom: 406,
+                alias: "prodan",
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
                     width: 94,
                     height: 38,
+                }
+            },
+
+            'prodan-24': {
+                left: 996, 
+                top: 394,
+                right: 1079,
+                bottom: 433,
+                alias: "prodan",
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 88,
+                    height: 44,
+                }
+            },
+
+            'prodan-25': {
+                left: 854, 
+                top: 370,
+                right: 936,
+                bottom: 410,
+                alias: "prodan",
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 87,
+                    height: 40,
+                }
+            },
+
+            'prodan-26': {
+                left: 1534, 
+                top: 393,
+                right: 1573,
+                bottom: 436,
+                alias: "prodan",
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 47,
+                    height: 46,
+                }
+            },
+
+            'prodan-27': {
+                left: 1435, 
+                top: 383,
+                right: 1497,
+                bottom: 417,
+                alias: "prodan",
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 65,
+                    height: 37,
+                }
+            },
+
+            'prodan-28': {
+                left: 1387, 
+                top: 375,
+                right: 1426,
+                bottom: 409,
+                alias: "prodan",
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 46,
+                    height: 32,
+                }
+            },
+
+            'prodan-29': {
+                left: 1223, 
+                top: 345,
+                right: 1261,
+                bottom: 389,
+                alias: "prodan",
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 44,
+                    height: 43,
+                }
+            },
+
+            'prodan-30': {
+                left: 1160, 
+                top: 337,
+                right: 1199,
+                bottom: 376,
+                alias: "prodan",
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 47,
+                    height: 43,
+                }
+            },
+
+            'prodan-31': {
+                left: 1103, 
+                top: 328,
+                right: 1146,
+                bottom: 369,
+                alias: "prodan",
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 48,
+                    height: 42,
+                }
+            },
+
+            'prodan-32': {
+                left: 1061, 
+                top: 323,
+                right: 1098,
+                bottom: 366,
+                alias: "prodan",
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 44,
+                    height: 43,
+                }
+            },
+
+            'prodan-33': {
+                left: 998, 
+                top: 314,
+                right: 1039,
+                bottom: 352,
+                alias: "prodan",
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 47,
+                    height: 41,
                 }
             },
 

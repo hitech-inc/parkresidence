@@ -117,23 +117,23 @@ div.map {
   /*font-size: 1.3rem;*/
   font-size: .70em;
   min-width: 100px;
+  min-height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /*text-align: left !important;*/
   /*height: 250px;*/
 }
 
-.tippy-tooltip.prodano-theme {
-  /* Your styling here. Example: */
+/*.tippy-tooltip.prodano-theme {
   background-color: rgba(99,67,52, 0.7);
   border: 2px solid #cecece;
   box-shadow: 1px 1px 5px 2px #cecece, 1px 1px 5px 2px #cecece inset;
   font-weight: bold;
   color: #fff;
-  /*font-size: 1.3rem;*/
   font-size: .70em;
   width: 250px;
-  /*text-align: left !important;*/
-  /*height: 250px;*/
-}
+}*/
 
 .statusBlock{
   background-color: rgba(99,67,52, 0.8);

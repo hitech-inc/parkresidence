@@ -17,15 +17,13 @@ class SiteController extends Controller
     {
         $currentUrl = \Request::segment(1);
         $houses = Houses::getHouses();
-        //$houses = Houses::where('alias', 'villas')->orWhere('alias', 'town-houses')->get();
         $villas = Houses::where('alias', 'villas')->get();
         $townHouses = Houses::where('slug', 'town-house-14')
                               ->orWhere('slug', 'town-house-12')
                               ->get();
-        //$prodano = Houses::where('alias', 'prodan')->get();
         //dd($prodano);
         
-        return view('frontend.index', compact('houses', 'villas', 'currentUrl', 'townHouses', 'prodano'));   	
+        return view('frontend.index', compact('houses', 'villas', 'currentUrl', 'townHouses'));   	
     }
 
     public function about(Request $request)
