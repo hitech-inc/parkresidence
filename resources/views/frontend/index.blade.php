@@ -101,7 +101,7 @@
               @php
                 
                 $url = url('/house-details/'.$house->slug);
-                $title = '<div style="width: 324px">' . $house->title . '</div>';
+                $title = '<div style="width: 324px; padding: 5px;">' . $house->title . '</div>';
                 $href = 'href=' . $url . '';
 
                 if($house->alias == "prodan")

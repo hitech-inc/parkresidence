@@ -116,13 +116,17 @@ div.map {
   color: #fff;
   /*font-size: 1.3rem;*/
   font-size: .70em;
-  min-width: 100px;
+  min-width: 80px;
   min-height: 15px;
   /*display: flex !important;
   justify-content: center !important;
   align-items: center !important;*/
   /*text-align: left !important;*/
   /*height: 250px;*/
+}
+
+.tippy-tooltip.parkresidence-theme p{
+  margin-bottom: 0 !important; 
 }
 
 /*.tippy-tooltip.prodano-theme {
