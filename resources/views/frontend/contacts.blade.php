@@ -209,11 +209,31 @@
             iconImageOffset: [-60, -20]
         });
 
+        zoopark = new ymaps.Placemark([42.376317, 69.618629], {
+  			hintContent: 'Зоопарк'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '/images/icons/new/zoopark.png',
+            iconImageSize: [116, 35],
+            iconImageOffset: [-25, -30]
+        });
+
+        ippodrom = new ymaps.Placemark([42.382872, 69.620131], {
+  			hintContent: 'Зоопарк'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '/images/icons/new/ippodrom.png',
+            iconImageSize: [156, 81],
+            iconImageOffset: [-130, -70]
+        });
+
         myMap.geoObjects.add(myPlacemark);
         myMap.geoObjects.add(myPlacemark2);
         myMap.geoObjects.add(detsad);
         myMap.geoObjects.add(admincentr);
         myMap.geoObjects.add(dendro);
+        myMap.geoObjects.add(zoopark);
+        myMap.geoObjects.add(ippodrom);
     }
 </script>
 
