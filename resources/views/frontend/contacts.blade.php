@@ -187,7 +187,7 @@
         }, {
             iconLayout: 'default#image',
             iconImageHref: '/images/icons/new/sadik.png',
-            iconImageSize: [156, 81],
+            iconImageSize: [150, 80],
             iconImageOffset: [-10, -60]
         });
 
