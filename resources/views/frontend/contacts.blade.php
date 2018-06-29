@@ -245,6 +245,33 @@
             iconImageOffset: [-80, 0]
         });
 
+        sadik280_2 = new ymaps.Placemark([42.388662, 69.582995], {
+  			hintContent: 'Детский сад на 280 мест'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '/images/icons/new/sadik280.png',
+            iconImageSize: [130, 70],
+            iconImageOffset: [7, -70]
+        });
+
+        shkola600 = new ymaps.Placemark([42.389743, 69.581922], {
+  			hintContent: 'Школа на 600 мест'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '/images/icons/new/shkola600.png',
+            iconImageSize: [150, 80],
+            iconImageOffset: [-150, -70]
+        });
+
+        shkola1200 = new ymaps.Placemark([42.387580, 69.570807], {
+  			hintContent: 'Школа на 1200 мест'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '/images/icons/new/shkola1200.png',
+            iconImageSize: [150, 80],
+            iconImageOffset: [-150, -5]
+        });
+
         myMap.geoObjects.add(myPlacemark);
         myMap.geoObjects.add(myPlacemark2);
         myMap.geoObjects.add(detsad);
@@ -254,6 +281,9 @@
         myMap.geoObjects.add(sadik280);
         myMap.geoObjects.add(ippodrom);
         myMap.geoObjects.add(fitness);
+        myMap.geoObjects.add(sadik280_2);
+        myMap.geoObjects.add(shkola600);
+        myMap.geoObjects.add(shkola1200);
     }
 </script>
 
