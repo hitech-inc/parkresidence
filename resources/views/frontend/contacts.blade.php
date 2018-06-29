@@ -218,6 +218,15 @@
             iconImageOffset: [-25, -30]
         });
 
+        sadik280 = new ymaps.Placemark([42.377463, 69.609302], {
+  			hintContent: 'Детский сад на 280 мест'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '/images/icons/new/sadik280.png',
+            iconImageSize: [130, 70],
+            iconImageOffset: [7, -70]
+        });
+
         ippodrom = new ymaps.Placemark([42.382872, 69.620131], {
   			hintContent: 'Зоопарк'
         }, {
@@ -242,6 +251,7 @@
         myMap.geoObjects.add(admincentr);
         myMap.geoObjects.add(dendro);
         myMap.geoObjects.add(zoopark);
+        myMap.geoObjects.add(sadik280);
         myMap.geoObjects.add(ippodrom);
         myMap.geoObjects.add(fitness);
     }
