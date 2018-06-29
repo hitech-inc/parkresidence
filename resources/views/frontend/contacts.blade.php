@@ -227,6 +227,15 @@
             iconImageOffset: [-130, -70]
         });
 
+        fitness = new ymaps.Placemark([42.383062, 69.586442], {
+  			hintContent: 'Фитнес клуб parkresidence'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: '/images/icons/new/fitness.png',
+            iconImageSize: [90, 50],
+            iconImageOffset: [-80, 0]
+        });
+
         myMap.geoObjects.add(myPlacemark);
         myMap.geoObjects.add(myPlacemark2);
         myMap.geoObjects.add(detsad);
@@ -234,6 +243,7 @@
         myMap.geoObjects.add(dendro);
         myMap.geoObjects.add(zoopark);
         myMap.geoObjects.add(ippodrom);
+        myMap.geoObjects.add(fitness);
     }
 </script>
 
