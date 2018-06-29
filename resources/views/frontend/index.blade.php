@@ -104,7 +104,7 @@
                 $title = '<div style="width: 324px; padding: 5px;">' . $house->title . '</div>';
                 $href = 'href=' . $url . '';
 
-                if($house->alias == "prodan")
+                if($house->alias == "prodan" || $house->alias == "under-construction")
                 {
                   $title = $house->title;
                   $url = "#";
@@ -113,21 +113,17 @@
 
               @endphp
 
-              @if($house->slug == "vila13s") 
-              <a id="link-{{ $house->slug }}" {{ $href }} class="myHouse" title="{{ $title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}" data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
-                  <path d="M {{$house->coords}} Z" data-hover="/images/houses/hover/{{$house->hover_img}}" >
-              </a>
-
-              @elseif($house->slug == "villa13" )
-              <a id="link-{{ $house->slug }}" {{ $href }} class="myHouse" title="{{ $title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}" data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
-                  <path d="M {{$house->coords}} Z" data-hover="/images/houses/hover/{{$house->hover_img}}" >
-              </a>
+              @if($house->slug == "vila13s" || $house->slug == "villa13") 
+                <a id="link-{{ $house->slug }}" {{ $href }} class="myHouse" title="{{ $title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}" data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
+                    <path d="M {{$house->coords}} Z" data-hover="/images/houses/hover/{{$house->hover_img}}" >
+                </a>
               
               @else
-              <a id="link-{{ $house->slug }}" {{ $href }} class="myHouse" title="{{ $title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}"  data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
-                  <path d="m {{$house->coords}} z">
-              </a>
+                <a id="link-{{ $house->slug }}" {{ $href }} class="myHouse" title="{{ $title }}" data-icon="{{ asset('/images/icons/map-marker-' . $house->status . '.png') }}" data-slug="{{ $house->slug }}"  data-icon-highlight="{{ asset('/images/highlights/' . $house->slug . '.png') }}">
+                    <path d="m {{$house->coords}} z">
+                </a>
               @endif
+
           @endforeach
         </svg>
         <img src="images/genplan.jpg" alt="" class="imgMap">
@@ -1050,11 +1046,26 @@
                 icon: '{{ asset('/images/icons/map-marker-') }}' + '0.png',
                 hightlight: {
                     icon: '{{ asset('/images/highlights/') }}',
-                    width: 135,
-                    height: 54,
+                    width: 137,
+                    height: 56,
                 }
             },
             // Конец мои переделки
+
+            // Строиющиеся вилы
+            // 'villa-stroitsya': {
+            //     left: 442, 
+            //     top: 472,
+            //     right: 570,
+            //     bottom: 519,
+            //     alias: "under-construction",
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '0.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 135,
+            //         height: 54,
+            //     }
+            // },
 
             //Проданные Вилы
             'prodan-1': {
