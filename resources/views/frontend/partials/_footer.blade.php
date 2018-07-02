@@ -8,10 +8,10 @@
                         </div>
                         	<div class="col-md-12">
                         		<div class="social-links mt-25 mb-80">
-                        			<a href="#"><i class="fa fa-facebook"></i></a>
-                        			<a href="#"><i class="fa fa-twitter"></i></a>
-                        			<a href="#"><i class="fa fa-linkedin"></i></a>
-                        			<a href="#"><i class="fa fa-google-plus"></i></a>
+                        			<a href="https://www.facebook.com/OTAU-GROUP-662116523988363/" target="_blank"><i class="fa fa-facebook"></i></a>
+                        			<a href="https://www.instagram.com/otaugroup/" target="_blank"><i class="fa fa-instagram"></i></a>
+                        			<a href="https://www.linkedin.com/company/otaugroup" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        			<a href="https://www.youtube.com/channel/UCqO6q2_3vH9DxwTGT2pde9g" target="_blank"><i class="fa fa-youtube"></i></a>
                         		</div>
                         	</div>
                         </div>
