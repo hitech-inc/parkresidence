@@ -59,7 +59,8 @@
 									<h1 style="display: none;" class="title1 wow fadeInUp text-uppercase text-white mb-20 special" data-wow-duration="2900ms" data-wow-delay=".5s"><span class="text-color">PARK RESIDENCE</span> <br>Новый стиль загородной жизни</h1>
 									<p style="display: none;" class="sub-title wow fadeInUp hidden-xs special" data-wow-duration="3600ms" data-wow-delay=".6s"> Уникальный клубный городок Park Residence с особой инфраструктурой, который объединяет в территорию 36 гектаров: эксклюзивные виллы и таунхаусы, собственную парковую зону, современный фитнес центр, крытые и открытые бассейны, детский сад, и ресторан изысканной кухни.</p>
 									<div class="banner-readmore  mt-37">
-										<a class="button slider-btn  wow fadeInUp specialbutton" style="display: none !important;" href="/about" data-wow-duration="4100ms" data-wow-delay=".7s">Читать больше</a>	                
+										<a class="button slider-btn  wow fadeInUp specialbutton" style="display: none !important;" href="/about" data-wow-duration="4100ms" data-wow-delay=".7s">Читать больше</a>	
+                    <a class="button slider-btn  wow fadeInUp specialbutton" style="display: none !important;" href="{{ asset('presentation/prp.pdf') }}" data-wow-duration="4100ms" data-wow-delay=".7s" download>Скачать презентацию</a>                
 									</div>
 								</div>
 							</div>
@@ -79,7 +80,8 @@
 									<h1 class="title1 text-uppercase text-white mb-20 wow fadeInUp"><span class="text-color">PARK RESIDENCE</span> </span><br> Новый стиль загородной жизни!</h1>
 									<p class="sub-title hidden-xs"> Уникальный клубный городок Park Residence с особой инфраструктурой, который объединяет в территорию 36 гектаров: эксклюзивные виллы и таунхаусы, собственную парковую зону, современный фитнес центр, крытые и открытые бассейны, детский сад, и ресторан изысканной кухни.</p>
 									<div class="banner-readmore mt-37">
-										<a class="button slider-btn" href="/about">Читать больше</a>	                
+										<a class="button slider-btn" href="/about">Читать больше</a>	 
+                    <a class="button slider-btn  wow fadeInUp specialbutton" style="display: none !important;" href="{{ asset('presentation/prp.pdf') }}" data-wow-duration="4100ms" data-wow-delay=".7s" download>Скачать презентацию</a>               
 									</div>
 								</div>
 							</div>
