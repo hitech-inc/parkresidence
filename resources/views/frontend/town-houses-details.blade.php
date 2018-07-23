@@ -55,10 +55,10 @@
 					</div>  
 					<div class="row housesSidebar">
 						@forelse($houses as $h)
-							@if ($loop->index % 2 == 0)
+							{{--@if ($loop->index % 2 == 0)--}}
 								<div class="col-md-6 pr-9 mb-18 col-sm-3">
 									<div class="single-property hover-effect-two">
-										<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet" @if($loop->index == 0 ) style="padding-bottom: 15px;" @endif>
+										<div class="property-title fix pl-18 pr-18 pt-9 pb-0 bg-violet" @if($loop->index == 1 ) style="height: 80px;" @endif>
 											<div class="title-left">
 												<h4 class="text-white mb-12"><a href="{{ url('/town-houses/' . $h->slug) }}">{{ $h->name }}</a></h4>
 											</div>
@@ -73,7 +73,7 @@
 										</div>
 									</div>
 								</div>
-							@endif
+							{{--@endif--}}
 						@empty <h4>Нет данных</h4>
 
 						@endforelse

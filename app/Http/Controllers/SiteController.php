@@ -46,8 +46,8 @@ class SiteController extends Controller
         if (!$slug)
         {
             $currentUrl = \Request::segment(1);
-            $townhouses = Houses::where('slug', 'town-house-12')
-                                    ->orWhere('slug', 'town-house-14')
+            $townhouses = Houses::where('slug', 'town-house-01')
+                                    ->orWhere('slug', 'town-house-03')
                                     ->get();
             //$townhouses = Houses::where('alias', 'town-houses')->paginate(9);
             // $townhouses = Houses::where('alias', 'town-houses')->take(4)->get();
@@ -60,7 +60,10 @@ class SiteController extends Controller
         {
             // $currentURL = \Request::segment(1);
             $house = Houses::whereSlug($slug)->first();
-            $houses = Houses::where('alias', 'town-houses')->take(3)->get();
+            $houses = Houses::where('slug', 'town-house-01')
+                                    ->orWhere('slug', 'town-house-03')
+                                    ->get();
+            // $houses = Houses::where('alias', 'town-houses')->take(3)->get();
             //dd($currentURL);
             return view('frontend.town-houses-details', compact('house', 'houses'));
         }
