@@ -413,18 +413,18 @@
                     height: 57,
                 }
             },
-            'vila11': {
-                left: 696, 
-                top: 481,
-                right: 764,
-                bottom: 521,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 81,
-                    height: 51,
-                }
-            },
+            // 'vila11': {
+            //     left: 696, 
+            //     top: 481,
+            //     right: 764,
+            //     bottom: 521,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 81,
+            //         height: 51,
+            //     }
+            // },
             'villa33': {
                 left: 1279, 
                 top: 482,
@@ -437,30 +437,30 @@
                     height: 51,
                 }
             },
-            'villa36': {
-                left: 1592, 
-                top: 539,
-                right: 1652,
-                bottom: 591,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 68,
-                    height: 60,
-                }
-            },
-            'villa32': {
-                left: 1533, 
-                top: 480,
-                right: 1620,
-                bottom: 524,
-                icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
-                hightlight: {
-                    icon: '{{ asset('/images/highlights/') }}',
-                    width: 99,
-                    height: 56,
-                }
-            },
+            // 'villa36': {
+            //     left: 1592, 
+            //     top: 539,
+            //     right: 1652,
+            //     bottom: 591,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 68,
+            //         height: 60,
+            //     }
+            // },
+            // 'villa32': {
+            //     left: 1533, 
+            //     top: 480,
+            //     right: 1620,
+            //     bottom: 524,
+            //     icon: '{{ asset('/images/icons/map-marker-') }}' + '1.png',
+            //     hightlight: {
+            //         icon: '{{ asset('/images/highlights/') }}',
+            //         width: 99,
+            //         height: 56,
+            //     }
+            // },
             'villa46': {
                 left: 1266, 
                 top: 350,
@@ -1515,6 +1515,48 @@
                     icon: '{{ asset('/images/highlights/') }}',
                     width: 47,
                     height: 41,
+                }
+            },
+
+            'vila11-prodan': {
+                left: 700, 
+                top: 475,
+                right: 764,
+                bottom: 521,
+                alias: "prodan",
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 81,
+                    height: 51,
+                }
+            },
+
+            'villa32-prodan': {
+                left: 1533, 
+                top: 480,
+                right: 1620,
+                bottom: 524,
+                alias: "prodan",
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 99,
+                    height: 56,
+                }
+            },
+
+            'villa36-prodan': {
+                left: 1592, 
+                top: 539,
+                right: 1652,
+                bottom: 591,
+                alias: "prodan",
+                icon: '{{ asset('/images/icons/map-marker-') }}' + '2.png',
+                hightlight: {
+                    icon: '{{ asset('/images/highlights/') }}',
+                    width: 68,
+                    height: 60,
                 }
             },
 
