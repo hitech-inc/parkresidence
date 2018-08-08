@@ -1,13 +1,19 @@
 <!-- Shape Field -->
-<div class="form-group col-sm-3">
+<div class="form-group col-sm-2">
     {!! Form::label('status', 'Status:') !!}
     {!! Form::text('status', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Alias Field -->
-<div class="form-group col-sm-3">
+<div class="form-group col-sm-2">
     {!! Form::label('alias', 'Alias:') !!}
     {!! Form::text('alias', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- House group -->
+<div class="form-group col-sm-2">
+    {!! Form::label('house_group', 'Группа:') !!}
+    {!! Form::text('house_group', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Coords Field -->

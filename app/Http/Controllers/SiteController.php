@@ -17,7 +17,9 @@ class SiteController extends Controller
     {
         $currentUrl = \Request::segment(1);
         $houses = Houses::getHouses();
-        $villas = Houses::where('alias', 'villas')->get();
+        $villas = Houses::where('alias', 'villas')
+                                ->orWhere('house_group', 2)
+                                ->get();
         $townHouses = Houses::where('slug', 'town-house-01')
                               ->orWhere('slug', 'town-house-03')
                               ->orderBy('name', 'asc')
@@ -75,7 +77,9 @@ class SiteController extends Controller
         {
             $currentUrl = \Request::segment(1);
             // $villas = Houses::where('alias', 'villas')->get();
-            $villas = Houses::where('alias', 'villas')->paginate(9);
+            $villas = Houses::where('alias', 'villas')
+                                    ->orWhere('house_group', 2)
+                                    ->paginate(9);
 
             return view('frontend.villas', compact('villas', 'currentUrl'));
         }

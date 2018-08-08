@@ -42,6 +42,7 @@ class Houses extends Model
         'plane',
         'plane2',
         'alias',
+        'house-group',
         'name',
         'kvadratura',
         'uchastok',

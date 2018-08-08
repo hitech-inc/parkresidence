@@ -93,7 +93,11 @@
 					<div class="property-image">
 						<a href="{{ url('villas/' . $villa->slug) }}" class="block dark-hover"><img src="/images/houses/small_img/{{$villa->small_img}}" alt="">
 							<span class="img-button text-uppercase">Узнать больше</span>
-							<span class="p-tag bg-lemon">Продается</span>
+							@if( $villa->house_group == 2 )
+								<span class="p-tag" style="background-color: #D90022">Продано</span>
+							@else
+								<span class="p-tag bg-lemon">Продается</span>
+							@endif
 						</a>
 						<div class="hover-container pl-15 pr-15 pt-16 pb-15">
 							<div class="hover-item">
